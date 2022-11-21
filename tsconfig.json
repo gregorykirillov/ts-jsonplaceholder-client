@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "incremental": true,                              /* Enable incremental compilation */
+    "target": "es2016",                                  /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "jsx": "preserve",                                /* Specify what JSX code is generated. */
+    "module": "commonjs",                                /* Specify what module code is generated. */
+    "rootDir": "./src",                                  /* Specify the root folder within your source files. */
+    "moduleResolution": "node",                       /* Specify how TypeScript looks up a file from a given module specifier. */
+    "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
+    "paths": {
+      "~/*": ["./*"]
+    },
+    "noEmit": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "strictPropertyInitialization": true,
+    "skipLibCheck": true
+  },
+}

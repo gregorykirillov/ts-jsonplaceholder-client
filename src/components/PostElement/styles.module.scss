@@ -1,0 +1,23 @@
+.postELement {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    width: 100%;
+
+    padding: 15px 20px;
+
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.commentsButton {
+    margin-top: 20px;
+}
+
+.commentSvg {
+    display: block;
+    height: 24px;
+    
+    cursor: pointer;
+}

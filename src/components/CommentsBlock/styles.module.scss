@@ -1,0 +1,13 @@
+.commentsBlock {
+    display: grid;
+    
+    gap: 7px;
+    margin-top: 10px;
+}
+
+.comment {
+    padding: 5px 7px;
+
+    border-radius: 2px;
+    box-shadow: 0 0 2px rgb(0 0 0 / 50%);
+}
