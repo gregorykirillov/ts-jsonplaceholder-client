@@ -14,13 +14,13 @@ const CommentsBlock = ({ postId }: { postId: number }) => {
 
     return (
         <div className={styles.commentsBlock}>
+            <span>Comments:</span>
             {comments.map(({ id, name, body }) => {
                 return (
-                    <div className={styles.comment} key={id}>
-                        <div>
-                            <strong>{name}</strong>
-                        </div>
-                        {body}
+                    <div key={id}>
+                        <strong>{name}</strong>
+                        <p className={styles.commentText}>{body}</p>
+                        <hr />
                     </div>
                 );
             })}

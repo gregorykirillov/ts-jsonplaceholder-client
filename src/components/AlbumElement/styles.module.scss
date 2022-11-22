@@ -1,4 +1,4 @@
-.postELement {
+.albumELement {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -9,11 +9,6 @@
 
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-}
 
-.commentSvg {
-    display: block;
-    height: 24px;
-    
     cursor: pointer;
 }

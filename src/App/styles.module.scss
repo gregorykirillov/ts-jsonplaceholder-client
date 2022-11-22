@@ -1,7 +1,10 @@
-.content {
+.container {
     display: flex;
     align-items: center;
     flex-direction: column;
 
     gap: 20px;
+    padding: 20px;
+    width: 580px;
+    margin: 0 auto;
 }
