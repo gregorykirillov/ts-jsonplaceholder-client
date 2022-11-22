@@ -3,14 +3,13 @@ import { useSelector } from 'react-redux';
 
 import { RootState } from '~/src/store';
 import { selectPostComments } from '~/src/store/comments/selectors';
-import { CommentType } from '~/src/types/CommentType';
 
 import styles from './styles.module.scss';
 
 const CommentsBlock = ({ postId }: { postId: number }) => {
-    const comments = Object.values(
-        useSelector((state: RootState) => selectPostComments(state, postId)),
-    ) as CommentType[];
+    const comments = useSelector((state: RootState) =>
+        selectPostComments(state, postId),
+    );
 
     return (
         <div className={styles.commentsBlock}>

@@ -12,4 +12,4 @@ export const selectComments = (state: RootState) =>
 export const selectPostComments = (state: RootState, postId: number) =>
     Object.values(selectPostModuleState(state).entities).filter(
         (comment) => (comment as CommentType).postId === postId,
-    );
+    ) as CommentType[];

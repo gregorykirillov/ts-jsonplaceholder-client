@@ -18,9 +18,7 @@ const AlbumList = () => {
         dispatch(fetchAlbums()).finally(() => setLoading(false));
     }, []);
 
-    const albums = Object.values(
-        useSelector((state: RootState) => selectAlbums(state)),
-    ) as AlbumType[];
+    const albums = useSelector((state: RootState) => selectAlbums(state));
 
     if (isLoading) return <Preloader />;
 

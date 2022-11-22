@@ -13,7 +13,7 @@ import { PhotoType } from '~/src/types/PhotoType';
 export const fetchPhotos = createAsyncThunk(
     'photo/fetchPhotos',
     async (albumId: number, thunkAPI) => {
-        const photos = selectPhotos(thunkAPI.getState() as RootState);
+        const photos = selectPhotos(thunkAPI.getState() as RootState, albumId);
 
         if (
             Object.values(photos).filter(

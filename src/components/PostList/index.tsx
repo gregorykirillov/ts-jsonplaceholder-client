@@ -18,9 +18,7 @@ const PostList = () => {
         dispatch(fetchPosts()).finally(() => setLoading(false));
     }, []);
 
-    const posts = Object.values(
-        useSelector((state: RootState) => selectPosts(state)),
-    ) as PostType[];
+    const posts = useSelector((state: RootState) => selectPosts(state));
 
     if (isLoading) return <Preloader />;
 
