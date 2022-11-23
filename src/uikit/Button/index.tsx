@@ -3,7 +3,7 @@ import cn from 'classnames';
 import styles from './styles.module.scss';
 
 type ButtonProps = {
-    size?: 'sm' | 'md';
+    size?: 'sm' | 'md' | 'lg';
     className?: string;
     inline?: boolean;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;

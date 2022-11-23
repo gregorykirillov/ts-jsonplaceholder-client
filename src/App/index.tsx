@@ -1,7 +1,13 @@
 import { Route, Routes } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import { AlbumPage, MainPage, PostPage } from '~/src/pages';
+import {
+    AlbumPage,
+    CreatePostPage,
+    MainPage,
+    PostPage,
+    TodoPage,
+} from '~/src/pages';
 import { store } from '../store';
 import { Header } from '../parts';
 
@@ -15,8 +21,12 @@ const App = () => {
             <div className={styles.container}>
                 <Routes>
                     <Route index element={<MainPage />} />
-                    <Route path="/posts" element={<PostPage />} />
+                    <Route path="/posts">
+                        <Route index element={<PostPage />} />
+                        <Route path="create" element={<CreatePostPage />} />
+                    </Route>
                     <Route path="/albums" element={<AlbumPage />} />
+                    <Route path="/todos" element={<TodoPage />} />
                 </Routes>
             </div>
         </Provider>

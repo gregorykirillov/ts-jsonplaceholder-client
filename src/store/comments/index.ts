@@ -3,6 +3,7 @@ import {
     createEntityAdapter,
     createSlice,
 } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { selectComments } from './selectors';
@@ -23,8 +24,8 @@ export const fetchComments = createAsyncThunk(
             return thunkAPI.rejectWithValue(LoadingStatuses.earlyAdded);
         }
 
-        const response = await fetch(getAllCommentsURL(postId));
-        return await response.json();
+        const response = await axios.get(getAllCommentsURL(postId));
+        return response.data;
     },
 );
 const commentEntityAdapter = createEntityAdapter();

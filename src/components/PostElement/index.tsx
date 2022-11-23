@@ -38,11 +38,12 @@ const PostElement = ({ post }: { post: PostType; posts: PostType[] }) => {
     return (
         <div className={styles.postELement}>
             <div className={styles.infoBlock}>
-                {user && (
-                    <span className={styles.username}>{user.username}</span>
-                )}
+                <span className={styles.username}>
+                    {user?.username || 'Anonym'}
+                </span>
             </div>
-            {post.title}
+            <div className={styles.postTitle}>{post.title}</div>
+            <div>{post.body}</div>
             <>
                 {isLoading && <Preloader size="sm" />}
                 {isCommentsVisible && <CommentsBlock postId={post.id} />}

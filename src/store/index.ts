@@ -20,7 +20,9 @@ const rootReducer = combineReducers({
 export const store = configureStore({
     reducer: rootReducer,
     middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware().concat([loggerMiddleware]),
+        getDefaultMiddleware({
+            serializableCheck: false,
+        }).concat([loggerMiddleware]),
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

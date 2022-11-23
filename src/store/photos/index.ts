@@ -3,6 +3,7 @@ import {
     createEntityAdapter,
     createSlice,
 } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { selectPhotos } from './selectors';
@@ -23,8 +24,8 @@ export const fetchPhotos = createAsyncThunk(
             return thunkAPI.rejectWithValue(LoadingStatuses.earlyAdded);
         }
 
-        const response = await fetch(getAlbumPhotosURL(albumId));
-        return await response.json();
+        const response = await axios.get(getAlbumPhotosURL(albumId));
+        return response.data;
     },
 );
 const photoEntityAdapter = createEntityAdapter();

@@ -3,6 +3,7 @@ import {
     createEntityAdapter,
     createSlice,
 } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { selectUserIds } from './selectors';
@@ -21,9 +22,13 @@ export const fetchUserById = createAsyncThunk(
             return thunkAPI.rejectWithValue(LoadingStatuses.earlyAdded);
         }
 
+        if (!userId && userId !== 0) {
+            return thunkAPI.rejectWithValue(LoadingStatuses.failed);
+        }
+
         fetchingItems.push(userId);
-        const response = await fetch(getUserByIdURL(userId));
-        return await response.json();
+        const response = await axios.get(getUserByIdURL(userId));
+        return response.data;
     },
 );
 
