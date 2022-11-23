@@ -1,11 +1,5 @@
-$gapValue: 7px;
-
 .commentsBlock {
     display: grid;
     
-    gap: $gapValue;
-}
-
-.commentText {
-    padding-bottom: $gapValue;
+    gap: 7px;
 }

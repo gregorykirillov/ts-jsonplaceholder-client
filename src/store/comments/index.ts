@@ -40,10 +40,23 @@ export const commentSlice = createSlice({
             .addCase(fetchComments.pending, (state) => {
                 state.status = LoadingStatuses.inProgress;
             })
-            .addCase(fetchComments.fulfilled, (state, { payload }) => {
-                commentEntityAdapter.addMany(state, payload);
-                state.status = LoadingStatuses.success;
-            })
+            .addCase(
+                fetchComments.fulfilled,
+                (state, { payload }: { payload: CommentType[] }) => {
+                    /* --- Fake case for nested comments */
+                    payload.map((comment, index) => {
+                        if (!comment['kids']) comment['kids'] = [];
+
+                        const newKid = structuredClone(payload[index]);
+                        comment['kids'].push(newKid);
+
+                        return comment;
+                    });
+                    /* --- Fake case for nested comments */
+                    commentEntityAdapter.addMany(state, payload);
+                    state.status = LoadingStatuses.success;
+                },
+            )
             .addCase(fetchComments.rejected, (state, { payload }) => {
                 state.status =
                     payload === LoadingStatuses.earlyAdded

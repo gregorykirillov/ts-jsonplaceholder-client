@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 
 import { RootState } from '~/src/store';
 import { selectPostComments } from '~/src/store/comments/selectors';
+import Comment from '../Comment';
 
 import styles from './styles.module.scss';
 
@@ -14,14 +15,8 @@ const CommentsBlock = ({ postId }: { postId: number }) => {
     return (
         <div className={styles.commentsBlock}>
             <span>Comments:</span>
-            {comments.map(({ id, name, body }) => {
-                return (
-                    <div key={id}>
-                        <strong>{name}</strong>
-                        <p className={styles.commentText}>{body}</p>
-                        <hr />
-                    </div>
-                );
+            {comments.map(({ id, name, body, kids }) => {
+                return <Comment key={id} name={name} body={body} kids={kids} />;
             })}
         </div>
     );

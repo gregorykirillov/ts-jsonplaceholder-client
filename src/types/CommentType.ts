@@ -4,4 +4,6 @@ export type CommentType = {
     body: string;
     email: string;
     name: string;
+    /* Fake kids for nested comments */
+    kids: CommentType[];
 };
