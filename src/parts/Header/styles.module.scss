@@ -34,10 +34,12 @@
             cursor: pointer;
     
             .link {
-                transition: .3s;
+                padding: 0 20px;
+
+                text-decoration: none;
                 line-height: 100px;
                 color: black;
-                padding: 0 20px;
+                transition: .3s;
             }
 
             &:hover, .link:focus {

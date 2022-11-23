@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
-import { useAppDispatch } from '~/src/store';
+import { RootState, useAppDispatch } from '~/src/store';
 import { fetchComments } from '~/src/store/comments';
 import { PostType } from '~/src/types/PostType';
-import { Preloader } from '~/src/uikit';
+import { Button, Preloader } from '~/src/uikit';
 import CommentsBlock from '../CommentsBlock';
+import { fetchUserById } from '~/src/store/users';
+import { selectUserById } from '~/src/store/users/selectors';
 
 import commentSvg from './comment.svg';
 
@@ -14,6 +17,14 @@ const PostElement = ({ post }: { post: PostType; posts: PostType[] }) => {
     const [isCommentsVisible, setCommentsVisible] = useState(false);
     const [isLoading, setLoading] = useState(false);
     const dispatch = useAppDispatch();
+
+    useEffect(() => {
+        dispatch(fetchUserById(post.userId));
+    }, []);
+
+    const user = useSelector((state: RootState) =>
+        selectUserById(state, post.userId),
+    );
 
     const toggleComments = (id: number) => {
         setLoading(true);
@@ -26,18 +37,19 @@ const PostElement = ({ post }: { post: PostType; posts: PostType[] }) => {
 
     return (
         <div className={styles.postELement}>
+            <div className={styles.infoBlock}>
+                {user && (
+                    <span className={styles.username}>{user.username}</span>
+                )}
+            </div>
             {post.title}
             <>
                 {isLoading && <Preloader size="sm" />}
                 {isCommentsVisible && <CommentsBlock postId={post.id} />}
             </>
-            <span>
-                <img
-                    className={styles.commentSvg}
-                    onClick={() => toggleComments(post.id)}
-                    src={commentSvg}
-                />
-            </span>
+            <Button inline={true} onClick={() => toggleComments(post.id)}>
+                <img className={styles.commentSvg} src={commentSvg} />
+            </Button>
         </div>
     );
 };

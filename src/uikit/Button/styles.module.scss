@@ -45,10 +45,17 @@
     font-size: 16px;
     border: 0;
     font-weight: 400;
+
+    padding: 3px;
+
+    border-style: solid;
+    border-radius: 10px;
     
     color: #005bff;
     background: none;
     cursor: pointer;
+
+    width: max-content;
 
     transition: .3s;
 

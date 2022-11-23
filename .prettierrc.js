@@ -1,3 +1,3 @@
-const {prettierConfig} = require('@wgwergwegwer/configs');
+const {prettierConfig} = require('./configs');
 
-module.exports = {...prettierConfig, endOfLine: 'crlf'};
+module.exports = {...prettierConfig};

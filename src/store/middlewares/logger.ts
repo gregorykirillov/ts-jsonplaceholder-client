@@ -1,5 +1,6 @@
-export const loggerMiddleware = (store) => (next) => (action) => {
-    console.log(action);
+export const loggerMiddleware =
+    (store: any) => (next: any) => (action: any) => {
+        console.log(action);
 
-    next(action);
-};
+        next(action);
+    };
