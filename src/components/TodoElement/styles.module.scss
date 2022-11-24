@@ -1,8 +1,7 @@
-.postELement {
+.todoELement {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    position: relative;
 
     width: 100%;
     gap: 10px;
@@ -10,6 +9,10 @@
 
     border-radius: 5px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+    &.completed {
+        background: #e6e6ef;
+    }
 }
 
 .infoBlock {
@@ -22,22 +25,13 @@
     cursor: pointer;
 }
 
-.postTitle {
+.todoTitle {
     font-weight: 600;
 }
 
-.actionBlock {
-    position: absolute;
-    top: 12px;
-    right: 20px;
-    height: 24px;
-}
-
-.editSvg, .commentSvg, .deleteSvg {
-    height: 20px;
-}
-
 .commentSvg {
-    display: block;    
+    display: block;
+    height: 24px;
+    
     cursor: pointer;
 }

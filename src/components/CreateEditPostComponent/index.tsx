@@ -1,22 +1,36 @@
 import React, { FormEvent, useState } from 'react';
 
 import { Button, Input, TextArea } from '~/src/uikit';
-import { createPost } from '~/src/store/posts';
+import { createPost, editPost } from '~/src/store/posts';
 import { useAppDispatch } from '~/src/store';
 
 import styles from './styles.module.scss';
+import { PostType } from '~/src/types/PostType';
 
-export type CreatePostData = {
+export interface CreatePostData {
     title: string;
     body: string;
+}
+
+export interface EditPostData extends CreatePostData {
+    id: number;
+    userId: number;
+}
+
+type PostData = CreatePostData | EditPostData;
+
+type PropsType = {
+    mode: 'create' | 'edit';
+    post?: PostType;
 };
 
-const CreatePostComponent = () => {
+const CreateEditPostComponent = ({ mode, post }: PropsType) => {
     const dispatch = useAppDispatch();
     const [formData, setFormData] = useState<CreatePostData>({
-        title: '',
-        body: '',
+        title: post?.title || '',
+        body: post?.body || '',
     });
+    const buttonName = mode[0].toUpperCase() + mode.slice(1);
 
     const handleChangeForm = (event: FormEvent) => {
         const input = event.target as HTMLInputElement;
@@ -31,16 +45,35 @@ const CreatePostComponent = () => {
 
     const handleSubmitForm = (event: FormEvent) => {
         event.preventDefault();
-        // eslint-disable-next-line no-console
-        dispatch(createPost(formData))
+        let dispatchEvent;
+        let dispatchData: PostData = {} as PostData;
+
+        if (mode === 'create') {
+            dispatchData = formData as CreatePostData;
+        }
+
+        dispatchEvent = createPost;
+
+        if (mode === 'edit') {
+            dispatchData = Object.assign(formData, {
+                id: post?.id,
+                userId: post?.userId,
+            });
+            dispatchEvent = editPost;
+        }
+
+        dispatch(dispatchEvent(dispatchData as EditPostData))
             .then(() => {
                 setFormData({
                     title: '',
                     body: '',
                 });
-                alert('Пост успешно добавлен!');
+                const messageType = mode === 'edit' ? 'изменён' : 'добавлен';
+                alert(`Пост успешно ${messageType}!`);
             })
+            // eslint-disable-next-line no-console
             .catch((err) => console.log(err));
+        return;
     };
 
     return (
@@ -69,9 +102,9 @@ const CreatePostComponent = () => {
                     onChange={(event) => handleChangeForm(event)}
                 />
             </div>
-            <Button>Create Post</Button>
+            <Button>{buttonName}</Button>
         </form>
     );
 };
 
-export default CreatePostComponent;
+export default CreateEditPostComponent;

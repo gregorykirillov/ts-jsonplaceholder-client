@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { CreatePostComponent } from '~/src/components';
+import { CreateEditPostComponent } from '~/src/components';
 
 const CreatePostPage = () => {
     return (
         <>
-            <h3>CreatePostPage</h3>
+            <h2>CreatePostPage</h2>
 
-            <CreatePostComponent />
+            <CreateEditPostComponent mode="create" />
         </>
     );
 };

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import { RootState, useAppDispatch } from '~/src/store';
 import { fetchComments } from '~/src/store/comments';
@@ -10,13 +11,19 @@ import { fetchUserById } from '~/src/store/users';
 import { selectUserById } from '~/src/store/users/selectors';
 
 import commentSvg from './comment.svg';
+import deleteSvg from './delete.svg';
+import editSvg from './edit.svg';
 
 import styles from './styles.module.scss';
+import { deletePost } from '~/src/store/posts';
 
 const PostElement = ({ post }: { post: PostType; posts: PostType[] }) => {
+    const dispatch = useAppDispatch();
+    const navigate = useNavigate();
+    const currPath = useLocation().pathname;
+
     const [isCommentsVisible, setCommentsVisible] = useState(false);
     const [isLoading, setLoading] = useState(false);
-    const dispatch = useAppDispatch();
 
     useEffect(() => {
         dispatch(fetchUserById(post.userId));
@@ -25,6 +32,14 @@ const PostElement = ({ post }: { post: PostType; posts: PostType[] }) => {
     const user = useSelector((state: RootState) =>
         selectUserById(state, post.userId),
     );
+
+    const handleDeletePost = (id: number) => {
+        dispatch(deletePost(id));
+    };
+
+    const handleEditPost = (id: number) => {
+        navigate(`${currPath}/edit/${id}`);
+    };
 
     const toggleComments = (id: number) => {
         setLoading(true);
@@ -48,6 +63,14 @@ const PostElement = ({ post }: { post: PostType; posts: PostType[] }) => {
                 {isLoading && <Preloader size="sm" />}
                 {isCommentsVisible && <CommentsBlock postId={post.id} />}
             </>
+            <div className={styles.actionBlock}>
+                <Button inline={true} onClick={() => handleEditPost(post.id)}>
+                    <img className={styles.editSvg} src={editSvg} />
+                </Button>
+                <Button inline={true} onClick={() => handleDeletePost(post.id)}>
+                    <img className={styles.deleteSvg} src={deleteSvg} />
+                </Button>
+            </div>
             <Button inline={true} onClick={() => toggleComments(post.id)}>
                 <img className={styles.commentSvg} src={commentSvg} />
             </Button>
