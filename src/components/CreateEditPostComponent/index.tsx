@@ -3,9 +3,9 @@ import React, { FormEvent, useState } from 'react';
 import { Button, Input, TextArea } from '~/src/uikit';
 import { createPost, editPost } from '~/src/store/posts';
 import { useAppDispatch } from '~/src/store';
+import { PostType } from '~/src/types/PostType';
 
 import styles from './styles.module.scss';
-import { PostType } from '~/src/types/PostType';
 
 export interface CreatePostData {
     title: string;

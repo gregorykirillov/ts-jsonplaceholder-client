@@ -8,6 +8,7 @@ import { PostType } from '~/src/types/PostType';
 import { Button, Preloader } from '~/src/uikit';
 import CommentsBlock from '../CommentsBlock';
 import { fetchUserById } from '~/src/store/users';
+import { deletePost } from '~/src/store/posts';
 import { selectUserById } from '~/src/store/users/selectors';
 
 import commentSvg from './comment.svg';
@@ -15,7 +16,6 @@ import deleteSvg from './delete.svg';
 import editSvg from './edit.svg';
 
 import styles from './styles.module.scss';
-import { deletePost } from '~/src/store/posts';
 
 const PostElement = ({ post }: { post: PostType; posts: PostType[] }) => {
     const dispatch = useAppDispatch();
