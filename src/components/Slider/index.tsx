@@ -26,7 +26,10 @@ const Slider = ({ children }: SliderProps) => {
     };
 
     return (
-        <div className={styles.slider}>
+        <div
+            className={styles.slider}
+            style={{ width: `${slidesToShow * (150 + 10) + 20}px` }}
+        >
             <div className={styles.childContainer}>
                 <div
                     className={styles.slide}

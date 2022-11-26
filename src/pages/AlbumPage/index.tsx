@@ -1,14 +1,10 @@
 import React from 'react';
 
 import { AlbumList } from '~/src/components';
+import EntityPage from '~/src/components/EntityPage';
 
-const AlbumPage = () => {
-    return (
-        <>
-            <h2>AlbumPage</h2>
-            <AlbumList />
-        </>
-    );
-};
+const AlbumPage = () => (
+    <EntityPage pageName="AlbumPage" Component={<AlbumList />} />
+);
 
 export default AlbumPage;

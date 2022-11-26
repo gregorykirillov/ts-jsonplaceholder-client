@@ -24,13 +24,18 @@ type PropsType = {
     post?: PostType;
 };
 
+const ModeButtonNameMap = {
+    create: 'Создать',
+    edit: 'Сохранить',
+};
+
 const CreateEditPostComponent = ({ mode, post }: PropsType) => {
     const dispatch = useAppDispatch();
     const [formData, setFormData] = useState<CreatePostData>({
         title: post?.title || '',
         body: post?.body || '',
     });
-    const buttonName = mode[0].toUpperCase() + mode.slice(1);
+    const buttonName = ModeButtonNameMap[mode];
 
     const handleChangeForm = (event: FormEvent) => {
         const input = event.target as HTMLInputElement;

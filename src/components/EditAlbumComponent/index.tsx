@@ -1,46 +1,44 @@
 import React, { FormEvent, useEffect, useState } from 'react';
 
 import { Button, Input, Preloader } from '~/src/uikit';
-import { fetchTodo, updateTodo } from '~/src/store/todos';
+import { fetchAlbum, updateAlbum } from '~/src/store/albums';
 import { RootState, useAppDispatch } from '~/src/store';
 
 import styles from './styles.module.scss';
-import { TodoType } from '~/src/types/TodoType';
+import { AlbumType } from '~/src/types/AlbumType';
 import { useSelector } from 'react-redux';
-import { selectTodoById } from '~/src/store/todos/selectors';
+import { selectAlbumById } from '~/src/store/albums/selectors';
 
-type EditTodoComponentProps = {
-    todoId: number;
+type EditAlbumComponentProps = {
+    albumId: number;
 };
 
-const EditTodoComponent = ({ todoId }: EditTodoComponentProps) => {
+const EditAlbumComponent = ({ albumId }: EditAlbumComponentProps) => {
     const [isLoading, setLoading] = useState(true);
     const dispatch = useAppDispatch();
 
-    const todo = useSelector((state: RootState) =>
-        selectTodoById(state, todoId),
+    const album = useSelector((state: RootState) =>
+        selectAlbumById(state, albumId),
     );
 
     useEffect(() => {
-        dispatch(fetchTodo(todoId)).finally(() => setLoading(false));
+        dispatch(fetchAlbum(albumId)).finally(() => setLoading(false));
     }, []);
 
     useEffect(() => {
-        setFormData(todo);
-    }, [todo]);
+        setFormData(album);
+    }, [album]);
 
-    const [formData, setFormData] = useState<TodoType>({
-        id: todo?.id,
-        userId: todo?.userId,
-        title: todo?.title,
-        completed: todo?.completed,
+    const [formData, setFormData] = useState<AlbumType>({
+        id: album?.id,
+        userId: album?.userId,
+        title: album?.title,
     });
 
     const handleChangeForm = (event: FormEvent) => {
         const input = event.target as HTMLInputElement;
         const inputName = input.name;
-        const inputValue: string | boolean =
-            input.type === 'checkbox' ? input.checked : input.value;
+        const inputValue = input.value;
 
         setFormData({
             ...formData,
@@ -51,15 +49,14 @@ const EditTodoComponent = ({ todoId }: EditTodoComponentProps) => {
     const handleSubmitForm = (event: FormEvent) => {
         event.preventDefault();
 
-        dispatch(updateTodo(formData))
+        dispatch(updateAlbum(formData))
             .then(() => {
                 setFormData({
                     id: 0,
                     userId: 0,
                     title: '',
-                    completed: false,
                 });
-                alert(`Задача успешно изменена!`);
+                alert(`Альбом успешно изменён!`);
             })
             // eslint-disable-next-line no-console
             .catch((err) => console.log(err));
@@ -84,20 +81,9 @@ const EditTodoComponent = ({ todoId }: EditTodoComponentProps) => {
                     onChange={(event) => handleChangeForm(event)}
                 />
             </div>
-            <div>
-                <label htmlFor="body">Completed</label>
-                <Input
-                    type="checkbox"
-                    name="completed"
-                    id="completed"
-                    checked={formData.completed}
-                    className={styles.checkBox}
-                    onChange={(event) => handleChangeForm(event)}
-                />
-            </div>
             <Button>Сохранить</Button>
         </form>
     );
 };
 
-export default EditTodoComponent;
+export default EditAlbumComponent;

@@ -32,6 +32,7 @@ const TodoList = () => {
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
     const currPath = useLocation().pathname;
+
     const [isLoading, setLoading] = useState(true);
     const stateRef = useRef({} as StateType);
 
