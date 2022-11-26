@@ -10,9 +10,10 @@ import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { selectPostIds } from './selectors';
 import {
     deletePostURL,
-    editPostURL,
+    updatePostURL,
     getAllPostsURL,
     getPostURL,
+    createPostURL,
 } from '~/src/routes';
 import { RootState } from '..';
 import { CreatePostData } from '~/src/components/CreateEditPostComponent';
@@ -20,9 +21,6 @@ import { CreatePostData } from '~/src/components/CreateEditPostComponent';
 export const fetchPosts = createAsyncThunk(
     'post/fetchPosts',
     async (_, thunkAPI) => {
-        // Обработка случая, если пользователь зашёл на сайт по ссылке /posts/create
-        // > 1 Костыль, но если брать настоящий API, он должен вернуть список постов
-        // с уже добавленными текущими постами, в данном случае должен быть 0
         if (selectPostIds(thunkAPI.getState() as RootState).length > 1) {
             return thunkAPI.rejectWithValue(LoadingStatuses.earlyAdded);
         }
@@ -51,7 +49,7 @@ export const fetchPost = createAsyncThunk(
 export const createPost = createAsyncThunk(
     'post/createPost',
     async (data: CreatePostData) => {
-        const response = await axios.post(getAllPostsURL, {
+        const response = await axios.post(createPostURL, {
             ...data,
         });
         return response.data;
@@ -61,7 +59,7 @@ export const createPost = createAsyncThunk(
 export const editPost = createAsyncThunk(
     'post/editPost',
     async (data: EditPostData) => {
-        const response = await axios.put(editPostURL(data.id), {
+        const response = await axios.put(updatePostURL(data.id), {
             ...data,
         });
         return response.data;
@@ -100,34 +98,6 @@ export const postSlice = createSlice({
                         : LoadingStatuses.failed;
             })
 
-            .addCase(createPost.pending, (state) => {
-                state.status = LoadingStatuses.inProgress;
-            })
-            .addCase(createPost.fulfilled, (state, { payload }) => {
-                postEntityAdapter.addOne(state, payload);
-                state.status = LoadingStatuses.success;
-            })
-            .addCase(createPost.rejected, (state, { payload }) => {
-                state.status =
-                    payload === LoadingStatuses.earlyAdded
-                        ? LoadingStatuses.success
-                        : LoadingStatuses.failed;
-            })
-
-            .addCase(deletePost.pending, (state) => {
-                state.status = LoadingStatuses.inProgress;
-            })
-            .addCase(deletePost.fulfilled, (state, id) => {
-                postEntityAdapter.removeOne(state, id);
-                state.status = LoadingStatuses.success;
-            })
-            .addCase(deletePost.rejected, (state, { payload }) => {
-                state.status =
-                    payload === LoadingStatuses.earlyAdded
-                        ? LoadingStatuses.success
-                        : LoadingStatuses.failed;
-            })
-
             .addCase(fetchPost.pending, (state) => {
                 state.status = LoadingStatuses.inProgress;
             })
@@ -142,6 +112,20 @@ export const postSlice = createSlice({
                         : LoadingStatuses.failed;
             })
 
+            .addCase(createPost.pending, (state) => {
+                state.status = LoadingStatuses.inProgress;
+            })
+            .addCase(createPost.fulfilled, (state, { payload }) => {
+                postEntityAdapter.addOne(state, payload);
+                state.status = LoadingStatuses.success;
+            })
+            .addCase(createPost.rejected, (state, { payload }) => {
+                state.status =
+                    payload === LoadingStatuses.earlyAdded
+                        ? LoadingStatuses.success
+                        : LoadingStatuses.failed;
+            })
+
             .addCase(editPost.pending, (state) => {
                 state.status = LoadingStatuses.inProgress;
             })
@@ -150,6 +134,20 @@ export const postSlice = createSlice({
                 state.status = LoadingStatuses.success;
             })
             .addCase(editPost.rejected, (state, { payload }) => {
+                state.status =
+                    payload === LoadingStatuses.earlyAdded
+                        ? LoadingStatuses.success
+                        : LoadingStatuses.failed;
+            })
+
+            .addCase(deletePost.pending, (state) => {
+                state.status = LoadingStatuses.inProgress;
+            })
+            .addCase(deletePost.fulfilled, (state, id) => {
+                postEntityAdapter.removeOne(state, id);
+                state.status = LoadingStatuses.success;
+            })
+            .addCase(deletePost.rejected, (state, { payload }) => {
                 state.status =
                     payload === LoadingStatuses.earlyAdded
                         ? LoadingStatuses.success

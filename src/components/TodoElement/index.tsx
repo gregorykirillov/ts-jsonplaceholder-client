@@ -1,37 +1,53 @@
-import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { DragEvent, ReactNode } from 'react';
 import cn from 'classnames';
 
-import { RootState, useAppDispatch } from '~/src/store';
-import { TodoType } from '~/src/types/TodoType';
-import { fetchUserById } from '~/src/store/users';
-import { selectUserById } from '~/src/store/users/selectors';
+import { StateType } from '../TodoList';
 
 import styles from './styles.module.scss';
 
-const TodoElement = ({ todo }: { todo: TodoType }) => {
-    const dispatch = useAppDispatch();
+type TodoElementProps = {
+    todoId: number;
+    boardId: number;
+    completed: boolean;
+    setCurrentState: (s: StateType) => void;
+    onHandleDrop: (boardId: number, todoId: number) => void;
+    children: ReactNode[];
+};
 
-    useEffect(() => {
-        dispatch(fetchUserById(todo.userId));
-    }, []);
+const TodoElement = ({
+    todoId,
+    boardId,
+    setCurrentState,
+    onHandleDrop,
+    completed,
+    children,
+}: TodoElementProps) => {
+    const dragOverHandler = (e: DragEvent<HTMLDivElement>) => {
+        e.preventDefault();
+    };
 
-    const user = useSelector((state: RootState) =>
-        selectUserById(state, todo.userId),
-    );
+    const dragStartHandler = () => {
+        setCurrentState({
+            todoId,
+            boardId,
+        });
+    };
+
+    const dropHandler = () => {
+        onHandleDrop(boardId, todoId);
+    };
 
     return (
         <div
+            onDragOver={dragOverHandler}
+            onDragStart={dragStartHandler}
+            onDrop={dropHandler}
+            draggable={true}
             className={cn(styles.todoELement, {
-                [styles.completed]: todo.completed,
+                [styles.completed]: completed,
             })}
         >
-            <div className={styles.infoBlock}>
-                <span className={styles.username}>
-                    {user?.username || 'Anonym'}
-                </span>
-            </div>
-            <div className={styles.todoTitle}>{todo.title}</div>
+            {children}
         </div>
     );
 };

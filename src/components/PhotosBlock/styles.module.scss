@@ -1,6 +1,11 @@
 .photo {
     display: block;
-    width: 150px;
+
+    height: 150px;
+    min-width: 150px;
+    
+    object-fit: cover;
+    object-position: center;
 }
 
 .dots {

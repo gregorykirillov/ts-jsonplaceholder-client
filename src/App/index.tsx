@@ -8,6 +8,8 @@ import {
     PostPage,
     TodoPage,
     EditPostPage,
+    EditTodoPage,
+    CreateTodoPage,
 } from '~/src/pages';
 import { store } from '../store';
 import { Header } from '../parts';
@@ -28,7 +30,11 @@ const App = () => {
                         <Route path="edit/:id" element={<EditPostPage />} />
                     </Route>
                     <Route path="/albums" element={<AlbumPage />} />
-                    <Route path="/todos" element={<TodoPage />} />
+                    <Route path="/todos">
+                        <Route index element={<TodoPage />} />
+                        <Route path="create" element={<CreateTodoPage />} />
+                        <Route path="edit/:id" element={<EditTodoPage />} />
+                    </Route>
                 </Routes>
             </div>
         </Provider>
