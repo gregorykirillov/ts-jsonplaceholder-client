@@ -4,7 +4,7 @@ import { createAsyncThunk, EntityAdapter } from '@reduxjs/toolkit';
 import { getUserByIdURL } from './../../routes/index';
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { BuilderType } from '.';
-import { UserType } from '~/src/types/UserType';
+import { UserType } from '~/src/types';
 import { selectUserIds } from './selectors';
 import { RootState } from '..';
 

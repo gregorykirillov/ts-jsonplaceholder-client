@@ -6,7 +6,7 @@ import {
 } from '@reduxjs/toolkit';
 
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
-import { PhotoType } from '~/src/types/PhotoType';
+import { PhotoType } from '~/src/types';
 import { addCaseReadPhotos } from './fetchPhotos';
 
 const photoEntityAdapter = createEntityAdapter<PhotoType>();

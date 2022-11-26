@@ -1,4 +1,4 @@
-import { PhotoType } from '~/src/types/PhotoType';
+import { PhotoType } from '~/src/types';
 import { RootState } from '..';
 
 export const selectPhotoModuleState = (state: RootState) => state.photo;

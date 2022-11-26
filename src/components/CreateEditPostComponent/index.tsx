@@ -1,9 +1,11 @@
 import React, { FormEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Button, Input, TextArea } from '~/src/uikit';
 import { createPost, updatePost } from '~/src/store/posts';
 import { useAppDispatch } from '~/src/store';
-import { PostType } from '~/src/types/PostType';
+import { PostType } from '~/src/types';
+import { POSTS_PATH } from '~/src/routes';
 
 import styles from './styles.module.scss';
 
@@ -31,6 +33,8 @@ const ModeButtonNameMap = {
 
 const CreateEditPostComponent = ({ mode, post }: PropsType) => {
     const dispatch = useAppDispatch();
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState<CreatePostData>({
         title: post?.title || '',
         body: post?.body || '',
@@ -75,6 +79,7 @@ const CreateEditPostComponent = ({ mode, post }: PropsType) => {
                 });
                 const messageType = mode === 'edit' ? 'изменён' : 'добавлен';
                 alert(`Пост успешно ${messageType}!`);
+                navigate(POSTS_PATH);
             })
             // eslint-disable-next-line no-console
             .catch((err) => console.log(err));

@@ -1,13 +1,16 @@
 import React, { FormEvent, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Button, Input, Preloader } from '~/src/uikit';
 import { fetchAlbum, updateAlbum } from '~/src/store/albums';
 import { RootState, useAppDispatch } from '~/src/store';
 
-import styles from './styles.module.scss';
-import { AlbumType } from '~/src/types/AlbumType';
+import { AlbumType } from '~/src/types';
 import { useSelector } from 'react-redux';
 import { selectAlbumById } from '~/src/store/albums/selectors';
+import { ALBUMS_PATH } from '~/src/routes';
+
+import styles from './styles.module.scss';
 
 type EditAlbumComponentProps = {
     albumId: number;
@@ -15,6 +18,8 @@ type EditAlbumComponentProps = {
 
 const EditAlbumComponent = ({ albumId }: EditAlbumComponentProps) => {
     const [isLoading, setLoading] = useState(true);
+    const navigate = useNavigate();
+
     const dispatch = useAppDispatch();
 
     const album = useSelector((state: RootState) =>
@@ -57,6 +62,7 @@ const EditAlbumComponent = ({ albumId }: EditAlbumComponentProps) => {
                     title: '',
                 });
                 alert(`Альбом успешно изменён!`);
+                navigate(ALBUMS_PATH);
             })
             // eslint-disable-next-line no-console
             .catch((err) => console.log(err));

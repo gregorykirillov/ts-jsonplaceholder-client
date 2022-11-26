@@ -6,7 +6,7 @@ import {
 } from '@reduxjs/toolkit';
 
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
-import { TodoType } from '~/src/types/TodoType';
+import { TodoType } from '~/src/types';
 import { addCaseCreateTodo } from './createTodo';
 import { addCaseFetchTodos } from './fetchTodos';
 import { addCaseFetchTodo } from './fetchTodo';

@@ -1,23 +1,23 @@
+import { useSelector } from 'react-redux';
 import axios from 'axios';
 import { createAsyncThunk, EntityAdapter } from '@reduxjs/toolkit';
 
 import { getAllCommentsURL } from '../../routes/index';
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { BuilderType } from '.';
-import { CommentType } from '~/src/types/CommentType';
-import { selectComments } from './selectors';
+import { CommentType } from '~/src/types';
+import { selectPostComments } from './selectors';
 import { RootState } from '..';
 
 export const fetchComments = createAsyncThunk(
     'comment/fetchComments',
     async (postId: number, thunkAPI) => {
-        const comments = selectComments(thunkAPI.getState() as RootState);
+        const postCommentsLength = selectPostComments(
+            thunkAPI.getState() as RootState,
+            postId,
+        ).length;
 
-        if (
-            Object.values(comments).filter(
-                (comment) => (comment as CommentType).postId === postId,
-            ).length
-        ) {
+        if (postCommentsLength) {
             return thunkAPI.rejectWithValue(LoadingStatuses.earlyAdded);
         }
 

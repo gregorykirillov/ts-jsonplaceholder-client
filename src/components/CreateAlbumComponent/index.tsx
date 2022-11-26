@@ -1,8 +1,10 @@
 import React, { FormEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Button, Input } from '~/src/uikit';
 import { createAlbum } from '~/src/store/albums';
 import { useAppDispatch } from '~/src/store';
+import { ALBUMS_PATH } from '~/src/routes';
 
 import styles from './styles.module.scss';
 
@@ -14,6 +16,8 @@ export type CreateAlbumData = {
 
 const CreateAlbumComponent = () => {
     const dispatch = useAppDispatch();
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState<CreateAlbumData>({
         id: 0,
         userId: 0,
@@ -44,6 +48,7 @@ const CreateAlbumComponent = () => {
                     title: '',
                 });
                 alert(`Альбом успешно создан!`);
+                navigate(ALBUMS_PATH);
             })
             // eslint-disable-next-line no-console
             .catch((err) => console.log(err));

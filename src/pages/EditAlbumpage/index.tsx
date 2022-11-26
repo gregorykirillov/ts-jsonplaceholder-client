@@ -7,7 +7,7 @@ const EditAlbumPage = () => {
 
     return (
         <>
-            <h2>Страница изменения альбома</h2>
+            <h2>Изменение альбома</h2>
 
             <EditAlbumComponent albumId={albumId} />
         </>

@@ -4,7 +4,7 @@ import { createAsyncThunk, EntityAdapter } from '@reduxjs/toolkit';
 import { updatePostURL } from '../../routes/index';
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { BuilderType } from '.';
-import { PostType } from '~/src/types/PostType';
+import { PostType } from '~/src/types';
 import { EditPostData } from '~/src/components/CreateEditPostComponent';
 
 export const updatePost = createAsyncThunk(

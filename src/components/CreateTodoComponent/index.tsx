@@ -1,8 +1,10 @@
 import React, { FormEvent, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import { Button, Input } from '~/src/uikit';
 import { createTodo } from '~/src/store/todos';
 import { useAppDispatch } from '~/src/store';
+import { TODOS_PATH } from '~/src/routes';
 
 import styles from './styles.module.scss';
 
@@ -13,6 +15,8 @@ export type CreateTodoData = {
 
 const CreateTodoComponent = () => {
     const dispatch = useAppDispatch();
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState<CreateTodoData>({
         title: '',
         completed: false,
@@ -41,6 +45,7 @@ const CreateTodoComponent = () => {
                     completed: false,
                 });
                 alert(`Задача успешно создана!`);
+                navigate(TODOS_PATH);
             })
             // eslint-disable-next-line no-console
             .catch((err) => console.log(err));
@@ -64,13 +69,12 @@ const CreateTodoComponent = () => {
                 />
             </div>
             <div>
-                <label htmlFor="body">Completed</label>
+                <label htmlFor="completed">Completed</label>
                 <Input
                     type="checkbox"
                     name="completed"
                     id="completed"
                     checked={formData.completed}
-                    className={styles.checkBox}
                     onChange={(event) => handleChangeForm(event)}
                 />
             </div>

@@ -13,10 +13,10 @@ import {
     EditAlbumpage,
 } from '~/src/pages';
 import { store } from '../store';
+import CreateAlbumPage from '../pages/CreateAlbumPage';
 import { Header } from '../parts';
 
 import styles from './styles.module.scss';
-import CreateAlbumPage from '../pages/CreateAlbumPage';
 
 const App = () => {
     return (

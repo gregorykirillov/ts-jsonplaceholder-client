@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 import { RootState, useAppDispatch } from '~/src/store';
 import { fetchComments } from '~/src/store/comments';
-import { PostType } from '~/src/types/PostType';
+import { PostType } from '~/src/types';
 import { Button, Preloader } from '~/src/uikit';
 import CommentsBlock from '../CommentsBlock';
 import { fetchUserById } from '~/src/store/users';

@@ -6,7 +6,7 @@ import {
 } from '@reduxjs/toolkit';
 
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
-import { PostType } from '~/src/types/PostType';
+import { PostType } from '~/src/types';
 import { addCaseCreatePost } from './createPost';
 import { addCaseReadPosts } from './fetchPosts';
 import { addCaseReadPost } from './fetchPost';

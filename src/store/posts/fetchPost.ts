@@ -4,7 +4,7 @@ import { createAsyncThunk, EntityAdapter } from '@reduxjs/toolkit';
 import { getPostURL } from './../../routes/index';
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { BuilderType } from '.';
-import { PostType } from '~/src/types/PostType';
+import { PostType } from '~/src/types';
 import { selectPostIds } from './selectors';
 import { RootState } from '..';
 

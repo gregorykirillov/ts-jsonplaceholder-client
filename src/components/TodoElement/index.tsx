@@ -11,7 +11,7 @@ type TodoElementProps = {
     completed: boolean;
     setCurrentState: (s: StateType) => void;
     onHandleDrop: (boardId: number, todoId: number) => void;
-    children: ReactNode[];
+    children: ReactNode;
 };
 
 const TodoElement = ({

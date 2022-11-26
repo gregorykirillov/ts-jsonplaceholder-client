@@ -4,7 +4,7 @@ import { createAsyncThunk, EntityAdapter } from '@reduxjs/toolkit';
 import { createAlbumURL } from '../../routes/index';
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { BuilderType } from '.';
-import { AlbumType } from '~/src/types/AlbumType';
+import { AlbumType } from '~/src/types';
 import { CreateAlbumData } from '~/src/components/CreateAlbumComponent';
 
 export const createAlbum = createAsyncThunk(

@@ -4,7 +4,7 @@ import { createAsyncThunk, EntityAdapter } from '@reduxjs/toolkit';
 import { deleteAlbumURL } from '../../routes/index';
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { BuilderType } from '.';
-import { AlbumType } from '~/src/types/AlbumType';
+import { AlbumType } from '~/src/types';
 
 export const deleteAlbum = createAsyncThunk(
     'post/deleteAlbum',

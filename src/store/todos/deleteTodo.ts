@@ -4,7 +4,7 @@ import { createAsyncThunk, EntityAdapter } from '@reduxjs/toolkit';
 import { deleteTodoURL } from './../../routes/index';
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { BuilderType } from '.';
-import { TodoType } from '~/src/types/TodoType';
+import { TodoType } from '~/src/types';
 
 export const deleteTodo = createAsyncThunk(
     'todo/deleteTodo',

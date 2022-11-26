@@ -1,4 +1,4 @@
-import { UserType } from '~/src/types/UserType';
+import { UserType } from '~/src/types';
 import { RootState } from '..';
 
 export const selectUserModuleState = (state: RootState) => state.user;

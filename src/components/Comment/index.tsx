@@ -1,5 +1,5 @@
 import React from 'react';
-import { CommentType } from '~/src/types/CommentType';
+import { CommentType } from '~/src/types';
 
 import styles from './styles.module.scss';
 
