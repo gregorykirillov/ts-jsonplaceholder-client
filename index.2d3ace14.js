@@ -33887,9 +33887,9 @@ $RefreshReg$(_c, "Preloader");
 module.exports["md"] = `XVlO_G_md`;
 module.exports["rotate"] = `XVlO_G_rotate`;
 module.exports["rotate"];
-module.exports["sm"] = `XVlO_G_sm`;
-module.exports["preloader"] = `XVlO_G_preloader`;
 module.exports["preloaderContainer"] = `XVlO_G_preloaderContainer`;
+module.exports["preloader"] = `XVlO_G_preloader`;
+module.exports["sm"] = `XVlO_G_sm`;
 
 },{}],"k5Q1w":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4f03 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -33959,11 +33959,11 @@ $RefreshReg$(_c, "Button");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","classnames":"jocGM","./styles.module.scss":"fMFY8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fMFY8":[function(require,module,exports) {
-module.exports["button"] = `_91g8AW_button`;
-module.exports["sm"] = `_91g8AW_sm`;
-module.exports["md"] = `_91g8AW_md`;
-module.exports["inline"] = `_91g8AW_inline`;
 module.exports["lg"] = `_91g8AW_lg`;
+module.exports["inline"] = `_91g8AW_inline`;
+module.exports["md"] = `_91g8AW_md`;
+module.exports["sm"] = `_91g8AW_sm`;
+module.exports["button"] = `_91g8AW_button`;
 
 },{}],"iEWTU":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$76a1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -33998,15 +33998,15 @@ $RefreshReg$(_c, "Input");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","classnames":"jocGM","./styles.module.scss":"jehPw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jehPw":[function(require,module,exports) {
-module.exports["md"] = `BlFgAW_md`;
 module.exports["sm"] = `BlFgAW_sm`;
+module.exports["md"] = `BlFgAW_md`;
 module.exports["input"] = `BlFgAW_input`;
 
 },{}],"etN8a":[function(require,module,exports) {
-module.exports["next"] = `Su0KMW_next`;
-module.exports["prev"] = `Su0KMW_prev`;
 module.exports["slider"] = `Su0KMW_slider`;
 module.exports["childContainer"] = `Su0KMW_childContainer`;
+module.exports["next"] = `Su0KMW_next`;
+module.exports["prev"] = `Su0KMW_prev`;
 module.exports["slide"] = `Su0KMW_slide`;
 
 },{}],"beIbC":[function(require,module,exports) {
@@ -42168,8 +42168,8 @@ $RefreshReg$(_c, "Comment");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./styles.module.scss":"lFjep","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lFjep":[function(require,module,exports) {
-module.exports["name"] = `UKQYVq_name`;
 module.exports["commentBlock"] = `UKQYVq_commentBlock`;
+module.exports["name"] = `UKQYVq_name`;
 module.exports["commentText"] = `UKQYVq_commentText`;
 
 },{}],"hHtrT":[function(require,module,exports) {
@@ -42219,14 +42219,14 @@ module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "delete
 module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "edit.3b2d22f0.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"9TaJ2":[function(require,module,exports) {
-module.exports["commentSvg"] = `aogtCa_commentSvg`;
-module.exports["username"] = `aogtCa_username`;
-module.exports["infoBlock"] = `aogtCa_infoBlock`;
-module.exports["postTitle"] = `aogtCa_postTitle`;
-module.exports["actionBlock"] = `aogtCa_actionBlock`;
-module.exports["deleteSvg"] = `aogtCa_deleteSvg`;
 module.exports["postELement"] = `aogtCa_postELement`;
 module.exports["editSvg"] = `aogtCa_editSvg`;
+module.exports["username"] = `aogtCa_username`;
+module.exports["actionBlock"] = `aogtCa_actionBlock`;
+module.exports["infoBlock"] = `aogtCa_infoBlock`;
+module.exports["postTitle"] = `aogtCa_postTitle`;
+module.exports["commentSvg"] = `aogtCa_commentSvg`;
+module.exports["deleteSvg"] = `aogtCa_deleteSvg`;
 
 },{}],"9nMHi":[function(require,module,exports) {
 module.exports["postList"] = `FQ2p6a_postList`;
@@ -42525,8 +42525,8 @@ $RefreshReg$(_c, "TodoElement");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","classnames":"jocGM","./styles.module.scss":"78CDP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"78CDP":[function(require,module,exports) {
-module.exports["todoELement"] = `uHGntq_todoELement`;
 module.exports["completed"] = `uHGntq_completed`;
+module.exports["todoELement"] = `uHGntq_todoELement`;
 
 },{}],"cKHcu":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "delete.d06969e9.svg" + "?" + Date.now();
@@ -42535,13 +42535,13 @@ module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "delete
 module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "edit.d0af44b8.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"k8jzk":[function(require,module,exports) {
-module.exports["deleteSvg"] = `yrM7Aa_deleteSvg`;
-module.exports["todoList"] = `yrM7Aa_todoList`;
-module.exports["generalList"] = `yrM7Aa_generalList`;
-module.exports["board"] = `yrM7Aa_board`;
-module.exports["title"] = `yrM7Aa_title`;
 module.exports["actionBlock"] = `yrM7Aa_actionBlock`;
 module.exports["editSvg"] = `yrM7Aa_editSvg`;
+module.exports["deleteSvg"] = `yrM7Aa_deleteSvg`;
+module.exports["generalList"] = `yrM7Aa_generalList`;
+module.exports["todoList"] = `yrM7Aa_todoList`;
+module.exports["board"] = `yrM7Aa_board`;
+module.exports["title"] = `yrM7Aa_title`;
 
 },{}],"7rLBL":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bfb0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -42856,12 +42856,12 @@ module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "edit.4
 
 },{"./helpers/bundle-url":"lgJ39"}],"bmRZe":[function(require,module,exports) {
 module.exports["deleteSvg"] = `Lt1Iba_deleteSvg`;
-module.exports["title"] = `Lt1Iba_title`;
-module.exports["editSvg"] = `Lt1Iba_editSvg`;
-module.exports["actionBlock"] = `Lt1Iba_actionBlock`;
 module.exports["albumELement"] = `Lt1Iba_albumELement`;
 module.exports["arrowSvg"] = `Lt1Iba_arrowSvg`;
 module.exports["active"] = `Lt1Iba_active`;
+module.exports["title"] = `Lt1Iba_title`;
+module.exports["actionBlock"] = `Lt1Iba_actionBlock`;
+module.exports["editSvg"] = `Lt1Iba_editSvg`;
 
 },{}],"aHIE0":[function(require,module,exports) {
 module.exports["albumList"] = `hJofxW_albumList`;
@@ -43025,11 +43025,11 @@ $RefreshReg$(_c, "EditTodoComponent");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","react-redux":"bdVon","~/src/store/todos/selectors":"hwlsU","./styles.module.scss":"j0JuF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"j0JuF":[function(require,module,exports) {
-module.exports["input"] = `W4BMtW_input`;
-module.exports["textarea"] = `W4BMtW_textarea`;
+module.exports["checkBoxBlock"] = `W4BMtW_checkBoxBlock`;
 module.exports["form"] = `W4BMtW_form`;
 module.exports["checkBox"] = `W4BMtW_checkBox`;
-module.exports["checkBoxBlock"] = `W4BMtW_checkBoxBlock`;
+module.exports["textarea"] = `W4BMtW_textarea`;
+module.exports["input"] = `W4BMtW_input`;
 
 },{}],"7feDt":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4979 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43159,8 +43159,8 @@ $RefreshReg$(_c, "EditAlbumComponent");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","react-redux":"bdVon","~/src/store/albums/selectors":"1CYRR","./styles.module.scss":"dSFM0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dSFM0":[function(require,module,exports) {
-module.exports["input"] = `_2siAjG_input`;
 module.exports["textarea"] = `_2siAjG_textarea`;
+module.exports["input"] = `_2siAjG_input`;
 module.exports["form"] = `_2siAjG_form`;
 
 },{}],"kWkE5":[function(require,module,exports) {
@@ -43299,9 +43299,9 @@ $RefreshReg$(_c, "CreateTodoComponent");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","./styles.module.scss":"baZ17","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"baZ17":[function(require,module,exports) {
-module.exports["textarea"] = `xr3HjG_textarea`;
-module.exports["input"] = `xr3HjG_input`;
 module.exports["form"] = `xr3HjG_form`;
+module.exports["input"] = `xr3HjG_input`;
+module.exports["textarea"] = `xr3HjG_textarea`;
 
 },{}],"7IFW6":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$79cb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43415,8 +43415,8 @@ $RefreshReg$(_c, "CreateAlbumComponent");
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","./styles.module.scss":"koEzG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"koEzG":[function(require,module,exports) {
 module.exports["form"] = `GUQMPa_form`;
-module.exports["input"] = `GUQMPa_input`;
 module.exports["textarea"] = `GUQMPa_textarea`;
+module.exports["input"] = `GUQMPa_input`;
 
 },{}],"l3Ckd":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9b0b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43570,9 +43570,9 @@ $RefreshReg$(_c, "CreateEditPostComponent");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/posts":"7Awff","~/src/store":"iLHNH","./styles.module.scss":"4y3JF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4y3JF":[function(require,module,exports) {
-module.exports["input"] = `eCBWHG_input`;
-module.exports["textarea"] = `eCBWHG_textarea`;
 module.exports["form"] = `eCBWHG_form`;
+module.exports["textarea"] = `eCBWHG_textarea`;
+module.exports["input"] = `eCBWHG_input`;
 
 },{}],"elrPy":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$f2d2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43653,8 +43653,8 @@ $RefreshReg$(_c, "EntityPage");
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","classnames":"jocGM","react-router-dom":"9xmpe","~/src/uikit":"jt2EU","./styles.module.scss":"a8AVU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"a8AVU":[function(require,module,exports) {
 module.exports["createButton"] = `_8kELJa_createButton`;
-module.exports["buttonBlock"] = `_8kELJa_buttonBlock`;
 module.exports["section"] = `_8kELJa_section`;
+module.exports["buttonBlock"] = `_8kELJa_buttonBlock`;
 
 },{}],"5t3ql":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b704 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -44163,11 +44163,11 @@ $RefreshReg$(_c, "Header");
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","classnames":"jocGM","./styles.module.scss":"gQHd5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gQHd5":[function(require,module,exports) {
 module.exports["link"] = `JTeIoW_link`;
-module.exports["header"] = `JTeIoW_header`;
 module.exports["header__section"] = `JTeIoW_header__section`;
-module.exports["navlist"] = `JTeIoW_navlist`;
-module.exports["nav"] = `JTeIoW_nav`;
+module.exports["header"] = `JTeIoW_header`;
 module.exports["logo"] = `JTeIoW_logo`;
+module.exports["nav"] = `JTeIoW_nav`;
+module.exports["navlist"] = `JTeIoW_navlist`;
 module.exports["navlist__item"] = `JTeIoW_navlist__item`;
 
 },{}],"dacDC":[function(require,module,exports) {
