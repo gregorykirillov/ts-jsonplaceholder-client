@@ -2503,14 +2503,14 @@ process.umask = function() {
     return 0;
 };
 
-},{}],"6FqiZ":[function(require,module,exports) {
+},{}],"jVvJi":[function(require,module,exports) {
 "use strict";
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d6ea1d42532a7575";
-module.bundle.HMR_BUNDLE_ID = "4d94d0802d3ace14";
+module.bundle.HMR_BUNDLE_ID = "022c1b16b4b6dfad";
 /* global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE, chrome, browser, globalThis, __parcel__import__, __parcel__importScripts__, ServiceWorkerGlobalScope */ /*::
 import type {
   HMRAsset,
@@ -2892,17 +2892,15 @@ function hmrAcceptRun(bundle, id) {
     acceptedAssets[id] = true;
 }
 
-},{}],"4aBH6":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$2a8f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{}],"d8Dch":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$98a3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$2a8f.prelude(module);
+$parcel$ReactRefreshHelpers$98a3.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
 var _reactRouterDom = require("react-router-dom");
@@ -2911,22 +2909,22 @@ var _appDefault = parcelHelpers.interopDefault(_app);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
-        fileName: "src/index.tsx",
-        lineNumber: 10,
+        fileName: "src/index.jsx",
+        lineNumber: 9,
         columnNumber: 9
     }, undefined)
 }, void 0, false, {
-    fileName: "src/index.tsx",
-    lineNumber: 9,
+    fileName: "src/index.jsx",
+    lineNumber: 8,
     columnNumber: 5
 }, undefined));
 
-  $parcel$ReactRefreshHelpers$2a8f.postlude(module);
+  $parcel$ReactRefreshHelpers$98a3.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","react-router-dom":"9xmpe","./App":"k780v","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","react-router-dom":"9xmpe","./App":"k780v","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("./cjs/react-jsx-dev-runtime.development.js");
 
@@ -31520,11 +31518,11 @@ var _reactRouterDom = require("react-router-dom");
 var _reactRedux = require("react-redux");
 var _pages = require("~/src/pages");
 var _store = require("../store");
-var _createAlbumPage = require("../pages/CreateAlbumPage");
-var _createAlbumPageDefault = parcelHelpers.interopDefault(_createAlbumPage);
 var _parts = require("../parts");
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
+var _createAlbumPage = require("../pages/CreateAlbumPage");
+var _createAlbumPageDefault = parcelHelpers.interopDefault(_createAlbumPage);
 const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRedux.Provider), {
         store: (0, _store.store),
@@ -31673,7 +31671,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","react-redux":"bdVon","~/src/pages":"kIGWd","../store":"iLHNH","../pages/CreateAlbumPage":"1WafW","../parts":"kUzue","./styles.module.scss":"dacDC","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bdVon":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-router-dom":"9xmpe","react-redux":"bdVon","~/src/pages":"kIGWd","../store":"iLHNH","../parts":"kUzue","./styles.module.scss":"dacDC","../pages/CreateAlbumPage":"1WafW","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"bdVon":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "batch", ()=>(0, _reactBatchedUpdates.unstable_batchedUpdates));
@@ -33472,7 +33470,7 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
 const MainPage = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: (0, _stylesModuleScssDefault.default).content,
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
@@ -33885,10 +33883,10 @@ $RefreshReg$(_c, "Preloader");
 
 },{}],"8FoPR":[function(require,module,exports) {
 module.exports["sm"] = `XVlO_G_sm`;
-module.exports["preloaderContainer"] = `XVlO_G_preloaderContainer`;
 module.exports["rotate"] = `XVlO_G_rotate`;
 module.exports["rotate"];
 module.exports["md"] = `XVlO_G_md`;
+module.exports["preloaderContainer"] = `XVlO_G_preloaderContainer`;
 module.exports["preloader"] = `XVlO_G_preloader`;
 
 },{}],"k5Q1w":[function(require,module,exports) {
@@ -33959,11 +33957,11 @@ $RefreshReg$(_c, "Button");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","classnames":"jocGM","./styles.module.scss":"fMFY8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fMFY8":[function(require,module,exports) {
+module.exports["button"] = `_91g8AW_button`;
+module.exports["sm"] = `_91g8AW_sm`;
 module.exports["lg"] = `_91g8AW_lg`;
 module.exports["md"] = `_91g8AW_md`;
-module.exports["button"] = `_91g8AW_button`;
 module.exports["inline"] = `_91g8AW_inline`;
-module.exports["sm"] = `_91g8AW_sm`;
 
 },{}],"iEWTU":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$76a1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -33999,15 +33997,15 @@ $RefreshReg$(_c, "Input");
 }
 },{"react/jsx-dev-runtime":"iTorj","classnames":"jocGM","./styles.module.scss":"jehPw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jehPw":[function(require,module,exports) {
 module.exports["input"] = `BlFgAW_input`;
-module.exports["md"] = `BlFgAW_md`;
 module.exports["sm"] = `BlFgAW_sm`;
+module.exports["md"] = `BlFgAW_md`;
 
 },{}],"etN8a":[function(require,module,exports) {
-module.exports["next"] = `Su0KMW_next`;
-module.exports["slider"] = `Su0KMW_slider`;
-module.exports["prev"] = `Su0KMW_prev`;
 module.exports["slide"] = `Su0KMW_slide`;
+module.exports["slider"] = `Su0KMW_slider`;
 module.exports["childContainer"] = `Su0KMW_childContainer`;
+module.exports["next"] = `Su0KMW_next`;
+module.exports["prev"] = `Su0KMW_prev`;
 
 },{}],"beIbC":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$a438 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -34262,7 +34260,7 @@ $RefreshReg$(_c, "PostElement");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","~/src/store":"iLHNH","~/src/store/comments":"jWvUX","~/src/uikit":"jt2EU","../CommentsBlock":"Ajrl5","~/src/store/users":"aSAB2","~/src/store/posts":"7Awff","~/src/store/users/selectors":"733PS","./comment.svg":"7AKw3","./delete.svg":"8IYYn","./edit.svg":"6B2Kw","./styles.module.scss":"9TaJ2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iLHNH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","~/src/store":"iLHNH","~/src/store/comments":"jWvUX","~/src/uikit":"jt2EU","../CommentsBlock":"Ajrl5","~/src/store/users":"aSAB2","~/src/store/posts":"7Awff","~/src/store/users/selectors":"733PS","./comment.svg":"6I9Qb","./delete.svg":"2JX7I","./edit.svg":"bUAt9","./styles.module.scss":"9TaJ2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iLHNH":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "store", ()=>store);
@@ -41530,8 +41528,8 @@ var _index = require("../../routes/index");
 var _loadingStatuses = require("~/src/constants/loadingStatuses");
 var _selectors = require("./selectors");
 const fetchComments = (0, _toolkit.createAsyncThunk)("comment/fetchComments", async (postId, thunkAPI)=>{
-    const postCommentsLength = (0, _selectors.selectPostComments)(thunkAPI.getState(), postId).length;
-    if (postCommentsLength) return thunkAPI.rejectWithValue((0, _loadingStatuses.LoadingStatuses).earlyAdded);
+    const comments = (0, _selectors.selectComments)(thunkAPI.getState());
+    if (Object.values(comments).filter((comment)=>comment.postId === postId).length) return thunkAPI.rejectWithValue((0, _loadingStatuses.LoadingStatuses).earlyAdded);
     const response = await (0, _axiosDefault.default).get((0, _index.getAllCommentsURL)(postId));
     return response.data;
 });
@@ -42175,8 +42173,8 @@ module.exports["name"] = `UKQYVq_name`;
 },{}],"hHtrT":[function(require,module,exports) {
 module.exports["commentsBlock"] = `JZlNKG_commentsBlock`;
 
-},{}],"7AKw3":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "comment.9359d126.svg" + "?" + Date.now();
+},{}],"6I9Qb":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("byUka") + "comment.9359d126.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
 "use strict";
@@ -42212,21 +42210,21 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"8IYYn":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "delete.fb320aa9.svg" + "?" + Date.now();
+},{}],"2JX7I":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("byUka") + "delete.fb320aa9.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"6B2Kw":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "edit.3b2d22f0.svg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"bUAt9":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("byUka") + "edit.3b2d22f0.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"9TaJ2":[function(require,module,exports) {
-module.exports["postELement"] = `aogtCa_postELement`;
-module.exports["infoBlock"] = `aogtCa_infoBlock`;
-module.exports["commentSvg"] = `aogtCa_commentSvg`;
-module.exports["actionBlock"] = `aogtCa_actionBlock`;
 module.exports["username"] = `aogtCa_username`;
-module.exports["editSvg"] = `aogtCa_editSvg`;
+module.exports["commentSvg"] = `aogtCa_commentSvg`;
+module.exports["infoBlock"] = `aogtCa_infoBlock`;
+module.exports["postELement"] = `aogtCa_postELement`;
+module.exports["actionBlock"] = `aogtCa_actionBlock`;
 module.exports["deleteSvg"] = `aogtCa_deleteSvg`;
 module.exports["postTitle"] = `aogtCa_postTitle`;
+module.exports["editSvg"] = `aogtCa_editSvg`;
 
 },{}],"9nMHi":[function(require,module,exports) {
 module.exports["postList"] = `FQ2p6a_postList`;
@@ -42243,7 +42241,6 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactRedux = require("react-redux");
-var _reactRouterDom = require("react-router-dom");
 var _todoElement = require("../TodoElement");
 var _todoElementDefault = parcelHelpers.interopDefault(_todoElement);
 var _selectors = require("~/src/store/todos/selectors");
@@ -42256,6 +42253,7 @@ var _editSvg = require("./edit.svg");
 var _editSvgDefault = parcelHelpers.interopDefault(_editSvg);
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
+var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 const TodoList = ()=>{
     _s();
@@ -42472,7 +42470,7 @@ $RefreshReg$(_c, "TodoList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","../TodoElement":"9VALH","~/src/store/todos/selectors":"hwlsU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","~/src/uikit":"jt2EU","./delete.svg":"cKHcu","./edit.svg":"bv9hf","./styles.module.scss":"k8jzk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9VALH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","../TodoElement":"9VALH","~/src/store/todos/selectors":"hwlsU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","~/src/uikit":"jt2EU","./delete.svg":"jbNy5","./edit.svg":"bHWM3","./styles.module.scss":"k8jzk","react-router-dom":"9xmpe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9VALH":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5118 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42528,20 +42526,20 @@ $RefreshReg$(_c, "TodoElement");
 module.exports["todoELement"] = `uHGntq_todoELement`;
 module.exports["completed"] = `uHGntq_completed`;
 
-},{}],"cKHcu":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "delete.d06969e9.svg" + "?" + Date.now();
+},{}],"jbNy5":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("byUka") + "delete.d06969e9.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"bv9hf":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "edit.d0af44b8.svg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"bHWM3":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("byUka") + "edit.d0af44b8.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"k8jzk":[function(require,module,exports) {
-module.exports["todoList"] = `yrM7Aa_todoList`;
+module.exports["title"] = `yrM7Aa_title`;
 module.exports["actionBlock"] = `yrM7Aa_actionBlock`;
 module.exports["deleteSvg"] = `yrM7Aa_deleteSvg`;
-module.exports["generalList"] = `yrM7Aa_generalList`;
 module.exports["board"] = `yrM7Aa_board`;
-module.exports["title"] = `yrM7Aa_title`;
 module.exports["editSvg"] = `yrM7Aa_editSvg`;
+module.exports["generalList"] = `yrM7Aa_generalList`;
+module.exports["todoList"] = `yrM7Aa_todoList`;
 
 },{}],"7rLBL":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bfb0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -42753,7 +42751,7 @@ $RefreshReg$(_c, "AlbumElement");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","classnames":"jocGM","react-router-dom":"9xmpe","../PhotosBlock":"cVhgc","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","./arrow.svg":"ldHZC","./delete.svg":"kSBDr","./edit.svg":"53Glp","./styles.module.scss":"bmRZe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cVhgc":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","classnames":"jocGM","react-router-dom":"9xmpe","../PhotosBlock":"cVhgc","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","./arrow.svg":"jFLMq","./delete.svg":"grJTB","./edit.svg":"56BSt","./styles.module.scss":"bmRZe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cVhgc":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$444b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42842,24 +42840,24 @@ $RefreshReg$(_c, "PhotosBlock");
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","~/src/store":"iLHNH","~/src/store/photos/selectors":"ack2i","../Slider":"7Rnr6","~/src/store/photos":"hMT9I","~/src/uikit":"jt2EU","./styles.module.scss":"3e0tb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3e0tb":[function(require,module,exports) {
 module.exports["photo"] = `_7giObG_photo`;
-module.exports["photosBlock"] = `_7giObG_photosBlock`;
 module.exports["dots"] = `_7giObG_dots`;
+module.exports["photosBlock"] = `_7giObG_photosBlock`;
 
-},{}],"ldHZC":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "arrow.c6fbb257.svg" + "?" + Date.now();
+},{}],"jFLMq":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("byUka") + "arrow.c6fbb257.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"kSBDr":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "delete.92ac3af0.svg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"grJTB":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("byUka") + "delete.92ac3af0.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"53Glp":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "edit.45b4fc30.svg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"56BSt":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("byUka") + "edit.45b4fc30.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"bmRZe":[function(require,module,exports) {
-module.exports["title"] = `Lt1Iba_title`;
-module.exports["active"] = `Lt1Iba_active`;
-module.exports["actionBlock"] = `Lt1Iba_actionBlock`;
 module.exports["albumELement"] = `Lt1Iba_albumELement`;
 module.exports["editSvg"] = `Lt1Iba_editSvg`;
+module.exports["active"] = `Lt1Iba_active`;
+module.exports["title"] = `Lt1Iba_title`;
+module.exports["actionBlock"] = `Lt1Iba_actionBlock`;
 module.exports["deleteSvg"] = `Lt1Iba_deleteSvg`;
 module.exports["arrowSvg"] = `Lt1Iba_arrowSvg`;
 
@@ -42881,10 +42879,10 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _uikit = require("~/src/uikit");
 var _todos = require("~/src/store/todos");
 var _store = require("~/src/store");
-var _reactRedux = require("react-redux");
-var _selectors = require("~/src/store/todos/selectors");
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
+var _reactRedux = require("react-redux");
+var _selectors = require("~/src/store/todos/selectors");
 var _s = $RefreshSig$();
 const EditTodoComponent = ({ todoId  })=>{
     _s();
@@ -42930,7 +42928,7 @@ const EditTodoComponent = ({ todoId  })=>{
     };
     if (isLoading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Preloader), {}, void 0, false, {
         fileName: "src/components/EditTodoComponent/index.tsx",
-        lineNumber: 70,
+        lineNumber: 69,
         columnNumber: 27
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -42944,7 +42942,7 @@ const EditTodoComponent = ({ todoId  })=>{
                         children: "Title"
                     }, void 0, false, {
                         fileName: "src/components/EditTodoComponent/index.tsx",
-                        lineNumber: 78,
+                        lineNumber: 77,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Input), {
@@ -42956,24 +42954,23 @@ const EditTodoComponent = ({ todoId  })=>{
                         onChange: (event)=>handleChangeForm(event)
                     }, void 0, false, {
                         fileName: "src/components/EditTodoComponent/index.tsx",
-                        lineNumber: 79,
+                        lineNumber: 78,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/EditTodoComponent/index.tsx",
-                lineNumber: 77,
+                lineNumber: 76,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: (0, _stylesModuleScssDefault.default).checkBoxBlock,
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                        htmlFor: "completed",
+                        htmlFor: "body",
                         children: "Completed"
                     }, void 0, false, {
                         fileName: "src/components/EditTodoComponent/index.tsx",
-                        lineNumber: 89,
+                        lineNumber: 88,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Input), {
@@ -42985,26 +42982,26 @@ const EditTodoComponent = ({ todoId  })=>{
                         onChange: (event)=>handleChangeForm(event)
                     }, void 0, false, {
                         fileName: "src/components/EditTodoComponent/index.tsx",
-                        lineNumber: 90,
+                        lineNumber: 89,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/EditTodoComponent/index.tsx",
-                lineNumber: 88,
+                lineNumber: 87,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Button), {
                 children: "Сохранить"
             }, void 0, false, {
                 fileName: "src/components/EditTodoComponent/index.tsx",
-                lineNumber: 99,
+                lineNumber: 98,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/EditTodoComponent/index.tsx",
-        lineNumber: 73,
+        lineNumber: 72,
         columnNumber: 9
     }, undefined);
 };
@@ -43024,11 +43021,9 @@ $RefreshReg$(_c, "EditTodoComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","react-redux":"bdVon","~/src/store/todos/selectors":"hwlsU","./styles.module.scss":"j0JuF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"j0JuF":[function(require,module,exports) {
-module.exports["form"] = `W4BMtW_form`;
-module.exports["checkBoxBlock"] = `W4BMtW_checkBoxBlock`;
-module.exports["checkBox"] = `W4BMtW_checkBox`;
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","./styles.module.scss":"j0JuF","react-redux":"bdVon","~/src/store/todos/selectors":"hwlsU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"j0JuF":[function(require,module,exports) {
 module.exports["textarea"] = `W4BMtW_textarea`;
+module.exports["form"] = `W4BMtW_form`;
 module.exports["input"] = `W4BMtW_input`;
 
 },{}],"7feDt":[function(require,module,exports) {
@@ -43046,10 +43041,10 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _uikit = require("~/src/uikit");
 var _albums = require("~/src/store/albums");
 var _store = require("~/src/store");
-var _reactRedux = require("react-redux");
-var _selectors = require("~/src/store/albums/selectors");
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
+var _reactRedux = require("react-redux");
+var _selectors = require("~/src/store/albums/selectors");
 var _s = $RefreshSig$();
 const EditAlbumComponent = ({ albumId  })=>{
     _s();
@@ -43093,7 +43088,7 @@ const EditAlbumComponent = ({ albumId  })=>{
     };
     if (isLoading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Preloader), {}, void 0, false, {
         fileName: "src/components/EditAlbumComponent/index.tsx",
-        lineNumber: 67,
+        lineNumber: 66,
         columnNumber: 27
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -43107,7 +43102,7 @@ const EditAlbumComponent = ({ albumId  })=>{
                         children: "Title"
                     }, void 0, false, {
                         fileName: "src/components/EditAlbumComponent/index.tsx",
-                        lineNumber: 75,
+                        lineNumber: 74,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Input), {
@@ -43119,26 +43114,26 @@ const EditAlbumComponent = ({ albumId  })=>{
                         onChange: (event)=>handleChangeForm(event)
                     }, void 0, false, {
                         fileName: "src/components/EditAlbumComponent/index.tsx",
-                        lineNumber: 76,
+                        lineNumber: 75,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/EditAlbumComponent/index.tsx",
-                lineNumber: 74,
+                lineNumber: 73,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Button), {
                 children: "Сохранить"
             }, void 0, false, {
                 fileName: "src/components/EditAlbumComponent/index.tsx",
-                lineNumber: 85,
+                lineNumber: 84,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/EditAlbumComponent/index.tsx",
-        lineNumber: 70,
+        lineNumber: 69,
         columnNumber: 9
     }, undefined);
 };
@@ -43158,7 +43153,7 @@ $RefreshReg$(_c, "EditAlbumComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","react-redux":"bdVon","~/src/store/albums/selectors":"1CYRR","./styles.module.scss":"dSFM0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dSFM0":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","./styles.module.scss":"dSFM0","react-redux":"bdVon","~/src/store/albums/selectors":"1CYRR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dSFM0":[function(require,module,exports) {
 module.exports["textarea"] = `_2siAjG_textarea`;
 module.exports["form"] = `_2siAjG_form`;
 module.exports["input"] = `_2siAjG_input`;
@@ -43245,7 +43240,7 @@ const CreateTodoComponent = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
-                        htmlFor: "completed",
+                        htmlFor: "body",
                         children: "Completed"
                     }, void 0, false, {
                         fileName: "src/components/CreateTodoComponent/index.tsx",
@@ -43257,6 +43252,7 @@ const CreateTodoComponent = ()=>{
                         name: "completed",
                         id: "completed",
                         checked: formData.completed,
+                        className: (0, _stylesModuleScssDefault.default).checkBox,
                         onChange: (event)=>handleChangeForm(event)
                     }, void 0, false, {
                         fileName: "src/components/CreateTodoComponent/index.tsx",
@@ -43273,7 +43269,7 @@ const CreateTodoComponent = ()=>{
                 children: "Создать"
             }, void 0, false, {
                 fileName: "src/components/CreateTodoComponent/index.tsx",
-                lineNumber: 76,
+                lineNumber: 77,
                 columnNumber: 13
             }, undefined)
         ]
@@ -43300,8 +43296,8 @@ $RefreshReg$(_c, "CreateTodoComponent");
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","./styles.module.scss":"baZ17","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"baZ17":[function(require,module,exports) {
 module.exports["input"] = `xr3HjG_input`;
-module.exports["form"] = `xr3HjG_form`;
 module.exports["textarea"] = `xr3HjG_textarea`;
+module.exports["form"] = `xr3HjG_form`;
 
 },{}],"7IFW6":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$79cb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43414,9 +43410,9 @@ $RefreshReg$(_c, "CreateAlbumComponent");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","./styles.module.scss":"koEzG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"koEzG":[function(require,module,exports) {
-module.exports["textarea"] = `GUQMPa_textarea`;
 module.exports["input"] = `GUQMPa_input`;
 module.exports["form"] = `GUQMPa_form`;
+module.exports["textarea"] = `GUQMPa_textarea`;
 
 },{}],"l3Ckd":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9b0b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43570,9 +43566,9 @@ $RefreshReg$(_c, "CreateEditPostComponent");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/posts":"7Awff","~/src/store":"iLHNH","./styles.module.scss":"4y3JF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4y3JF":[function(require,module,exports) {
-module.exports["form"] = `eCBWHG_form`;
 module.exports["input"] = `eCBWHG_input`;
 module.exports["textarea"] = `eCBWHG_textarea`;
+module.exports["form"] = `eCBWHG_form`;
 
 },{}],"elrPy":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$f2d2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43586,32 +43582,29 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
 var _reactRouterDom = require("react-router-dom");
 var _uikit = require("~/src/uikit");
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
 var _s = $RefreshSig$();
-const EntityPage = ({ pageName , Component , buttonClassName  })=>{
+const EntityPage = ({ pageName , Component  })=>{
     _s();
     const navigate = (0, _reactRouterDom.useNavigate)();
     const currPath = (0, _reactRouterDom.useLocation)().pathname;
     const handleCreateClick = ()=>{
         navigate(`${currPath}/create`);
     };
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
-        className: (0, _stylesModuleScssDefault.default).section,
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 children: pageName
             }, void 0, false, {
                 fileName: "src/components/EntityPage/index.tsx",
-                lineNumber: 29,
+                lineNumber: 22,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: (0, _classnamesDefault.default)((0, _stylesModuleScssDefault.default).buttonBlock, buttonClassName),
+                className: (0, _stylesModuleScssDefault.default).buttonBlock,
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Button), {
                     size: "lg",
                     className: (0, _stylesModuleScssDefault.default).createButton,
@@ -43619,21 +43612,17 @@ const EntityPage = ({ pageName , Component , buttonClassName  })=>{
                     children: "+"
                 }, void 0, false, {
                     fileName: "src/components/EntityPage/index.tsx",
-                    lineNumber: 32,
+                    lineNumber: 25,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/EntityPage/index.tsx",
-                lineNumber: 31,
+                lineNumber: 24,
                 columnNumber: 13
             }, undefined),
             Component
         ]
-    }, void 0, true, {
-        fileName: "src/components/EntityPage/index.tsx",
-        lineNumber: 28,
-        columnNumber: 9
-    }, undefined);
+    }, void 0, true);
 };
 _s(EntityPage, "VR1S3t8AyEmmKRcd8/lCIH5gwhw=", false, function() {
     return [
@@ -43651,10 +43640,9 @@ $RefreshReg$(_c, "EntityPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","classnames":"jocGM","react-router-dom":"9xmpe","~/src/uikit":"jt2EU","./styles.module.scss":"a8AVU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"a8AVU":[function(require,module,exports) {
-module.exports["createButton"] = `_8kELJa_createButton`;
-module.exports["section"] = `_8kELJa_section`;
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","~/src/uikit":"jt2EU","./styles.module.scss":"a8AVU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"a8AVU":[function(require,module,exports) {
 module.exports["buttonBlock"] = `_8kELJa_buttonBlock`;
+module.exports["createButton"] = `_8kELJa_createButton`;
 
 },{}],"5t3ql":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b704 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43704,15 +43692,12 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _components = require("~/src/components");
 var _entityPage = require("~/src/components/EntityPage");
 var _entityPageDefault = parcelHelpers.interopDefault(_entityPage);
-var _stylesModuleScss = require("./styles.module.scss");
-var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
 const AlbumPage = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _entityPageDefault.default), {
         pageName: "Альбомы",
-        Component: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _components.AlbumList), {}, void 0, false, void 0, void 0),
-        buttonClassName: (0, _stylesModuleScssDefault.default).buttonBlock
+        Component: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _components.AlbumList), {}, void 0, false, void 0, void 0)
     }, void 0, false, {
         fileName: "src/pages/AlbumPage/index.tsx",
-        lineNumber: 9,
+        lineNumber: 7,
         columnNumber: 5
     }, undefined);
 _c = AlbumPage;
@@ -43725,10 +43710,7 @@ $RefreshReg$(_c, "AlbumPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/components":"dHnah","~/src/components/EntityPage":"elrPy","./styles.module.scss":"3a0iy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3a0iy":[function(require,module,exports) {
-module.exports["buttonBlock"] = `_3tjnra_buttonBlock`;
-
-},{}],"9pj2V":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/components":"dHnah","~/src/components/EntityPage":"elrPy","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9pj2V":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9083 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -43758,7 +43740,7 @@ const EditPostPage = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Изменение поста"
+                children: "Страница изменения поста"
             }, void 0, false, {
                 fileName: "src/pages/EditPostPage/index.tsx",
                 lineNumber: 22,
@@ -43813,7 +43795,7 @@ const EditTodoPage = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Изменение задачи"
+                children: "Страница изменения задачи"
             }, void 0, false, {
                 fileName: "src/pages/EditTodoPage/index.tsx",
                 lineNumber: 10,
@@ -43865,7 +43847,7 @@ const EditAlbumPage = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Изменение альбома"
+                children: "Страница изменения альбома"
             }, void 0, false, {
                 fileName: "src/pages/EditAlbumpage/index.tsx",
                 lineNumber: 10,
@@ -43913,7 +43895,7 @@ const CreateTodoPage = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Создание задачи"
+                children: "Страница создания задачи"
             }, void 0, false, {
                 fileName: "src/pages/CreateTodoPage/index.tsx",
                 lineNumber: 8,
@@ -43954,7 +43936,7 @@ const CreatePostPage = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Создание поста"
+                children: "Страница создания поста"
             }, void 0, false, {
                 fileName: "src/pages/CreatePostPage/index.tsx",
                 lineNumber: 8,
@@ -43976,47 +43958,6 @@ var _c;
 $RefreshReg$(_c, "CreatePostPage");
 
   $parcel$ReactRefreshHelpers$cb19.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/components":"dHnah","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1WafW":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$bd28 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$bd28.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _components = require("~/src/components");
-const CreateAlbumPage = ()=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                children: "Создание альбома"
-            }, void 0, false, {
-                fileName: "src/pages/CreateAlbumPage/index.tsx",
-                lineNumber: 8,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _components.CreateAlbumComponent), {}, void 0, false, {
-                fileName: "src/pages/CreateAlbumPage/index.tsx",
-                lineNumber: 10,
-                columnNumber: 13
-            }, undefined)
-        ]
-    }, void 0, true);
-};
-_c = CreateAlbumPage;
-exports.default = CreateAlbumPage;
-var _c;
-$RefreshReg$(_c, "CreateAlbumPage");
-
-  $parcel$ReactRefreshHelpers$bd28.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
@@ -44162,17 +44103,58 @@ $RefreshReg$(_c, "Header");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","classnames":"jocGM","./styles.module.scss":"gQHd5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gQHd5":[function(require,module,exports) {
-module.exports["logo"] = `JTeIoW_logo`;
-module.exports["header"] = `JTeIoW_header`;
-module.exports["nav"] = `JTeIoW_nav`;
-module.exports["navlist"] = `JTeIoW_navlist`;
 module.exports["navlist__item"] = `JTeIoW_navlist__item`;
+module.exports["header"] = `JTeIoW_header`;
 module.exports["link"] = `JTeIoW_link`;
+module.exports["nav"] = `JTeIoW_nav`;
 module.exports["header__section"] = `JTeIoW_header__section`;
+module.exports["navlist"] = `JTeIoW_navlist`;
+module.exports["logo"] = `JTeIoW_logo`;
 
 },{}],"dacDC":[function(require,module,exports) {
 module.exports["container"] = `BsYhIW_container`;
 
-},{}]},["1xC6H","6FqiZ","4aBH6"], "4aBH6", "parcelRequire094e")
+},{}],"1WafW":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bd28 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bd28.prelude(module);
 
-//# sourceMappingURL=index.2d3ace14.js.map
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _components = require("~/src/components");
+const CreateAlbumPage = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Страница создания альбома"
+            }, void 0, false, {
+                fileName: "src/pages/CreateAlbumPage/index.tsx",
+                lineNumber: 8,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _components.CreateAlbumComponent), {}, void 0, false, {
+                fileName: "src/pages/CreateAlbumPage/index.tsx",
+                lineNumber: 10,
+                columnNumber: 13
+            }, undefined)
+        ]
+    }, void 0, true);
+};
+_c = CreateAlbumPage;
+exports.default = CreateAlbumPage;
+var _c;
+$RefreshReg$(_c, "CreateAlbumPage");
+
+  $parcel$ReactRefreshHelpers$bd28.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/components":"dHnah","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","jVvJi","d8Dch"], "d8Dch", "parcelRequire094e")
+
+//# sourceMappingURL=index.b4b6dfad.js.map
