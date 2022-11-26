@@ -1,4 +1,4 @@
-import { TodoType } from '~/src/types/TodoType';
+import { TodoType } from '~/src/types';
 import { RootState } from '..';
 
 export const selectTodoModuleState = (state: RootState) => state.todo;

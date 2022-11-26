@@ -4,10 +4,11 @@ import { Button, Input, Preloader } from '~/src/uikit';
 import { fetchAlbum, updateAlbum } from '~/src/store/albums';
 import { RootState, useAppDispatch } from '~/src/store';
 
-import styles from './styles.module.scss';
-import { AlbumType } from '~/src/types/AlbumType';
+import { AlbumType } from '~/src/types';
 import { useSelector } from 'react-redux';
 import { selectAlbumById } from '~/src/store/albums/selectors';
+
+import styles from './styles.module.scss';
 
 type EditAlbumComponentProps = {
     albumId: number;

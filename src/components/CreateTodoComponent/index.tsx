@@ -64,13 +64,12 @@ const CreateTodoComponent = () => {
                 />
             </div>
             <div>
-                <label htmlFor="body">Completed</label>
+                <label htmlFor="completed">Completed</label>
                 <Input
                     type="checkbox"
                     name="completed"
                     id="completed"
                     checked={formData.completed}
-                    className={styles.checkBox}
                     onChange={(event) => handleChangeForm(event)}
                 />
             </div>

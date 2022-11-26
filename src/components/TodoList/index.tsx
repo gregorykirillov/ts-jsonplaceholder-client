@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import TodoElement from '../TodoElement';
 import { selectTodos } from '~/src/store/todos/selectors';
 import { deleteTodo, fetchTodos, updateTodo } from '~/src/store/todos';
 import { RootState, useAppDispatch } from '~/src/store';
 import { Button, Preloader } from '~/src/uikit';
-import { TodoType } from '~/src/types/TodoType';
+import { TodoType } from '~/src/types';
 
 import deleteSvg from './delete.svg';
 import editSvg from './edit.svg';
 
 import styles from './styles.module.scss';
-import { useLocation, useNavigate } from 'react-router-dom';
 
 type BoardIdType = number;
 type TodoIdType = number;

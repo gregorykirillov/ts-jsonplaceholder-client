@@ -1,4 +1,4 @@
-import { AlbumType } from '~/src/types/AlbumType';
+import { AlbumType } from '~/src/types';
 import { RootState } from '..';
 
 export const selectAlbumModuleState = (state: RootState) => state.album;

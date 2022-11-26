@@ -4,7 +4,7 @@ import { createAsyncThunk, EntityAdapter } from '@reduxjs/toolkit';
 import { updateTodoURL } from './../../routes/index';
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { BuilderType } from '.';
-import { TodoType } from '~/src/types/TodoType';
+import { TodoType } from '~/src/types';
 
 export const updateTodo = createAsyncThunk(
     'todo/updateTodo',

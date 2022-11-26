@@ -6,7 +6,7 @@ import {
 } from '@reduxjs/toolkit';
 
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
-import { CommentType } from '~/src/types/CommentType';
+import { CommentType } from '~/src/types';
 import { addCaseReadComments } from './fetchComments';
 
 const commentEntityAdapter = createEntityAdapter<CommentType>();

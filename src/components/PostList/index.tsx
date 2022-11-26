@@ -6,7 +6,7 @@ import { selectPosts } from '~/src/store/posts/selectors';
 import { fetchPosts } from '~/src/store/posts';
 import { RootState, useAppDispatch } from '~/src/store';
 import { Preloader } from '~/src/uikit';
-import { PostType } from '~/src/types/PostType';
+import { PostType } from '~/src/types';
 
 import styles from './styles.module.scss';
 

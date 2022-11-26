@@ -4,10 +4,11 @@ import { Button, Input, Preloader } from '~/src/uikit';
 import { fetchTodo, updateTodo } from '~/src/store/todos';
 import { RootState, useAppDispatch } from '~/src/store';
 
-import styles from './styles.module.scss';
-import { TodoType } from '~/src/types/TodoType';
+import { TodoType } from '~/src/types';
 import { useSelector } from 'react-redux';
 import { selectTodoById } from '~/src/store/todos/selectors';
+
+import styles from './styles.module.scss';
 
 type EditTodoComponentProps = {
     todoId: number;
@@ -84,8 +85,8 @@ const EditTodoComponent = ({ todoId }: EditTodoComponentProps) => {
                     onChange={(event) => handleChangeForm(event)}
                 />
             </div>
-            <div>
-                <label htmlFor="body">Completed</label>
+            <div className={styles.checkBoxBlock}>
+                <label htmlFor="completed">Completed</label>
                 <Input
                     type="checkbox"
                     name="completed"

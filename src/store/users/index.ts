@@ -6,7 +6,7 @@ import {
 } from '@reduxjs/toolkit';
 
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
-import { UserType } from './../../types/UserType';
+import { UserType } from './../../types';
 import { AddCaseFetchUserById } from './fetchUserById';
 
 const userEntityAdapter = createEntityAdapter<UserType>();

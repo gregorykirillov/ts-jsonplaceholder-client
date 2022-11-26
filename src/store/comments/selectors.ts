@@ -1,4 +1,4 @@
-import { CommentType } from '~/src/types/CommentType';
+import { CommentType } from '~/src/types';
 import { RootState } from '..';
 
 export const selectPostModuleState = (state: RootState) => state.comment;

@@ -3,7 +3,7 @@ import React, { FormEvent, useState } from 'react';
 import { Button, Input, TextArea } from '~/src/uikit';
 import { createPost, updatePost } from '~/src/store/posts';
 import { useAppDispatch } from '~/src/store';
-import { PostType } from '~/src/types/PostType';
+import { PostType } from '~/src/types';
 
 import styles from './styles.module.scss';
 

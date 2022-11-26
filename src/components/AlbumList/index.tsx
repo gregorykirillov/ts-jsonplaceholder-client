@@ -6,7 +6,7 @@ import { selectAlbums } from '~/src/store/albums/selectors';
 import { fetchAlbums } from '~/src/store/albums';
 import { RootState, useAppDispatch } from '~/src/store';
 import { Preloader } from '~/src/uikit';
-import { AlbumType } from '~/src/types/AlbumType';
+import { AlbumType } from '~/src/types';
 
 import styles from './styles.module.scss';
 

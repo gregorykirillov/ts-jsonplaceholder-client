@@ -2,7 +2,7 @@ import { useState } from 'react';
 import cn from 'classnames';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-import { AlbumType } from '~/src/types/AlbumType';
+import { AlbumType } from '~/src/types';
 import PhotosBlock from '../PhotosBlock';
 import { Button } from '~/src/uikit';
 

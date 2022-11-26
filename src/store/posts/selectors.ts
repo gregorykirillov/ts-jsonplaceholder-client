@@ -1,4 +1,4 @@
-import { PostType } from '~/src/types/PostType';
+import { PostType } from '~/src/types';
 import { RootState } from '..';
 
 export const selectPostModuleState = (state: RootState) => state.post;

@@ -6,7 +6,7 @@ import {
 } from '@reduxjs/toolkit';
 
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
-import { AlbumType } from '~/src/types/AlbumType';
+import { AlbumType } from '~/src/types';
 import { addCaseUpdateAlbum } from './updateAlbum';
 import { addCaseCreateAlbum } from './createAlbum';
 import { addCaseReadAlbums } from './fetchAlbums';
