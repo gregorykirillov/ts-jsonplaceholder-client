@@ -1,7 +1,7 @@
 import React, { FormEvent, useState } from 'react';
 
 import { Button, Input, TextArea } from '~/src/uikit';
-import { createPost, editPost } from '~/src/store/posts';
+import { createPost, updatePost } from '~/src/store/posts';
 import { useAppDispatch } from '~/src/store';
 import { PostType } from '~/src/types/PostType';
 
@@ -64,7 +64,7 @@ const CreateEditPostComponent = ({ mode, post }: PropsType) => {
                 id: post?.id,
                 userId: post?.userId,
             });
-            dispatchEvent = editPost;
+            dispatchEvent = updatePost;
         }
 
         dispatch(dispatchEvent(dispatchData as EditPostData))
