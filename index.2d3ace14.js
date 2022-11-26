@@ -2909,7 +2909,7 @@ var _reactRouterDom = require("react-router-dom");
 var _app = require("./App");
 var _appDefault = parcelHelpers.interopDefault(_app);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.BrowserRouter), {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.HashRouter), {
     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
         fileName: "src/index.tsx",
         lineNumber: 10,
@@ -33884,11 +33884,11 @@ $RefreshReg$(_c, "Preloader");
 })();
 
 },{}],"8FoPR":[function(require,module,exports) {
+module.exports["preloaderContainer"] = `XVlO_G_preloaderContainer`;
+module.exports["md"] = `XVlO_G_md`;
 module.exports["rotate"] = `XVlO_G_rotate`;
 module.exports["rotate"];
-module.exports["preloaderContainer"] = `XVlO_G_preloaderContainer`;
 module.exports["sm"] = `XVlO_G_sm`;
-module.exports["md"] = `XVlO_G_md`;
 module.exports["preloader"] = `XVlO_G_preloader`;
 
 },{}],"k5Q1w":[function(require,module,exports) {
@@ -33959,10 +33959,10 @@ $RefreshReg$(_c, "Button");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","classnames":"jocGM","./styles.module.scss":"fMFY8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fMFY8":[function(require,module,exports) {
-module.exports["md"] = `_91g8AW_md`;
-module.exports["sm"] = `_91g8AW_sm`;
 module.exports["lg"] = `_91g8AW_lg`;
 module.exports["inline"] = `_91g8AW_inline`;
+module.exports["sm"] = `_91g8AW_sm`;
+module.exports["md"] = `_91g8AW_md`;
 module.exports["button"] = `_91g8AW_button`;
 
 },{}],"iEWTU":[function(require,module,exports) {
@@ -33998,15 +33998,15 @@ $RefreshReg$(_c, "Input");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","classnames":"jocGM","./styles.module.scss":"jehPw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jehPw":[function(require,module,exports) {
-module.exports["input"] = `BlFgAW_input`;
 module.exports["sm"] = `BlFgAW_sm`;
 module.exports["md"] = `BlFgAW_md`;
+module.exports["input"] = `BlFgAW_input`;
 
 },{}],"etN8a":[function(require,module,exports) {
 module.exports["prev"] = `Su0KMW_prev`;
-module.exports["childContainer"] = `Su0KMW_childContainer`;
 module.exports["slider"] = `Su0KMW_slider`;
 module.exports["slide"] = `Su0KMW_slide`;
+module.exports["childContainer"] = `Su0KMW_childContainer`;
 module.exports["next"] = `Su0KMW_next`;
 
 },{}],"beIbC":[function(require,module,exports) {
@@ -41360,7 +41360,7 @@ const updatePostURL = (postId)=>`${0, _settings.API_URL}/posts/${postId}`;
 const deletePostURL = (postId)=>`${0, _settings.API_URL}/posts/${postId}`;
 const getAllCommentsURL = (postId)=>`${0, _settings.API_URL}/posts/${postId}/comments`;
 const getAllAlbumsURL = `${(0, _settings.API_URL)}/albums`;
-const getAlbumURL = (albumId)=>`${0, _settings.API_URL}/album/${albumId}`;
+const getAlbumURL = (albumId)=>`${0, _settings.API_URL}/albums/${albumId}`;
 const getAlbumPhotosURL = (albumId)=>`${0, _settings.API_URL}/albums/${albumId}/photos`;
 const createAlbumURL = `${(0, _settings.API_URL)}/albums`;
 const updateAlbumURL = (albumId)=>`${0, _settings.API_URL}/albums/${albumId}`;
@@ -42168,8 +42168,8 @@ $RefreshReg$(_c, "Comment");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./styles.module.scss":"lFjep","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lFjep":[function(require,module,exports) {
-module.exports["commentText"] = `UKQYVq_commentText`;
 module.exports["commentBlock"] = `UKQYVq_commentBlock`;
+module.exports["commentText"] = `UKQYVq_commentText`;
 module.exports["name"] = `UKQYVq_name`;
 
 },{}],"hHtrT":[function(require,module,exports) {
@@ -42219,14 +42219,14 @@ module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "delete
 module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "edit.3b2d22f0.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"9TaJ2":[function(require,module,exports) {
-module.exports["postELement"] = `aogtCa_postELement`;
-module.exports["postTitle"] = `aogtCa_postTitle`;
 module.exports["editSvg"] = `aogtCa_editSvg`;
-module.exports["commentSvg"] = `aogtCa_commentSvg`;
 module.exports["infoBlock"] = `aogtCa_infoBlock`;
-module.exports["actionBlock"] = `aogtCa_actionBlock`;
-module.exports["username"] = `aogtCa_username`;
 module.exports["deleteSvg"] = `aogtCa_deleteSvg`;
+module.exports["username"] = `aogtCa_username`;
+module.exports["commentSvg"] = `aogtCa_commentSvg`;
+module.exports["postTitle"] = `aogtCa_postTitle`;
+module.exports["postELement"] = `aogtCa_postELement`;
+module.exports["actionBlock"] = `aogtCa_actionBlock`;
 
 },{}],"9nMHi":[function(require,module,exports) {
 module.exports["postList"] = `FQ2p6a_postList`;
@@ -42535,13 +42535,13 @@ module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "delete
 module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "edit.d0af44b8.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"k8jzk":[function(require,module,exports) {
+module.exports["actionBlock"] = `yrM7Aa_actionBlock`;
 module.exports["editSvg"] = `yrM7Aa_editSvg`;
-module.exports["deleteSvg"] = `yrM7Aa_deleteSvg`;
 module.exports["board"] = `yrM7Aa_board`;
+module.exports["deleteSvg"] = `yrM7Aa_deleteSvg`;
+module.exports["todoList"] = `yrM7Aa_todoList`;
 module.exports["title"] = `yrM7Aa_title`;
 module.exports["generalList"] = `yrM7Aa_generalList`;
-module.exports["todoList"] = `yrM7Aa_todoList`;
-module.exports["actionBlock"] = `yrM7Aa_actionBlock`;
 
 },{}],"7rLBL":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bfb0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -42841,8 +42841,8 @@ $RefreshReg$(_c, "PhotosBlock");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","~/src/store":"iLHNH","~/src/store/photos/selectors":"ack2i","../Slider":"7Rnr6","~/src/store/photos":"hMT9I","~/src/uikit":"jt2EU","./styles.module.scss":"3e0tb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3e0tb":[function(require,module,exports) {
-module.exports["photo"] = `_7giObG_photo`;
 module.exports["photosBlock"] = `_7giObG_photosBlock`;
+module.exports["photo"] = `_7giObG_photo`;
 module.exports["dots"] = `_7giObG_dots`;
 
 },{}],"ldHZC":[function(require,module,exports) {
@@ -42856,12 +42856,12 @@ module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "edit.4
 
 },{"./helpers/bundle-url":"lgJ39"}],"bmRZe":[function(require,module,exports) {
 module.exports["editSvg"] = `Lt1Iba_editSvg`;
-module.exports["albumELement"] = `Lt1Iba_albumELement`;
-module.exports["actionBlock"] = `Lt1Iba_actionBlock`;
 module.exports["deleteSvg"] = `Lt1Iba_deleteSvg`;
-module.exports["arrowSvg"] = `Lt1Iba_arrowSvg`;
 module.exports["active"] = `Lt1Iba_active`;
+module.exports["arrowSvg"] = `Lt1Iba_arrowSvg`;
 module.exports["title"] = `Lt1Iba_title`;
+module.exports["actionBlock"] = `Lt1Iba_actionBlock`;
+module.exports["albumELement"] = `Lt1Iba_albumELement`;
 
 },{}],"aHIE0":[function(require,module,exports) {
 module.exports["albumList"] = `hJofxW_albumList`;
@@ -42879,60 +42879,16 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _uikit = require("~/src/uikit");
-var _todos = require("~/src/store/todos");
-var _store = require("~/src/store");
-var _reactRedux = require("react-redux");
-var _selectors = require("~/src/store/todos/selectors");
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
-var _s = $RefreshSig$();
-const EditTodoComponent = ({ todoId  })=>{
-    _s();
-    const [isLoading, setLoading] = (0, _react.useState)(true);
-    const dispatch = (0, _store.useAppDispatch)();
-    const todo = (0, _reactRedux.useSelector)((state)=>(0, _selectors.selectTodoById)(state, todoId));
-    (0, _react.useEffect)(()=>{
-        dispatch((0, _todos.fetchTodo)(todoId)).finally(()=>setLoading(false));
-    }, []);
-    (0, _react.useEffect)(()=>{
-        setFormData(todo);
-    }, [
-        todo
-    ]);
-    const [formData, setFormData] = (0, _react.useState)({
-        id: todo?.id,
-        userId: todo?.userId,
-        title: todo?.title,
-        completed: todo?.completed
-    });
+const EditTodoComponent = ({ title , completed , onChangeForm , onSubmitForm  })=>{
     const handleChangeForm = (event)=>{
-        const input = event.target;
-        const inputName = input.name;
-        const inputValue = input.type === "checkbox" ? input.checked : input.value;
-        setFormData({
-            ...formData,
-            [inputName]: inputValue
-        });
+        onChangeForm(event);
     };
     const handleSubmitForm = (event)=>{
         event.preventDefault();
-        dispatch((0, _todos.updateTodo)(formData)).then(()=>{
-            setFormData({
-                id: 0,
-                userId: 0,
-                title: "",
-                completed: false
-            });
-            alert(`Задача успешно изменена!`);
-        })// eslint-disable-next-line no-console
-        .catch((err)=>console.log(err));
-        return;
+        onSubmitForm();
     };
-    if (isLoading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Preloader), {}, void 0, false, {
-        fileName: "src/components/EditTodoComponent/index.tsx",
-        lineNumber: 70,
-        columnNumber: 27
-    }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
         className: (0, _stylesModuleScssDefault.default).form,
         onSubmit: (event)=>handleSubmitForm(event),
@@ -42944,25 +42900,25 @@ const EditTodoComponent = ({ todoId  })=>{
                         children: "Title"
                     }, void 0, false, {
                         fileName: "src/components/EditTodoComponent/index.tsx",
-                        lineNumber: 78,
+                        lineNumber: 36,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Input), {
                         type: "text",
                         name: "title",
                         id: "title",
-                        value: formData.title,
+                        value: title,
                         className: (0, _stylesModuleScssDefault.default).input,
                         onChange: (event)=>handleChangeForm(event)
                     }, void 0, false, {
                         fileName: "src/components/EditTodoComponent/index.tsx",
-                        lineNumber: 79,
+                        lineNumber: 37,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/EditTodoComponent/index.tsx",
-                lineNumber: 77,
+                lineNumber: 35,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -42973,47 +42929,41 @@ const EditTodoComponent = ({ todoId  })=>{
                         children: "Completed"
                     }, void 0, false, {
                         fileName: "src/components/EditTodoComponent/index.tsx",
-                        lineNumber: 89,
+                        lineNumber: 47,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Input), {
                         type: "checkbox",
                         name: "completed",
                         id: "completed",
-                        checked: formData.completed,
+                        checked: completed,
                         className: (0, _stylesModuleScssDefault.default).checkBox,
                         onChange: (event)=>handleChangeForm(event)
                     }, void 0, false, {
                         fileName: "src/components/EditTodoComponent/index.tsx",
-                        lineNumber: 90,
+                        lineNumber: 48,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/EditTodoComponent/index.tsx",
-                lineNumber: 88,
+                lineNumber: 46,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Button), {
                 children: "Сохранить"
             }, void 0, false, {
                 fileName: "src/components/EditTodoComponent/index.tsx",
-                lineNumber: 99,
+                lineNumber: 57,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/EditTodoComponent/index.tsx",
-        lineNumber: 73,
+        lineNumber: 31,
         columnNumber: 9
     }, undefined);
 };
-_s(EditTodoComponent, "O+5QtHCuDkE6H3ZvU2NCQSpccM0=", false, function() {
-    return [
-        (0, _store.useAppDispatch),
-        (0, _reactRedux.useSelector)
-    ];
-});
 _c = EditTodoComponent;
 exports.default = EditTodoComponent;
 var _c;
@@ -43024,10 +42974,10 @@ $RefreshReg$(_c, "EditTodoComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","react-redux":"bdVon","~/src/store/todos/selectors":"hwlsU","./styles.module.scss":"j0JuF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"j0JuF":[function(require,module,exports) {
-module.exports["form"] = `W4BMtW_form`;
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","./styles.module.scss":"j0JuF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"j0JuF":[function(require,module,exports) {
 module.exports["checkBoxBlock"] = `W4BMtW_checkBoxBlock`;
 module.exports["input"] = `W4BMtW_input`;
+module.exports["form"] = `W4BMtW_form`;
 module.exports["textarea"] = `W4BMtW_textarea`;
 module.exports["checkBox"] = `W4BMtW_checkBox`;
 
@@ -43160,8 +43110,8 @@ $RefreshReg$(_c, "EditAlbumComponent");
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","react-redux":"bdVon","~/src/store/albums/selectors":"1CYRR","./styles.module.scss":"dSFM0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dSFM0":[function(require,module,exports) {
 module.exports["textarea"] = `_2siAjG_textarea`;
-module.exports["form"] = `_2siAjG_form`;
 module.exports["input"] = `_2siAjG_input`;
+module.exports["form"] = `_2siAjG_form`;
 
 },{}],"kWkE5":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2fb3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43414,8 +43364,8 @@ $RefreshReg$(_c, "CreateAlbumComponent");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","./styles.module.scss":"koEzG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"koEzG":[function(require,module,exports) {
-module.exports["textarea"] = `GUQMPa_textarea`;
 module.exports["input"] = `GUQMPa_input`;
+module.exports["textarea"] = `GUQMPa_textarea`;
 module.exports["form"] = `GUQMPa_form`;
 
 },{}],"l3Ckd":[function(require,module,exports) {
@@ -43652,9 +43602,9 @@ $RefreshReg$(_c, "EntityPage");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","classnames":"jocGM","react-router-dom":"9xmpe","~/src/uikit":"jt2EU","./styles.module.scss":"a8AVU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"a8AVU":[function(require,module,exports) {
+module.exports["buttonBlock"] = `_8kELJa_buttonBlock`;
 module.exports["section"] = `_8kELJa_section`;
 module.exports["createButton"] = `_8kELJa_createButton`;
-module.exports["buttonBlock"] = `_8kELJa_buttonBlock`;
 
 },{}],"5t3ql":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b704 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43746,22 +43696,31 @@ var _components = require("~/src/components");
 var _store = require("~/src/store");
 var _posts = require("~/src/store/posts");
 var _selectors = require("~/src/store/posts/selectors");
+var _uikit = require("~/src/uikit");
 var _s = $RefreshSig$();
 const EditPostPage = ()=>{
     _s();
     const postId = Number((0, _reactRouterDom.useParams)().id);
+    const [isLoading, setLoading] = (0, _react.useState)(true);
     const dispatch = (0, _store.useAppDispatch)();
     (0, _react.useEffect)(()=>{
-        dispatch((0, _posts.fetchPost)(postId));
+        dispatch((0, _posts.fetchPost)(postId)).finally(()=>{
+            setLoading(false);
+        });
     }, []);
     const post = (0, _reactRedux.useSelector)((state)=>(0, _selectors.selectPostById)(state, postId));
+    if (isLoading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Preloader), {}, void 0, false, {
+        fileName: "src/pages/EditPostPage/index.tsx",
+        lineNumber: 24,
+        columnNumber: 27
+    }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 children: "Изменение поста"
             }, void 0, false, {
                 fileName: "src/pages/EditPostPage/index.tsx",
-                lineNumber: 22,
+                lineNumber: 28,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _components.CreateEditPostComponent), {
@@ -43769,13 +43728,13 @@ const EditPostPage = ()=>{
                 post: post
             }, void 0, false, {
                 fileName: "src/pages/EditPostPage/index.tsx",
-                lineNumber: 24,
+                lineNumber: 30,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(EditPostPage, "PiY1Pgg2Cmd7VBuRt1U+UbHiy68=", false, function() {
+_s(EditPostPage, "fOsq1Ki6uDqH8qB+cy466+KA7Ro=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
         (0, _store.useAppDispatch),
@@ -43792,7 +43751,7 @@ $RefreshReg$(_c, "EditPostPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","~/src/components":"dHnah","~/src/store":"iLHNH","~/src/store/posts":"7Awff","~/src/store/posts/selectors":"1IsUc","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kugtO":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","~/src/components":"dHnah","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-redux":"bdVon","~/src/store":"iLHNH","~/src/store/posts":"7Awff","~/src/store/posts/selectors":"1IsUc","~/src/uikit":"jt2EU"}],"kugtO":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e34e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -43804,34 +43763,89 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRedux = require("react-redux");
 var _reactRouterDom = require("react-router-dom");
 var _components = require("~/src/components");
+var _store = require("~/src/store");
+var _todos = require("~/src/store/todos");
+var _selectors = require("~/src/store/todos/selectors");
+var _uikit = require("~/src/uikit");
 var _s = $RefreshSig$();
 const EditTodoPage = ()=>{
     _s();
     const todoId = Number((0, _reactRouterDom.useParams)().id);
+    const [isLoading, setLoading] = (0, _react.useState)(true);
+    const dispatch = (0, _store.useAppDispatch)();
+    const todo = (0, _reactRedux.useSelector)((state)=>(0, _selectors.selectTodoById)(state, todoId));
+    const [formData, setFormData] = (0, _react.useState)({
+        id: todo?.id,
+        userId: todo?.userId,
+        title: todo?.title,
+        completed: todo?.completed
+    });
+    (0, _react.useEffect)(()=>{
+        dispatch((0, _todos.fetchTodo)(todoId)).finally(()=>{
+            setLoading(false);
+        });
+    }, []);
+    (0, _react.useEffect)(()=>{
+        setFormData(todo);
+    }, [
+        todo
+    ]);
+    const onChangeForm = (event)=>{
+        const input = event.target;
+        const inputName = input.name;
+        const inputValue = input.type === "checkbox" ? input.checked : input.value;
+        setFormData({
+            ...formData,
+            [inputName]: inputValue
+        });
+    };
+    const onSubmitForm = ()=>{
+        dispatch((0, _todos.updateTodo)(formData)).then(()=>{
+            setFormData({
+                id: 0,
+                userId: 0,
+                title: "",
+                completed: false
+            });
+            alert(`Задача успешно изменена!`);
+        })// eslint-disable-next-line no-console
+        .catch((err)=>console.log(err));
+    };
+    if (isLoading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Preloader), {}, void 0, false, {
+        fileName: "src/pages/EditTodoPage/index.tsx",
+        lineNumber: 65,
+        columnNumber: 27
+    }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 children: "Изменение задачи"
             }, void 0, false, {
                 fileName: "src/pages/EditTodoPage/index.tsx",
-                lineNumber: 10,
+                lineNumber: 69,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _components.EditTodoComponent), {
-                todoId: todoId
+                title: formData.title,
+                completed: formData.completed,
+                onSubmitForm: onSubmitForm,
+                onChangeForm: onChangeForm
             }, void 0, false, {
                 fileName: "src/pages/EditTodoPage/index.tsx",
-                lineNumber: 12,
+                lineNumber: 71,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(EditTodoPage, "zmUErVVHtqqM6DIDQ9M8H17P2nM=", false, function() {
+_s(EditTodoPage, "8+GtQ/ka0+JdJOUaIOWFJyrWS6g=", false, function() {
     return [
-        (0, _reactRouterDom.useParams)
+        (0, _reactRouterDom.useParams),
+        (0, _store.useAppDispatch),
+        (0, _reactRedux.useSelector)
     ];
 });
 _c = EditTodoPage;
@@ -43844,7 +43858,7 @@ $RefreshReg$(_c, "EditTodoPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","~/src/components":"dHnah","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dhkvd":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","~/src/components":"dHnah","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/store":"iLHNH","~/src/store/todos":"3yjR4","react-redux":"bdVon","~/src/store/todos/selectors":"hwlsU","~/src/uikit":"jt2EU"}],"dhkvd":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$eeb9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -44162,13 +44176,13 @@ $RefreshReg$(_c, "Header");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","classnames":"jocGM","./styles.module.scss":"gQHd5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gQHd5":[function(require,module,exports) {
-module.exports["logo"] = `JTeIoW_logo`;
-module.exports["nav"] = `JTeIoW_nav`;
-module.exports["header"] = `JTeIoW_header`;
-module.exports["navlist"] = `JTeIoW_navlist`;
-module.exports["navlist__item"] = `JTeIoW_navlist__item`;
 module.exports["link"] = `JTeIoW_link`;
+module.exports["header"] = `JTeIoW_header`;
+module.exports["navlist__item"] = `JTeIoW_navlist__item`;
+module.exports["logo"] = `JTeIoW_logo`;
 module.exports["header__section"] = `JTeIoW_header__section`;
+module.exports["nav"] = `JTeIoW_nav`;
+module.exports["navlist"] = `JTeIoW_navlist`;
 
 },{}],"dacDC":[function(require,module,exports) {
 module.exports["container"] = `BsYhIW_container`;
