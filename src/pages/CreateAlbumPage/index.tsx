@@ -5,7 +5,7 @@ import { CreateAlbumComponent } from '~/src/components';
 const CreateAlbumPage = () => {
     return (
         <>
-            <h2>CreateAlbumPage</h2>
+            <h2>Страница создания альбома</h2>
 
             <CreateAlbumComponent />
         </>

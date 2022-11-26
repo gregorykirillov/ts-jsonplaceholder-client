@@ -163,12 +163,12 @@ const TodoList = () => {
             setBoards([
                 {
                     id: 1,
-                    title: 'To Do',
+                    title: 'Сделать',
                     items: uncompletedTodos,
                 },
                 {
                     id: 2,
-                    title: 'Done',
+                    title: 'Сделано',
                     items: completedTodos,
                 },
             ]);
@@ -180,8 +180,8 @@ const TodoList = () => {
     return (
         <div className={styles.generalList}>
             {boards.map((board) => (
-                <div key={board.id} className="board">
-                    <div className="board__title">{board.title}</div>
+                <div key={board.id} className={styles.board}>
+                    <span>{board.title}</span>
                     {board?.items?.map((todo) => {
                         return (
                             <TodoElement

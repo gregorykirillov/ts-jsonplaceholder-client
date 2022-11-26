@@ -9,6 +9,12 @@
     flex-direction: column;
 }
 
+.board {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .title {
     max-width: calc(100% - 60px);
 }

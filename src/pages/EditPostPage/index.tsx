@@ -19,7 +19,7 @@ const EditPostPage = () => {
 
     return (
         <>
-            <h2>EditPostPage</h2>
+            <h2>Страница изменения поста</h2>
 
             <CreateEditPostComponent mode="edit" post={post} />
         </>

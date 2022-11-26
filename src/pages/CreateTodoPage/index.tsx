@@ -5,7 +5,7 @@ import { CreateTodoComponent } from '~/src/components';
 const CreateTodoPage = () => {
     return (
         <>
-            <h2>CreateTodoPage</h2>
+            <h2>Страница создания задачи</h2>
 
             <CreateTodoComponent />
         </>

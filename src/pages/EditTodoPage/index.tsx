@@ -7,7 +7,7 @@ const EditTodoPage = () => {
 
     return (
         <>
-            <h2>EditTodoPage</h2>
+            <h2>Страница изменения задачи</h2>
 
             <EditTodoComponent todoId={todoId} />
         </>

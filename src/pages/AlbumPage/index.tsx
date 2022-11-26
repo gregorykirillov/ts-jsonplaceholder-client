@@ -4,7 +4,7 @@ import { AlbumList } from '~/src/components';
 import EntityPage from '~/src/components/EntityPage';
 
 const AlbumPage = () => (
-    <EntityPage pageName="AlbumPage" Component={<AlbumList />} />
+    <EntityPage pageName="Альбомы" Component={<AlbumList />} />
 );
 
 export default AlbumPage;
