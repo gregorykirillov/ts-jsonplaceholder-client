@@ -33699,7 +33699,7 @@ var _createAlbumComponentDefault = parcelHelpers.interopDefault(_createAlbumComp
 var _createEditPostComponent = require("./CreateEditPostComponent");
 var _createEditPostComponentDefault = parcelHelpers.interopDefault(_createEditPostComponent);
 
-},{"./Slider":"7Rnr6","./PostList":"beIbC","./TodoList":"avx45","./AlbumList":"7rLBL","./PostElement":"cOImL","./EditTodoComponent":"ldU2r","./EditAlbumComponent":"7feDt","./CreateTodoComponent":"kWkE5","./CreateAlbumComponent":"7IFW6","./CreateEditPostComponent":"l3Ckd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./EditPhotoComponent":"5tDim"}],"7Rnr6":[function(require,module,exports) {
+},{"./Slider":"7Rnr6","./PostList":"beIbC","./TodoList":"avx45","./AlbumList":"7rLBL","./PostElement":"cOImL","./EditTodoComponent":"ldU2r","./EditAlbumComponent":"7feDt","./CreateTodoComponent":"kWkE5","./EditPhotoComponent":"5tDim","./CreateAlbumComponent":"7IFW6","./CreateEditPostComponent":"l3Ckd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7Rnr6":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6c2e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -33883,9 +33883,9 @@ $RefreshReg$(_c, "Preloader");
 })();
 
 },{}],"8FoPR":[function(require,module,exports) {
-module.exports["sm"] = `XVlO_G_sm`;
 module.exports["preloaderContainer"] = `XVlO_G_preloaderContainer`;
 module.exports["md"] = `XVlO_G_md`;
+module.exports["sm"] = `XVlO_G_sm`;
 module.exports["rotate"] = `XVlO_G_rotate`;
 module.exports["rotate"];
 module.exports["preloader"] = `XVlO_G_preloader`;
@@ -33958,11 +33958,11 @@ $RefreshReg$(_c, "Button");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","classnames":"jocGM","./styles.module.scss":"fMFY8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fMFY8":[function(require,module,exports) {
-module.exports["md"] = `_91g8AW_md`;
+module.exports["inline"] = `_91g8AW_inline`;
 module.exports["sm"] = `_91g8AW_sm`;
+module.exports["md"] = `_91g8AW_md`;
 module.exports["button"] = `_91g8AW_button`;
 module.exports["lg"] = `_91g8AW_lg`;
-module.exports["inline"] = `_91g8AW_inline`;
 
 },{}],"iEWTU":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$76a1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -33997,16 +33997,16 @@ $RefreshReg$(_c, "Input");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","classnames":"jocGM","./styles.module.scss":"jehPw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jehPw":[function(require,module,exports) {
-module.exports["sm"] = `BlFgAW_sm`;
 module.exports["input"] = `BlFgAW_input`;
 module.exports["md"] = `BlFgAW_md`;
+module.exports["sm"] = `BlFgAW_sm`;
 
 },{}],"etN8a":[function(require,module,exports) {
-module.exports["prev"] = `Su0KMW_prev`;
 module.exports["next"] = `Su0KMW_next`;
 module.exports["slide"] = `Su0KMW_slide`;
-module.exports["slider"] = `Su0KMW_slider`;
+module.exports["prev"] = `Su0KMW_prev`;
 module.exports["childContainer"] = `Su0KMW_childContainer`;
+module.exports["slider"] = `Su0KMW_slider`;
 
 },{}],"beIbC":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$a438 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -34146,7 +34146,7 @@ const PostElement = ({ post  })=>{
                 lineNumber: 55,
                 columnNumber: 13
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
                 className: (0, _stylesModuleScssDefault.default).postTitle,
                 children: post.title
             }, void 0, false, {
@@ -34261,7 +34261,7 @@ $RefreshReg$(_c, "PostElement");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","~/src/store":"iLHNH","~/src/store/comments":"jWvUX","~/src/uikit":"jt2EU","../CommentsBlock":"Ajrl5","~/src/store/users":"aSAB2","~/src/store/posts":"7Awff","~/src/store/users/selectors":"733PS","./styles.module.scss":"9TaJ2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/public/icons/comment.svg":"dlscx","~/public/icons/delete.svg":"kje09","~/public/icons/edit.svg":"1DTuK"}],"iLHNH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","~/src/store":"iLHNH","~/src/store/comments":"jWvUX","~/src/uikit":"jt2EU","../CommentsBlock":"Ajrl5","~/src/store/users":"aSAB2","~/src/store/posts":"7Awff","~/src/store/users/selectors":"733PS","~/public/icons/comment.svg":"dlscx","~/public/icons/delete.svg":"kje09","~/public/icons/edit.svg":"1DTuK","./styles.module.scss":"9TaJ2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iLHNH":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "store", ()=>store);
@@ -41776,7 +41776,32 @@ const photoSlice = (0, _toolkit.createSlice)({
     }
 });
 
-},{"@reduxjs/toolkit":"lL1Ef","~/src/constants/loadingStatuses":"37tdo","./fetchPhotos":"5Yki5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./deletephoto":"6G8Fu"}],"5Yki5":[function(require,module,exports) {
+},{"@reduxjs/toolkit":"lL1Ef","~/src/constants/loadingStatuses":"37tdo","./deletephoto":"6G8Fu","./fetchPhotos":"5Yki5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6G8Fu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "deletePhoto", ()=>deletePhoto);
+parcelHelpers.export(exports, "addCaseDeletePhotos", ()=>addCaseDeletePhotos);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _toolkit = require("@reduxjs/toolkit");
+var _index = require("../../routes/index");
+var _loadingStatuses = require("~/src/constants/loadingStatuses");
+const deletePhoto = (0, _toolkit.createAsyncThunk)("photo/deletePhoto", async (photoId)=>{
+    await (0, _axiosDefault.default).delete((0, _index.deletePhotoURL)(photoId));
+    return photoId;
+});
+const addCaseDeletePhotos = (builder, photoEntityAdapter)=>{
+    return builder.addCase(deletePhoto.pending, (state)=>{
+        state.status = (0, _loadingStatuses.LoadingStatuses).inProgress;
+    }).addCase(deletePhoto.fulfilled, (state, { payload  })=>{
+        photoEntityAdapter.removeOne(state, payload);
+        state.status = (0, _loadingStatuses.LoadingStatuses).success;
+    }).addCase(deletePhoto.rejected, (state, { payload  })=>{
+        state.status = payload === (0, _loadingStatuses.LoadingStatuses).earlyAdded ? (0, _loadingStatuses.LoadingStatuses).success : (0, _loadingStatuses.LoadingStatuses).failed;
+    });
+};
+
+},{"axios":"jo6P5","@reduxjs/toolkit":"lL1Ef","../../routes/index":"kvHxr","~/src/constants/loadingStatuses":"37tdo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5Yki5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "fetchPhotos", ()=>fetchPhotos);
@@ -41814,32 +41839,7 @@ const selectPhotoModuleState = (state)=>state.photo;
 const selectPhotoIds = (state)=>selectPhotoModuleState(state).ids;
 const selectPhotos = (state, albumId)=>Object.values(selectPhotoModuleState(state).entities).filter((photo)=>photo.albumId === albumId);
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6G8Fu":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "deletePhoto", ()=>deletePhoto);
-parcelHelpers.export(exports, "addCaseDeletePhotos", ()=>addCaseDeletePhotos);
-var _axios = require("axios");
-var _axiosDefault = parcelHelpers.interopDefault(_axios);
-var _toolkit = require("@reduxjs/toolkit");
-var _index = require("../../routes/index");
-var _loadingStatuses = require("~/src/constants/loadingStatuses");
-const deletePhoto = (0, _toolkit.createAsyncThunk)("photo/deletePhoto", async (photoId)=>{
-    await (0, _axiosDefault.default).delete((0, _index.deletePhotoURL)(photoId));
-    return photoId;
-});
-const addCaseDeletePhotos = (builder, photoEntityAdapter)=>{
-    return builder.addCase(deletePhoto.pending, (state)=>{
-        state.status = (0, _loadingStatuses.LoadingStatuses).inProgress;
-    }).addCase(deletePhoto.fulfilled, (state, { payload  })=>{
-        photoEntityAdapter.removeOne(state, payload);
-        state.status = (0, _loadingStatuses.LoadingStatuses).success;
-    }).addCase(deletePhoto.rejected, (state, { payload  })=>{
-        state.status = payload === (0, _loadingStatuses.LoadingStatuses).earlyAdded ? (0, _loadingStatuses.LoadingStatuses).success : (0, _loadingStatuses.LoadingStatuses).failed;
-    });
-};
-
-},{"axios":"jo6P5","@reduxjs/toolkit":"lL1Ef","../../routes/index":"kvHxr","~/src/constants/loadingStatuses":"37tdo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aSAB2":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aSAB2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "userSlice", ()=>userSlice);
@@ -42217,16 +42217,6 @@ module.exports["commentText"] = `UKQYVq_commentText`;
 },{}],"hHtrT":[function(require,module,exports) {
 module.exports["commentsBlock"] = `JZlNKG_commentsBlock`;
 
-},{}],"9TaJ2":[function(require,module,exports) {
-module.exports["deleteSvg"] = `aogtCa_deleteSvg`;
-module.exports["actionBlock"] = `aogtCa_actionBlock`;
-module.exports["username"] = `aogtCa_username`;
-module.exports["editSvg"] = `aogtCa_editSvg`;
-module.exports["infoBlock"] = `aogtCa_infoBlock`;
-module.exports["commentSvg"] = `aogtCa_commentSvg`;
-module.exports["postTitle"] = `aogtCa_postTitle`;
-module.exports["postELement"] = `aogtCa_postELement`;
-
 },{}],"dlscx":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "comment.f40d9c58.svg" + "?" + Date.now();
 
@@ -42270,7 +42260,17 @@ module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "delete
 },{"./helpers/bundle-url":"lgJ39"}],"1DTuK":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "edit.2775ccd1.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"9nMHi":[function(require,module,exports) {
+},{"./helpers/bundle-url":"lgJ39"}],"9TaJ2":[function(require,module,exports) {
+module.exports["editSvg"] = `aogtCa_editSvg`;
+module.exports["username"] = `aogtCa_username`;
+module.exports["actionBlock"] = `aogtCa_actionBlock`;
+module.exports["commentSvg"] = `aogtCa_commentSvg`;
+module.exports["infoBlock"] = `aogtCa_infoBlock`;
+module.exports["deleteSvg"] = `aogtCa_deleteSvg`;
+module.exports["postELement"] = `aogtCa_postELement`;
+module.exports["postTitle"] = `aogtCa_postTitle`;
+
+},{}],"9nMHi":[function(require,module,exports) {
 module.exports["postList"] = `FQ2p6a_postList`;
 
 },{}],"avx45":[function(require,module,exports) {
@@ -42514,7 +42514,7 @@ $RefreshReg$(_c, "TodoList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","../TodoElement":"9VALH","~/src/store/todos/selectors":"hwlsU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","~/src/uikit":"jt2EU","./styles.module.scss":"k8jzk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/public/icons/delete.svg":"kje09","~/public/icons/edit.svg":"1DTuK"}],"9VALH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","../TodoElement":"9VALH","~/src/store/todos/selectors":"hwlsU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","~/src/uikit":"jt2EU","~/public/icons/delete.svg":"kje09","~/public/icons/edit.svg":"1DTuK","./styles.module.scss":"k8jzk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9VALH":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5118 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42567,17 +42567,17 @@ $RefreshReg$(_c, "TodoElement");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","classnames":"jocGM","./styles.module.scss":"78CDP","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"78CDP":[function(require,module,exports) {
-module.exports["completed"] = `uHGntq_completed`;
 module.exports["todoELement"] = `uHGntq_todoELement`;
+module.exports["completed"] = `uHGntq_completed`;
 
 },{}],"k8jzk":[function(require,module,exports) {
 module.exports["generalList"] = `yrM7Aa_generalList`;
-module.exports["board"] = `yrM7Aa_board`;
+module.exports["actionBlock"] = `yrM7Aa_actionBlock`;
+module.exports["deleteSvg"] = `yrM7Aa_deleteSvg`;
 module.exports["todoList"] = `yrM7Aa_todoList`;
 module.exports["title"] = `yrM7Aa_title`;
 module.exports["editSvg"] = `yrM7Aa_editSvg`;
-module.exports["deleteSvg"] = `yrM7Aa_deleteSvg`;
-module.exports["actionBlock"] = `yrM7Aa_actionBlock`;
+module.exports["board"] = `yrM7Aa_board`;
 
 },{}],"7rLBL":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bfb0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -42789,7 +42789,7 @@ $RefreshReg$(_c, "AlbumElement");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","classnames":"jocGM","react-router-dom":"9xmpe","../PhotosBlock":"cVhgc","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","./styles.module.scss":"bmRZe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/public/icons/arrow.svg":"ellWI","~/public/icons/delete.svg":"kje09","~/public/icons/edit.svg":"1DTuK"}],"cVhgc":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","classnames":"jocGM","react-router-dom":"9xmpe","../PhotosBlock":"cVhgc","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","~/public/icons/arrow.svg":"ellWI","~/public/icons/delete.svg":"kje09","~/public/icons/edit.svg":"1DTuK","./styles.module.scss":"bmRZe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cVhgc":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$444b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42877,23 +42877,23 @@ $RefreshReg$(_c, "PhotosBlock");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","~/src/store":"iLHNH","~/src/store/photos/selectors":"ack2i","../Slider":"7Rnr6","~/src/store/photos":"hMT9I","~/src/uikit":"jt2EU","./styles.module.scss":"3e0tb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3e0tb":[function(require,module,exports) {
-module.exports["photo"] = `_7giObG_photo`;
 module.exports["dots"] = `_7giObG_dots`;
+module.exports["photo"] = `_7giObG_photo`;
 module.exports["photosBlock"] = `_7giObG_photosBlock`;
-
-},{}],"bmRZe":[function(require,module,exports) {
-module.exports["deleteSvg"] = `Lt1Iba_deleteSvg`;
-module.exports["actionBlock"] = `Lt1Iba_actionBlock`;
-module.exports["editSvg"] = `Lt1Iba_editSvg`;
-module.exports["albumELement"] = `Lt1Iba_albumELement`;
-module.exports["title"] = `Lt1Iba_title`;
-module.exports["arrowSvg"] = `Lt1Iba_arrowSvg`;
-module.exports["active"] = `Lt1Iba_active`;
 
 },{}],"ellWI":[function(require,module,exports) {
 module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "arrow.de242c13.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"aHIE0":[function(require,module,exports) {
+},{"./helpers/bundle-url":"lgJ39"}],"bmRZe":[function(require,module,exports) {
+module.exports["editSvg"] = `Lt1Iba_editSvg`;
+module.exports["deleteSvg"] = `Lt1Iba_deleteSvg`;
+module.exports["arrowSvg"] = `Lt1Iba_arrowSvg`;
+module.exports["active"] = `Lt1Iba_active`;
+module.exports["title"] = `Lt1Iba_title`;
+module.exports["albumELement"] = `Lt1Iba_albumELement`;
+module.exports["actionBlock"] = `Lt1Iba_actionBlock`;
+
+},{}],"aHIE0":[function(require,module,exports) {
 module.exports["albumList"] = `hJofxW_albumList`;
 
 },{}],"ldU2r":[function(require,module,exports) {
@@ -43006,10 +43006,10 @@ $RefreshReg$(_c, "EditTodoComponent");
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","./styles.module.scss":"j0JuF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"j0JuF":[function(require,module,exports) {
 module.exports["input"] = `W4BMtW_input`;
-module.exports["checkBoxBlock"] = `W4BMtW_checkBoxBlock`;
-module.exports["form"] = `W4BMtW_form`;
 module.exports["textarea"] = `W4BMtW_textarea`;
+module.exports["checkBoxBlock"] = `W4BMtW_checkBoxBlock`;
 module.exports["checkBox"] = `W4BMtW_checkBox`;
+module.exports["form"] = `W4BMtW_form`;
 
 },{}],"7feDt":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4979 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43084,8 +43084,8 @@ $RefreshReg$(_c, "EditAlbumComponent");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","./styles.module.scss":"dSFM0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dSFM0":[function(require,module,exports) {
-module.exports["textarea"] = `_2siAjG_textarea`;
 module.exports["form"] = `_2siAjG_form`;
+module.exports["textarea"] = `_2siAjG_textarea`;
 module.exports["input"] = `_2siAjG_input`;
 
 },{}],"kWkE5":[function(require,module,exports) {
@@ -43228,12 +43228,50 @@ $RefreshReg$(_c, "CreateTodoComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","./styles.module.scss":"baZ17","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/routes":"kvHxr","react-router-dom":"9xmpe"}],"baZ17":[function(require,module,exports) {
-module.exports["textarea"] = `xr3HjG_textarea`;
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","~/src/uikit":"jt2EU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","~/src/routes":"kvHxr","./styles.module.scss":"baZ17","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"baZ17":[function(require,module,exports) {
 module.exports["form"] = `xr3HjG_form`;
+module.exports["textarea"] = `xr3HjG_textarea`;
 module.exports["input"] = `xr3HjG_input`;
 
-},{}],"7IFW6":[function(require,module,exports) {
+},{}],"5tDim":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f7e1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f7e1.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const EditPhotoComponent = ({ photoSrc , photoAlt  })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            src: photoSrc,
+            alt: photoAlt
+        }, void 0, false, {
+            fileName: "src/components/EditPhotoComponent/index.tsx",
+            lineNumber: 14,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/EditPhotoComponent/index.tsx",
+        lineNumber: 13,
+        columnNumber: 9
+    }, undefined);
+};
+_c = EditPhotoComponent;
+exports.default = EditPhotoComponent;
+var _c;
+$RefreshReg$(_c, "EditPhotoComponent");
+
+  $parcel$ReactRefreshHelpers$f7e1.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7IFW6":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$79cb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -43348,9 +43386,9 @@ $RefreshReg$(_c, "CreateAlbumComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","./styles.module.scss":"koEzG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","~/src/routes":"kvHxr"}],"koEzG":[function(require,module,exports) {
-module.exports["input"] = `GUQMPa_input`;
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","~/src/routes":"kvHxr","./styles.module.scss":"koEzG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"koEzG":[function(require,module,exports) {
 module.exports["form"] = `GUQMPa_form`;
+module.exports["input"] = `GUQMPa_input`;
 module.exports["textarea"] = `GUQMPa_textarea`;
 
 },{}],"l3Ckd":[function(require,module,exports) {
@@ -43509,50 +43547,12 @@ $RefreshReg$(_c, "CreateEditPostComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/posts":"7Awff","~/src/store":"iLHNH","./styles.module.scss":"4y3JF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/routes":"kvHxr","react-router-dom":"9xmpe"}],"4y3JF":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","~/src/uikit":"jt2EU","~/src/store/posts":"7Awff","~/src/store":"iLHNH","~/src/routes":"kvHxr","./styles.module.scss":"4y3JF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4y3JF":[function(require,module,exports) {
+module.exports["form"] = `eCBWHG_form`;
 module.exports["textarea"] = `eCBWHG_textarea`;
 module.exports["input"] = `eCBWHG_input`;
-module.exports["form"] = `eCBWHG_form`;
 
-},{}],"5tDim":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$f7e1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
-var prevRefreshReg = window.$RefreshReg$;
-var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$f7e1.prelude(module);
-
-try {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-const EditPhotoComponent = ({ photoSrc , photoAlt  })=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-            src: photoSrc,
-            alt: photoAlt
-        }, void 0, false, {
-            fileName: "src/components/EditPhotoComponent/index.tsx",
-            lineNumber: 14,
-            columnNumber: 13
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/EditPhotoComponent/index.tsx",
-        lineNumber: 13,
-        columnNumber: 9
-    }, undefined);
-};
-_c = EditPhotoComponent;
-exports.default = EditPhotoComponent;
-var _c;
-$RefreshReg$(_c, "EditPhotoComponent");
-
-  $parcel$ReactRefreshHelpers$f7e1.postlude(module);
-} finally {
-  window.$RefreshReg$ = prevRefreshReg;
-  window.$RefreshSig$ = prevRefreshSig;
-}
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"elrPy":[function(require,module,exports) {
+},{}],"elrPy":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$f2d2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -43630,9 +43630,9 @@ $RefreshReg$(_c, "EntityPage");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","classnames":"jocGM","react-router-dom":"9xmpe","~/src/uikit":"jt2EU","./styles.module.scss":"a8AVU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"a8AVU":[function(require,module,exports) {
-module.exports["buttonBlock"] = `_8kELJa_buttonBlock`;
 module.exports["createButton"] = `_8kELJa_createButton`;
 module.exports["section"] = `_8kELJa_section`;
+module.exports["buttonBlock"] = `_8kELJa_buttonBlock`;
 
 },{}],"5t3ql":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b704 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43779,7 +43779,7 @@ $RefreshReg$(_c, "EditPostPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","~/src/components":"dHnah","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-redux":"bdVon","~/src/store":"iLHNH","~/src/store/posts":"7Awff","~/src/store/posts/selectors":"1IsUc","~/src/uikit":"jt2EU"}],"kugtO":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","~/src/components":"dHnah","~/src/store":"iLHNH","~/src/store/posts":"7Awff","~/src/store/posts/selectors":"1IsUc","~/src/uikit":"jt2EU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kugtO":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e34e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -43890,7 +43890,7 @@ $RefreshReg$(_c, "EditTodoPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","~/src/components":"dHnah","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/store":"iLHNH","~/src/store/todos":"3yjR4","react-redux":"bdVon","~/src/store/todos/selectors":"hwlsU","~/src/uikit":"jt2EU","~/src/routes":"kvHxr"}],"dhkvd":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","~/src/components":"dHnah","~/src/store":"iLHNH","~/src/store/todos":"3yjR4","~/src/store/todos/selectors":"hwlsU","~/src/uikit":"jt2EU","~/src/routes":"kvHxr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dhkvd":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$eeb9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -44057,11 +44057,11 @@ $RefreshReg$(_c, "EditAlbumPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","~/src/components":"dHnah","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-redux":"bdVon","~/src/routes":"kvHxr","~/src/store":"iLHNH","~/src/store/albums":"5i2UF","~/src/store/albums/selectors":"1CYRR","~/src/store/photos":"hMT9I","~/src/store/photos/selectors":"ack2i","~/src/uikit":"jt2EU","./styles.module.scss":"466ns","~/src/store/photos/deletephoto":"6G8Fu","~/public/icons/delete.svg":"kje09"}],"466ns":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","~/src/components":"dHnah","~/src/routes":"kvHxr","~/src/store":"iLHNH","~/src/store/albums":"5i2UF","~/src/store/albums/selectors":"1CYRR","~/src/store/photos":"hMT9I","~/src/store/photos/deletephoto":"6G8Fu","~/src/store/photos/selectors":"ack2i","~/src/uikit":"jt2EU","~/public/icons/delete.svg":"kje09","./styles.module.scss":"466ns","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"466ns":[function(require,module,exports) {
 module.exports["deleteSvg"] = `KTNGUW_deleteSvg`;
+module.exports["photoWrapper"] = `KTNGUW_photoWrapper`;
 module.exports["photo"] = `KTNGUW_photo`;
 module.exports["deleteButton"] = `KTNGUW_deleteButton`;
-module.exports["photoWrapper"] = `KTNGUW_photoWrapper`;
 
 },{}],"8Ofb2":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6884 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -44308,15 +44308,15 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","classnames":"jocGM","./styles.module.scss":"gQHd5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/routes":"kvHxr"}],"gQHd5":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","classnames":"jocGM","~/src/routes":"kvHxr","./styles.module.scss":"gQHd5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gQHd5":[function(require,module,exports) {
+module.exports["header"] = `JTeIoW_header`;
 module.exports["nav"] = `JTeIoW_nav`;
 module.exports["navlist"] = `JTeIoW_navlist`;
-module.exports["header"] = `JTeIoW_header`;
-module.exports["active"] = `JTeIoW_active`;
-module.exports["navlist__item"] = `JTeIoW_navlist__item`;
-module.exports["header__section"] = `JTeIoW_header__section`;
 module.exports["logo"] = `JTeIoW_logo`;
 module.exports["link"] = `JTeIoW_link`;
+module.exports["navlist__item"] = `JTeIoW_navlist__item`;
+module.exports["header__section"] = `JTeIoW_header__section`;
+module.exports["active"] = `JTeIoW_active`;
 
 },{}],"dacDC":[function(require,module,exports) {
 module.exports["container"] = `BsYhIW_container`;
