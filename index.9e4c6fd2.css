@@ -553,6 +553,10 @@ section, footer {
   background-color: #d3d3d3;
 }
 
+.JTeIoW_header .JTeIoW_navlist__item.JTeIoW_active {
+  background-color: #e7e7e7;
+}
+
 .BsYhIW_container {
   flex-direction: column;
   align-items: center;

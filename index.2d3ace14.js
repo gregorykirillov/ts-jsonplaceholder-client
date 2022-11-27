@@ -41334,6 +41334,12 @@ var utils = require("./../utils");
 },{"./../utils":"5By4s"}],"kvHxr":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "POSTS_PATH", ()=>POSTS_PATH);
+parcelHelpers.export(exports, "TODOS_PATH", ()=>TODOS_PATH);
+parcelHelpers.export(exports, "USERS_PATH", ()=>USERS_PATH);
+parcelHelpers.export(exports, "ALBUMS_PATH", ()=>ALBUMS_PATH);
+parcelHelpers.export(exports, "PHOTOS_PATH", ()=>PHOTOS_PATH);
+parcelHelpers.export(exports, "COMMENTS_PATH", ()=>COMMENTS_PATH);
 parcelHelpers.export(exports, "getAllPostsURL", ()=>getAllPostsURL);
 parcelHelpers.export(exports, "getPostURL", ()=>getPostURL);
 parcelHelpers.export(exports, "createPostURL", ()=>createPostURL);
@@ -41353,24 +41359,30 @@ parcelHelpers.export(exports, "createTodoURL", ()=>createTodoURL);
 parcelHelpers.export(exports, "updateTodoURL", ()=>updateTodoURL);
 parcelHelpers.export(exports, "deleteTodoURL", ()=>deleteTodoURL);
 var _settings = require("../settings");
-const getAllPostsURL = `${(0, _settings.API_URL)}/posts`;
-const getPostURL = (postId)=>`${0, _settings.API_URL}/posts/${postId}`;
-const createPostURL = `${(0, _settings.API_URL)}/posts`;
-const updatePostURL = (postId)=>`${0, _settings.API_URL}/posts/${postId}`;
-const deletePostURL = (postId)=>`${0, _settings.API_URL}/posts/${postId}`;
-const getAllCommentsURL = (postId)=>`${0, _settings.API_URL}/posts/${postId}/comments`;
-const getAllAlbumsURL = `${(0, _settings.API_URL)}/albums`;
-const getAlbumURL = (albumId)=>`${0, _settings.API_URL}/albums/${albumId}`;
-const getAlbumPhotosURL = (albumId)=>`${0, _settings.API_URL}/albums/${albumId}/photos`;
-const createAlbumURL = `${(0, _settings.API_URL)}/albums`;
-const updateAlbumURL = (albumId)=>`${0, _settings.API_URL}/albums/${albumId}`;
-const deleteAlbumURL = (albumId)=>`${0, _settings.API_URL}/albums/${albumId}`;
-const getUserByIdURL = (userId)=>`${0, _settings.API_URL}/users/${userId}`;
-const getAllTodosURL = `${(0, _settings.API_URL)}/todos`;
-const getTodoURL = (todoId)=>`${0, _settings.API_URL}/todos/${todoId}`;
-const createTodoURL = `${(0, _settings.API_URL)}/todos`;
-const updateTodoURL = (todoId)=>`${0, _settings.API_URL}/todos/${todoId}`;
-const deleteTodoURL = (todoId)=>`${0, _settings.API_URL}/todos/${todoId}`;
+const POSTS_PATH = "/posts";
+const TODOS_PATH = "/todos";
+const USERS_PATH = "/users";
+const ALBUMS_PATH = "/albums";
+const PHOTOS_PATH = "/photos";
+const COMMENTS_PATH = "/comments";
+const getAllPostsURL = `${(0, _settings.API_URL) + POSTS_PATH}`;
+const getPostURL = (postId)=>`${(0, _settings.API_URL) + POSTS_PATH}/${postId}`;
+const createPostURL = `${(0, _settings.API_URL) + POSTS_PATH}`;
+const updatePostURL = (postId)=>`${(0, _settings.API_URL) + POSTS_PATH}/${postId}`;
+const deletePostURL = (postId)=>`${(0, _settings.API_URL) + POSTS_PATH}/${postId}`;
+const getAllCommentsURL = (postId)=>`${(0, _settings.API_URL) + POSTS_PATH}/${postId + COMMENTS_PATH}`;
+const getAllAlbumsURL = `${(0, _settings.API_URL) + ALBUMS_PATH}`;
+const getAlbumURL = (albumId)=>`${(0, _settings.API_URL) + ALBUMS_PATH}/${albumId}`;
+const getAlbumPhotosURL = (albumId)=>`${(0, _settings.API_URL) + ALBUMS_PATH}/${albumId + PHOTOS_PATH}`;
+const createAlbumURL = `${(0, _settings.API_URL) + ALBUMS_PATH}`;
+const updateAlbumURL = (albumId)=>`${(0, _settings.API_URL) + ALBUMS_PATH}/${albumId}`;
+const deleteAlbumURL = (albumId)=>`${(0, _settings.API_URL) + ALBUMS_PATH}/${albumId}`;
+const getUserByIdURL = (userId)=>`${(0, _settings.API_URL) + USERS_PATH}/${userId}`;
+const getAllTodosURL = `${(0, _settings.API_URL) + TODOS_PATH}`;
+const getTodoURL = (todoId)=>`${(0, _settings.API_URL) + TODOS_PATH}/${todoId}`;
+const createTodoURL = `${(0, _settings.API_URL) + TODOS_PATH}`;
+const updateTodoURL = (todoId)=>`${(0, _settings.API_URL) + TODOS_PATH}/${todoId}`;
+const deleteTodoURL = (todoId)=>`${(0, _settings.API_URL) + TODOS_PATH}/${todoId}`;
 
 },{"../settings":"5blfu","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5blfu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -42993,17 +43005,20 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
 var _uikit = require("~/src/uikit");
 var _albums = require("~/src/store/albums");
 var _store = require("~/src/store");
 var _reactRedux = require("react-redux");
 var _selectors = require("~/src/store/albums/selectors");
+var _routes = require("~/src/routes");
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
 var _s = $RefreshSig$();
 const EditAlbumComponent = ({ albumId  })=>{
     _s();
     const [isLoading, setLoading] = (0, _react.useState)(true);
+    const navigate = (0, _reactRouterDom.useNavigate)();
     const dispatch = (0, _store.useAppDispatch)();
     const album = (0, _reactRedux.useSelector)((state)=>(0, _selectors.selectAlbumById)(state, albumId));
     (0, _react.useEffect)(()=>{
@@ -43037,13 +43052,14 @@ const EditAlbumComponent = ({ albumId  })=>{
                 title: ""
             });
             alert(`Альбом успешно изменён!`);
+            navigate((0, _routes.ALBUMS_PATH));
         })// eslint-disable-next-line no-console
         .catch((err)=>console.log(err));
         return;
     };
     if (isLoading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Preloader), {}, void 0, false, {
         fileName: "src/components/EditAlbumComponent/index.tsx",
-        lineNumber: 67,
+        lineNumber: 72,
         columnNumber: 27
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
@@ -43057,7 +43073,7 @@ const EditAlbumComponent = ({ albumId  })=>{
                         children: "Title"
                     }, void 0, false, {
                         fileName: "src/components/EditAlbumComponent/index.tsx",
-                        lineNumber: 75,
+                        lineNumber: 80,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Input), {
@@ -43069,31 +43085,32 @@ const EditAlbumComponent = ({ albumId  })=>{
                         onChange: (event)=>handleChangeForm(event)
                     }, void 0, false, {
                         fileName: "src/components/EditAlbumComponent/index.tsx",
-                        lineNumber: 76,
+                        lineNumber: 81,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/EditAlbumComponent/index.tsx",
-                lineNumber: 74,
+                lineNumber: 79,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Button), {
                 children: "Сохранить"
             }, void 0, false, {
                 fileName: "src/components/EditAlbumComponent/index.tsx",
-                lineNumber: 85,
+                lineNumber: 90,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/EditAlbumComponent/index.tsx",
-        lineNumber: 70,
+        lineNumber: 75,
         columnNumber: 9
     }, undefined);
 };
-_s(EditAlbumComponent, "WWoH1W4HhcIufRHLE/33gVdGrnQ=", false, function() {
+_s(EditAlbumComponent, "OEzoxguaf+j739MaZITeWKiU+F8=", false, function() {
     return [
+        (0, _reactRouterDom.useNavigate),
         (0, _store.useAppDispatch),
         (0, _reactRedux.useSelector)
     ];
@@ -43108,7 +43125,7 @@ $RefreshReg$(_c, "EditAlbumComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","react-redux":"bdVon","~/src/store/albums/selectors":"1CYRR","./styles.module.scss":"dSFM0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dSFM0":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","react-redux":"bdVon","~/src/store/albums/selectors":"1CYRR","./styles.module.scss":"dSFM0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/routes":"kvHxr","react-router-dom":"9xmpe"}],"dSFM0":[function(require,module,exports) {
 module.exports["textarea"] = `_2siAjG_textarea`;
 module.exports["input"] = `_2siAjG_input`;
 module.exports["form"] = `_2siAjG_form`;
@@ -43125,15 +43142,18 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
 var _uikit = require("~/src/uikit");
 var _todos = require("~/src/store/todos");
 var _store = require("~/src/store");
+var _routes = require("~/src/routes");
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
 var _s = $RefreshSig$();
 const CreateTodoComponent = ()=>{
     _s();
     const dispatch = (0, _store.useAppDispatch)();
+    const navigate = (0, _reactRouterDom.useNavigate)();
     const [formData, setFormData] = (0, _react.useState)({
         title: "",
         completed: false
@@ -43156,6 +43176,7 @@ const CreateTodoComponent = ()=>{
                 completed: false
             });
             alert(`Задача успешно создана!`);
+            navigate((0, _routes.TODOS_PATH));
         })// eslint-disable-next-line no-console
         .catch((err)=>console.log(err));
         return;
@@ -43171,7 +43192,7 @@ const CreateTodoComponent = ()=>{
                         children: "Title"
                     }, void 0, false, {
                         fileName: "src/components/CreateTodoComponent/index.tsx",
-                        lineNumber: 56,
+                        lineNumber: 61,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Input), {
@@ -43183,13 +43204,13 @@ const CreateTodoComponent = ()=>{
                         onChange: (event)=>handleChangeForm(event)
                     }, void 0, false, {
                         fileName: "src/components/CreateTodoComponent/index.tsx",
-                        lineNumber: 57,
+                        lineNumber: 62,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/CreateTodoComponent/index.tsx",
-                lineNumber: 55,
+                lineNumber: 60,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -43199,7 +43220,7 @@ const CreateTodoComponent = ()=>{
                         children: "Completed"
                     }, void 0, false, {
                         fileName: "src/components/CreateTodoComponent/index.tsx",
-                        lineNumber: 67,
+                        lineNumber: 72,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Input), {
@@ -43210,32 +43231,33 @@ const CreateTodoComponent = ()=>{
                         onChange: (event)=>handleChangeForm(event)
                     }, void 0, false, {
                         fileName: "src/components/CreateTodoComponent/index.tsx",
-                        lineNumber: 68,
+                        lineNumber: 73,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/CreateTodoComponent/index.tsx",
-                lineNumber: 66,
+                lineNumber: 71,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Button), {
                 children: "Создать"
             }, void 0, false, {
                 fileName: "src/components/CreateTodoComponent/index.tsx",
-                lineNumber: 76,
+                lineNumber: 81,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/CreateTodoComponent/index.tsx",
-        lineNumber: 51,
+        lineNumber: 56,
         columnNumber: 9
     }, undefined);
 };
-_s(CreateTodoComponent, "ZpsEO4SLv3j1LouoKxKmKsJ/XvQ=", false, function() {
+_s(CreateTodoComponent, "fFLoMNA+BkuEebU8hkc3dhwyWX8=", false, function() {
     return [
-        (0, _store.useAppDispatch)
+        (0, _store.useAppDispatch),
+        (0, _reactRouterDom.useNavigate)
     ];
 });
 _c = CreateTodoComponent;
@@ -43248,7 +43270,7 @@ $RefreshReg$(_c, "CreateTodoComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","./styles.module.scss":"baZ17","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"baZ17":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","./styles.module.scss":"baZ17","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/routes":"kvHxr","react-router-dom":"9xmpe"}],"baZ17":[function(require,module,exports) {
 module.exports["input"] = `xr3HjG_input`;
 module.exports["textarea"] = `xr3HjG_textarea`;
 module.exports["form"] = `xr3HjG_form`;
@@ -43265,15 +43287,18 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
 var _uikit = require("~/src/uikit");
 var _albums = require("~/src/store/albums");
 var _store = require("~/src/store");
+var _routes = require("~/src/routes");
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
 var _s = $RefreshSig$();
 const CreateAlbumComponent = ()=>{
     _s();
     const dispatch = (0, _store.useAppDispatch)();
+    const navigate = (0, _reactRouterDom.useNavigate)();
     const [formData, setFormData] = (0, _react.useState)({
         id: 0,
         userId: 0,
@@ -43298,6 +43323,7 @@ const CreateAlbumComponent = ()=>{
                 title: ""
             });
             alert(`Альбом успешно создан!`);
+            navigate((0, _routes.ALBUMS_PATH));
         })// eslint-disable-next-line no-console
         .catch((err)=>console.log(err));
         return;
@@ -43313,7 +43339,7 @@ const CreateAlbumComponent = ()=>{
                         children: "Title"
                     }, void 0, false, {
                         fileName: "src/components/CreateAlbumComponent/index.tsx",
-                        lineNumber: 59,
+                        lineNumber: 64,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Input), {
@@ -43325,32 +43351,33 @@ const CreateAlbumComponent = ()=>{
                         onChange: (event)=>handleChangeForm(event)
                     }, void 0, false, {
                         fileName: "src/components/CreateAlbumComponent/index.tsx",
-                        lineNumber: 60,
+                        lineNumber: 65,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/CreateAlbumComponent/index.tsx",
-                lineNumber: 58,
+                lineNumber: 63,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Button), {
                 children: "Создать"
             }, void 0, false, {
                 fileName: "src/components/CreateAlbumComponent/index.tsx",
-                lineNumber: 69,
+                lineNumber: 74,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/CreateAlbumComponent/index.tsx",
-        lineNumber: 54,
+        lineNumber: 59,
         columnNumber: 9
     }, undefined);
 };
-_s(CreateAlbumComponent, "19VMpAehzKVn/wKICd8RKAC1OC4=", false, function() {
+_s(CreateAlbumComponent, "/ccRqD+7zXdJUCLiSQ1fnXFTE0g=", false, function() {
     return [
-        (0, _store.useAppDispatch)
+        (0, _store.useAppDispatch),
+        (0, _reactRouterDom.useNavigate)
     ];
 });
 _c = CreateAlbumComponent;
@@ -43363,7 +43390,7 @@ $RefreshReg$(_c, "CreateAlbumComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","./styles.module.scss":"koEzG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"koEzG":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","./styles.module.scss":"koEzG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","~/src/routes":"kvHxr"}],"koEzG":[function(require,module,exports) {
 module.exports["input"] = `GUQMPa_input`;
 module.exports["textarea"] = `GUQMPa_textarea`;
 module.exports["form"] = `GUQMPa_form`;
@@ -43380,9 +43407,11 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
 var _uikit = require("~/src/uikit");
 var _posts = require("~/src/store/posts");
 var _store = require("~/src/store");
+var _routes = require("~/src/routes");
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
 var _s = $RefreshSig$();
@@ -43393,6 +43422,7 @@ const ModeButtonNameMap = {
 const CreateEditPostComponent = ({ mode , post  })=>{
     _s();
     const dispatch = (0, _store.useAppDispatch)();
+    const navigate = (0, _reactRouterDom.useNavigate)();
     const [formData, setFormData] = (0, _react.useState)({
         title: post?.title || "",
         body: post?.body || ""
@@ -43427,6 +43457,7 @@ const CreateEditPostComponent = ({ mode , post  })=>{
             });
             const messageType = mode === "edit" ? "изменён" : "добавлен";
             alert(`Пост успешно ${messageType}!`);
+            navigate((0, _routes.POSTS_PATH));
         })// eslint-disable-next-line no-console
         .catch((err)=>console.log(err));
         return;
@@ -43442,7 +43473,7 @@ const CreateEditPostComponent = ({ mode , post  })=>{
                         children: "Title"
                     }, void 0, false, {
                         fileName: "src/components/CreateEditPostComponent/index.tsx",
-                        lineNumber: 90,
+                        lineNumber: 95,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Input), {
@@ -43454,13 +43485,13 @@ const CreateEditPostComponent = ({ mode , post  })=>{
                         onChange: (event)=>handleChangeForm(event)
                     }, void 0, false, {
                         fileName: "src/components/CreateEditPostComponent/index.tsx",
-                        lineNumber: 91,
+                        lineNumber: 96,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/CreateEditPostComponent/index.tsx",
-                lineNumber: 89,
+                lineNumber: 94,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -43470,7 +43501,7 @@ const CreateEditPostComponent = ({ mode , post  })=>{
                         children: "Body"
                     }, void 0, false, {
                         fileName: "src/components/CreateEditPostComponent/index.tsx",
-                        lineNumber: 101,
+                        lineNumber: 106,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.TextArea), {
@@ -43481,32 +43512,33 @@ const CreateEditPostComponent = ({ mode , post  })=>{
                         onChange: (event)=>handleChangeForm(event)
                     }, void 0, false, {
                         fileName: "src/components/CreateEditPostComponent/index.tsx",
-                        lineNumber: 102,
+                        lineNumber: 107,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/CreateEditPostComponent/index.tsx",
-                lineNumber: 100,
+                lineNumber: 105,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Button), {
                 children: buttonName
             }, void 0, false, {
                 fileName: "src/components/CreateEditPostComponent/index.tsx",
-                lineNumber: 110,
+                lineNumber: 115,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/CreateEditPostComponent/index.tsx",
-        lineNumber: 85,
+        lineNumber: 90,
         columnNumber: 9
     }, undefined);
 };
-_s(CreateEditPostComponent, "SaEKEpk1SfVQUkIWawtTMQa1fM8=", false, function() {
+_s(CreateEditPostComponent, "1c0ZOdz9ReWX7WWjuLPbwsWl3nk=", false, function() {
     return [
-        (0, _store.useAppDispatch)
+        (0, _store.useAppDispatch),
+        (0, _reactRouterDom.useNavigate)
     ];
 });
 _c = CreateEditPostComponent;
@@ -43519,7 +43551,7 @@ $RefreshReg$(_c, "CreateEditPostComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/posts":"7Awff","~/src/store":"iLHNH","./styles.module.scss":"4y3JF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"4y3JF":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/posts":"7Awff","~/src/store":"iLHNH","./styles.module.scss":"4y3JF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/routes":"kvHxr","react-router-dom":"9xmpe"}],"4y3JF":[function(require,module,exports) {
 module.exports["form"] = `eCBWHG_form`;
 module.exports["input"] = `eCBWHG_input`;
 module.exports["textarea"] = `eCBWHG_textarea`;
@@ -43770,11 +43802,13 @@ var _store = require("~/src/store");
 var _todos = require("~/src/store/todos");
 var _selectors = require("~/src/store/todos/selectors");
 var _uikit = require("~/src/uikit");
+var _routes = require("~/src/routes");
 var _s = $RefreshSig$();
 const EditTodoPage = ()=>{
     _s();
     const todoId = Number((0, _reactRouterDom.useParams)().id);
     const [isLoading, setLoading] = (0, _react.useState)(true);
+    const navigate = (0, _reactRouterDom.useNavigate)();
     const dispatch = (0, _store.useAppDispatch)();
     const todo = (0, _reactRedux.useSelector)((state)=>(0, _selectors.selectTodoById)(state, todoId));
     const [formData, setFormData] = (0, _react.useState)({
@@ -43811,12 +43845,13 @@ const EditTodoPage = ()=>{
                 completed: false
             });
             alert(`Задача успешно изменена!`);
+            navigate((0, _routes.TODOS_PATH));
         })// eslint-disable-next-line no-console
         .catch((err)=>console.log(err));
     };
     if (isLoading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Preloader), {}, void 0, false, {
         fileName: "src/pages/EditTodoPage/index.tsx",
-        lineNumber: 65,
+        lineNumber: 68,
         columnNumber: 27
     }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -43825,7 +43860,7 @@ const EditTodoPage = ()=>{
                 children: "Изменение задачи"
             }, void 0, false, {
                 fileName: "src/pages/EditTodoPage/index.tsx",
-                lineNumber: 69,
+                lineNumber: 72,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _components.EditTodoComponent), {
@@ -43835,15 +43870,16 @@ const EditTodoPage = ()=>{
                 onChangeForm: onChangeForm
             }, void 0, false, {
                 fileName: "src/pages/EditTodoPage/index.tsx",
-                lineNumber: 71,
+                lineNumber: 74,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(EditTodoPage, "8+GtQ/ka0+JdJOUaIOWFJyrWS6g=", false, function() {
+_s(EditTodoPage, "GxZU8C9r3yy+tR/umkEcXkw587Y=", false, function() {
     return [
         (0, _reactRouterDom.useParams),
+        (0, _reactRouterDom.useNavigate),
         (0, _store.useAppDispatch),
         (0, _reactRedux.useSelector)
     ];
@@ -43858,7 +43894,7 @@ $RefreshReg$(_c, "EditTodoPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","~/src/components":"dHnah","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/store":"iLHNH","~/src/store/todos":"3yjR4","react-redux":"bdVon","~/src/store/todos/selectors":"hwlsU","~/src/uikit":"jt2EU"}],"dhkvd":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","~/src/components":"dHnah","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/store":"iLHNH","~/src/store/todos":"3yjR4","react-redux":"bdVon","~/src/store/todos/selectors":"hwlsU","~/src/uikit":"jt2EU","~/src/routes":"kvHxr"}],"dhkvd":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$eeb9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -44057,9 +44093,32 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactRouterDom = require("react-router-dom");
 var _classnames = require("classnames");
 var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _routes = require("~/src/routes");
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
+var _s = $RefreshSig$();
+const navPaths = [
+    {
+        title: "Главная",
+        to: "/"
+    },
+    {
+        title: "Посты",
+        to: (0, _routes.POSTS_PATH)
+    },
+    {
+        title: "Альбомы",
+        to: (0, _routes.ALBUMS_PATH)
+    },
+    {
+        title: "Задачи",
+        to: (0, _routes.TODOS_PATH)
+    }, 
+];
 function Header() {
+    _s();
+    const path = (0, _reactRouterDom.useLocation)().pathname;
+    const isActive = (link)=>link !== "/" ? path.includes(link) : path === "/";
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
         className: (0, _stylesModuleScssDefault.default).header,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -44070,101 +44129,58 @@ function Header() {
                     children: "Admin panel"
                 }, void 0, false, {
                     fileName: "src/parts/Header/index.tsx",
-                    lineNumber: 11,
+                    lineNumber: 36,
                     columnNumber: 17
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("nav", {
                     className: (0, _stylesModuleScssDefault.default).nav,
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ul", {
                         className: (0, _stylesModuleScssDefault.default).navlist,
-                        children: [
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                className: (0, _stylesModuleScssDefault.default).navlist__item,
+                        children: navPaths.map((navItem)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                                className: (0, _classnamesDefault.default)((0, _stylesModuleScssDefault.default).navlist__item, {
+                                    [(0, _stylesModuleScssDefault.default).active]: isActive(navItem.to)
+                                }),
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                                     className: (0, _stylesModuleScssDefault.default).link,
-                                    to: "/",
-                                    children: "Главная"
+                                    to: navItem.to,
+                                    children: navItem.title
                                 }, void 0, false, {
                                     fileName: "src/parts/Header/index.tsx",
-                                    lineNumber: 16,
-                                    columnNumber: 29
+                                    lineNumber: 46,
+                                    columnNumber: 33
                                 }, this)
                             }, void 0, false, {
                                 fileName: "src/parts/Header/index.tsx",
-                                lineNumber: 15,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                className: (0, _stylesModuleScssDefault.default).navlist__item,
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                    className: (0, _stylesModuleScssDefault.default).link,
-                                    to: "/posts",
-                                    children: "Посты"
-                                }, void 0, false, {
-                                    fileName: "src/parts/Header/index.tsx",
-                                    lineNumber: 21,
-                                    columnNumber: 29
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/parts/Header/index.tsx",
-                                lineNumber: 20,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                className: (0, _stylesModuleScssDefault.default).navlist__item,
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                    className: (0, _stylesModuleScssDefault.default).link,
-                                    to: "/albums",
-                                    children: "Альбомы"
-                                }, void 0, false, {
-                                    fileName: "src/parts/Header/index.tsx",
-                                    lineNumber: 27,
-                                    columnNumber: 29
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/parts/Header/index.tsx",
-                                lineNumber: 26,
-                                columnNumber: 25
-                            }, this),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
-                                className: (0, _stylesModuleScssDefault.default).navlist__item,
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                                    className: (0, _stylesModuleScssDefault.default).link,
-                                    to: "/todos",
-                                    children: "Задачи"
-                                }, void 0, false, {
-                                    fileName: "src/parts/Header/index.tsx",
-                                    lineNumber: 33,
-                                    columnNumber: 29
-                                }, this)
-                            }, void 0, false, {
-                                fileName: "src/parts/Header/index.tsx",
-                                lineNumber: 32,
-                                columnNumber: 25
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                                lineNumber: 41,
+                                columnNumber: 29
+                            }, this))
+                    }, void 0, false, {
                         fileName: "src/parts/Header/index.tsx",
-                        lineNumber: 14,
+                        lineNumber: 39,
                         columnNumber: 21
                     }, this)
                 }, void 0, false, {
                     fileName: "src/parts/Header/index.tsx",
-                    lineNumber: 13,
+                    lineNumber: 38,
                     columnNumber: 17
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/parts/Header/index.tsx",
-            lineNumber: 10,
+            lineNumber: 35,
             columnNumber: 13
         }, this)
     }, void 0, false, {
         fileName: "src/parts/Header/index.tsx",
-        lineNumber: 9,
+        lineNumber: 34,
         columnNumber: 9
     }, this);
 }
+_s(Header, "EuD9q2dZ34PfN/QO2OBhBzeMxmY=", false, function() {
+    return [
+        (0, _reactRouterDom.useLocation)
+    ];
+});
 _c = Header;
 exports.default = Header;
 var _c;
@@ -44175,14 +44191,15 @@ $RefreshReg$(_c, "Header");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","classnames":"jocGM","./styles.module.scss":"gQHd5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gQHd5":[function(require,module,exports) {
-module.exports["link"] = `JTeIoW_link`;
-module.exports["header"] = `JTeIoW_header`;
-module.exports["navlist__item"] = `JTeIoW_navlist__item`;
-module.exports["logo"] = `JTeIoW_logo`;
-module.exports["header__section"] = `JTeIoW_header__section`;
-module.exports["nav"] = `JTeIoW_nav`;
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","classnames":"jocGM","./styles.module.scss":"gQHd5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/routes":"kvHxr"}],"gQHd5":[function(require,module,exports) {
 module.exports["navlist"] = `JTeIoW_navlist`;
+module.exports["header__section"] = `JTeIoW_header__section`;
+module.exports["logo"] = `JTeIoW_logo`;
+module.exports["header"] = `JTeIoW_header`;
+module.exports["link"] = `JTeIoW_link`;
+module.exports["active"] = `JTeIoW_active`;
+module.exports["navlist__item"] = `JTeIoW_navlist__item`;
+module.exports["nav"] = `JTeIoW_nav`;
 
 },{}],"dacDC":[function(require,module,exports) {
 module.exports["container"] = `BsYhIW_container`;
