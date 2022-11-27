@@ -33673,6 +33673,7 @@ parcelHelpers.export(exports, "PostElement", ()=>(0, _postElementDefault.default
 parcelHelpers.export(exports, "EditTodoComponent", ()=>(0, _editTodoComponentDefault.default));
 parcelHelpers.export(exports, "EditAlbumComponent", ()=>(0, _editAlbumComponentDefault.default));
 parcelHelpers.export(exports, "CreateTodoComponent", ()=>(0, _createTodoComponentDefault.default));
+parcelHelpers.export(exports, "EditPhotoComponent", ()=>(0, _editPhotoComponentDefault.default));
 parcelHelpers.export(exports, "CreateAlbumComponent", ()=>(0, _createAlbumComponentDefault.default));
 parcelHelpers.export(exports, "CreateEditPostComponent", ()=>(0, _createEditPostComponentDefault.default));
 var _slider = require("./Slider");
@@ -33691,12 +33692,14 @@ var _editAlbumComponent = require("./EditAlbumComponent");
 var _editAlbumComponentDefault = parcelHelpers.interopDefault(_editAlbumComponent);
 var _createTodoComponent = require("./CreateTodoComponent");
 var _createTodoComponentDefault = parcelHelpers.interopDefault(_createTodoComponent);
+var _editPhotoComponent = require("./EditPhotoComponent");
+var _editPhotoComponentDefault = parcelHelpers.interopDefault(_editPhotoComponent);
 var _createAlbumComponent = require("./CreateAlbumComponent");
 var _createAlbumComponentDefault = parcelHelpers.interopDefault(_createAlbumComponent);
 var _createEditPostComponent = require("./CreateEditPostComponent");
 var _createEditPostComponentDefault = parcelHelpers.interopDefault(_createEditPostComponent);
 
-},{"./Slider":"7Rnr6","./PostList":"beIbC","./TodoList":"avx45","./AlbumList":"7rLBL","./PostElement":"cOImL","./EditTodoComponent":"ldU2r","./EditAlbumComponent":"7feDt","./CreateTodoComponent":"kWkE5","./CreateAlbumComponent":"7IFW6","./CreateEditPostComponent":"l3Ckd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7Rnr6":[function(require,module,exports) {
+},{"./Slider":"7Rnr6","./PostList":"beIbC","./TodoList":"avx45","./AlbumList":"7rLBL","./PostElement":"cOImL","./EditTodoComponent":"ldU2r","./EditAlbumComponent":"7feDt","./CreateTodoComponent":"kWkE5","./CreateAlbumComponent":"7IFW6","./CreateEditPostComponent":"l3Ckd","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./EditPhotoComponent":"5tDim"}],"7Rnr6":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6c2e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -33715,13 +33718,9 @@ var _s = $RefreshSig$();
 const Slider = ({ children  })=>{
     _s();
     const [currSlideNum, setCurrSlideNum] = (0, _react.useState)(0);
-    const [slides, setSlides] = (0, _react.useState)([]);
     const itemsCount = children.length;
     const slidesToShow = 3;
     const maxSlides = Math.ceil(itemsCount / slidesToShow);
-    (0, _react.useEffect)(()=>{
-        setSlides(children);
-    }, []);
     const handlePrev = ()=>{
         if (currSlideNum) setCurrSlideNum(currSlideNum - 1);
     };
@@ -33741,15 +33740,15 @@ const Slider = ({ children  })=>{
                     style: {
                         transform: `translateX(calc(${currSlideNum ? -100 * currSlideNum : 0}% + ${20 * currSlideNum + 10}px))`
                     },
-                    children: slides
+                    children: children
                 }, void 0, false, {
                     fileName: "src/components/Slider/index.tsx",
-                    lineNumber: 34,
+                    lineNumber: 29,
                     columnNumber: 17
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Slider/index.tsx",
-                lineNumber: 33,
+                lineNumber: 28,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Button), {
@@ -33758,7 +33757,7 @@ const Slider = ({ children  })=>{
                 children: "<"
             }, void 0, false, {
                 fileName: "src/components/Slider/index.tsx",
-                lineNumber: 45,
+                lineNumber: 40,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Button), {
@@ -33767,17 +33766,17 @@ const Slider = ({ children  })=>{
                 children: ">"
             }, void 0, false, {
                 fileName: "src/components/Slider/index.tsx",
-                lineNumber: 48,
+                lineNumber: 43,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Slider/index.tsx",
-        lineNumber: 29,
+        lineNumber: 24,
         columnNumber: 9
     }, undefined);
 };
-_s(Slider, "cRFu1M0LNv2lbH5HRznMGVt7omo=");
+_s(Slider, "IAH0BrOVuoT3sgVNB+K9AloW0QU=");
 _c = Slider;
 exports.default = Slider;
 var _c;
@@ -33884,11 +33883,11 @@ $RefreshReg$(_c, "Preloader");
 })();
 
 },{}],"8FoPR":[function(require,module,exports) {
+module.exports["sm"] = `XVlO_G_sm`;
 module.exports["preloaderContainer"] = `XVlO_G_preloaderContainer`;
 module.exports["md"] = `XVlO_G_md`;
 module.exports["rotate"] = `XVlO_G_rotate`;
 module.exports["rotate"];
-module.exports["sm"] = `XVlO_G_sm`;
 module.exports["preloader"] = `XVlO_G_preloader`;
 
 },{}],"k5Q1w":[function(require,module,exports) {
@@ -33959,11 +33958,11 @@ $RefreshReg$(_c, "Button");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","classnames":"jocGM","./styles.module.scss":"fMFY8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fMFY8":[function(require,module,exports) {
+module.exports["md"] = `_91g8AW_md`;
+module.exports["sm"] = `_91g8AW_sm`;
+module.exports["button"] = `_91g8AW_button`;
 module.exports["lg"] = `_91g8AW_lg`;
 module.exports["inline"] = `_91g8AW_inline`;
-module.exports["sm"] = `_91g8AW_sm`;
-module.exports["md"] = `_91g8AW_md`;
-module.exports["button"] = `_91g8AW_button`;
 
 },{}],"iEWTU":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$76a1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -33999,15 +33998,15 @@ $RefreshReg$(_c, "Input");
 }
 },{"react/jsx-dev-runtime":"iTorj","classnames":"jocGM","./styles.module.scss":"jehPw","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"jehPw":[function(require,module,exports) {
 module.exports["sm"] = `BlFgAW_sm`;
-module.exports["md"] = `BlFgAW_md`;
 module.exports["input"] = `BlFgAW_input`;
+module.exports["md"] = `BlFgAW_md`;
 
 },{}],"etN8a":[function(require,module,exports) {
 module.exports["prev"] = `Su0KMW_prev`;
-module.exports["slider"] = `Su0KMW_slider`;
-module.exports["slide"] = `Su0KMW_slide`;
-module.exports["childContainer"] = `Su0KMW_childContainer`;
 module.exports["next"] = `Su0KMW_next`;
+module.exports["slide"] = `Su0KMW_slide`;
+module.exports["slider"] = `Su0KMW_slider`;
+module.exports["childContainer"] = `Su0KMW_childContainer`;
 
 },{}],"beIbC":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$a438 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -34096,11 +34095,11 @@ var _commentsBlockDefault = parcelHelpers.interopDefault(_commentsBlock);
 var _users = require("~/src/store/users");
 var _posts = require("~/src/store/posts");
 var _selectors = require("~/src/store/users/selectors");
-var _commentSvg = require("./comment.svg");
+var _commentSvg = require("~/public/icons/comment.svg");
 var _commentSvgDefault = parcelHelpers.interopDefault(_commentSvg);
-var _deleteSvg = require("./delete.svg");
+var _deleteSvg = require("~/public/icons/delete.svg");
 var _deleteSvgDefault = parcelHelpers.interopDefault(_deleteSvg);
-var _editSvg = require("./edit.svg");
+var _editSvg = require("~/public/icons/edit.svg");
 var _editSvgDefault = parcelHelpers.interopDefault(_editSvg);
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
@@ -34262,7 +34261,7 @@ $RefreshReg$(_c, "PostElement");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","~/src/store":"iLHNH","~/src/store/comments":"jWvUX","~/src/uikit":"jt2EU","../CommentsBlock":"Ajrl5","~/src/store/users":"aSAB2","~/src/store/posts":"7Awff","~/src/store/users/selectors":"733PS","./comment.svg":"7AKw3","./delete.svg":"8IYYn","./edit.svg":"6B2Kw","./styles.module.scss":"9TaJ2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iLHNH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","~/src/store":"iLHNH","~/src/store/comments":"jWvUX","~/src/uikit":"jt2EU","../CommentsBlock":"Ajrl5","~/src/store/users":"aSAB2","~/src/store/posts":"7Awff","~/src/store/users/selectors":"733PS","./styles.module.scss":"9TaJ2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/public/icons/comment.svg":"dlscx","~/public/icons/delete.svg":"kje09","~/public/icons/edit.svg":"1DTuK"}],"iLHNH":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "store", ()=>store);
@@ -38044,7 +38043,7 @@ exports.default = thunk;
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "loggerMiddleware", ()=>loggerMiddleware);
-const loggerMiddleware = (store)=>(next)=>(action)=>{
+const loggerMiddleware = ()=>(next)=>(action)=>{
             // eslint-disable-next-line no-console
             console.log(action);
             next(action);
@@ -41348,10 +41347,11 @@ parcelHelpers.export(exports, "deletePostURL", ()=>deletePostURL);
 parcelHelpers.export(exports, "getAllCommentsURL", ()=>getAllCommentsURL);
 parcelHelpers.export(exports, "getAllAlbumsURL", ()=>getAllAlbumsURL);
 parcelHelpers.export(exports, "getAlbumURL", ()=>getAlbumURL);
-parcelHelpers.export(exports, "getAlbumPhotosURL", ()=>getAlbumPhotosURL);
 parcelHelpers.export(exports, "createAlbumURL", ()=>createAlbumURL);
 parcelHelpers.export(exports, "updateAlbumURL", ()=>updateAlbumURL);
 parcelHelpers.export(exports, "deleteAlbumURL", ()=>deleteAlbumURL);
+parcelHelpers.export(exports, "getAlbumPhotosURL", ()=>getAlbumPhotosURL);
+parcelHelpers.export(exports, "deletePhotoURL", ()=>deletePhotoURL);
 parcelHelpers.export(exports, "getUserByIdURL", ()=>getUserByIdURL);
 parcelHelpers.export(exports, "getAllTodosURL", ()=>getAllTodosURL);
 parcelHelpers.export(exports, "getTodoURL", ()=>getTodoURL);
@@ -41373,10 +41373,11 @@ const deletePostURL = (postId)=>`${(0, _settings.API_URL) + POSTS_PATH}/${postId
 const getAllCommentsURL = (postId)=>`${(0, _settings.API_URL) + POSTS_PATH}/${postId + COMMENTS_PATH}`;
 const getAllAlbumsURL = `${(0, _settings.API_URL) + ALBUMS_PATH}`;
 const getAlbumURL = (albumId)=>`${(0, _settings.API_URL) + ALBUMS_PATH}/${albumId}`;
-const getAlbumPhotosURL = (albumId)=>`${(0, _settings.API_URL) + ALBUMS_PATH}/${albumId + PHOTOS_PATH}`;
 const createAlbumURL = `${(0, _settings.API_URL) + ALBUMS_PATH}`;
 const updateAlbumURL = (albumId)=>`${(0, _settings.API_URL) + ALBUMS_PATH}/${albumId}`;
 const deleteAlbumURL = (albumId)=>`${(0, _settings.API_URL) + ALBUMS_PATH}/${albumId}`;
+const getAlbumPhotosURL = (albumId)=>`${(0, _settings.API_URL) + ALBUMS_PATH}/${albumId + PHOTOS_PATH}`;
+const deletePhotoURL = (photoId)=>`${(0, _settings.API_URL) + PHOTOS_PATH}/${photoId}`;
 const getUserByIdURL = (userId)=>`${(0, _settings.API_URL) + USERS_PATH}/${userId}`;
 const getAllTodosURL = `${(0, _settings.API_URL) + TODOS_PATH}`;
 const getTodoURL = (todoId)=>`${(0, _settings.API_URL) + TODOS_PATH}/${todoId}`;
@@ -41760,6 +41761,7 @@ parcelHelpers.export(exports, "photoSlice", ()=>photoSlice);
 parcelHelpers.export(exports, "fetchPhotos", ()=>(0, _fetchPhotos.fetchPhotos));
 var _toolkit = require("@reduxjs/toolkit");
 var _loadingStatuses = require("~/src/constants/loadingStatuses");
+var _deletephoto = require("./deletephoto");
 var _fetchPhotos = require("./fetchPhotos");
 const photoEntityAdapter = (0, _toolkit.createEntityAdapter)();
 const photoSlice = (0, _toolkit.createSlice)({
@@ -41768,10 +41770,13 @@ const photoSlice = (0, _toolkit.createSlice)({
         status: (0, _loadingStatuses.LoadingStatuses).idle
     }),
     reducers: {},
-    extraReducers: (builder)=>(0, _fetchPhotos.addCaseReadPhotos)(builder, photoEntityAdapter)
+    extraReducers: (builder)=>{
+        (0, _fetchPhotos.addCaseReadPhotos)(builder, photoEntityAdapter);
+        (0, _deletephoto.addCaseDeletePhotos)(builder, photoEntityAdapter);
+    }
 });
 
-},{"@reduxjs/toolkit":"lL1Ef","~/src/constants/loadingStatuses":"37tdo","./fetchPhotos":"5Yki5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5Yki5":[function(require,module,exports) {
+},{"@reduxjs/toolkit":"lL1Ef","~/src/constants/loadingStatuses":"37tdo","./fetchPhotos":"5Yki5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./deletephoto":"6G8Fu"}],"5Yki5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "fetchPhotos", ()=>fetchPhotos);
@@ -41809,7 +41814,32 @@ const selectPhotoModuleState = (state)=>state.photo;
 const selectPhotoIds = (state)=>selectPhotoModuleState(state).ids;
 const selectPhotos = (state, albumId)=>Object.values(selectPhotoModuleState(state).entities).filter((photo)=>photo.albumId === albumId);
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aSAB2":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6G8Fu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "deletePhoto", ()=>deletePhoto);
+parcelHelpers.export(exports, "addCaseDeletePhotos", ()=>addCaseDeletePhotos);
+var _axios = require("axios");
+var _axiosDefault = parcelHelpers.interopDefault(_axios);
+var _toolkit = require("@reduxjs/toolkit");
+var _index = require("../../routes/index");
+var _loadingStatuses = require("~/src/constants/loadingStatuses");
+const deletePhoto = (0, _toolkit.createAsyncThunk)("photo/deletePhoto", async (photoId)=>{
+    await (0, _axiosDefault.default).delete((0, _index.deletePhotoURL)(photoId));
+    return photoId;
+});
+const addCaseDeletePhotos = (builder, photoEntityAdapter)=>{
+    return builder.addCase(deletePhoto.pending, (state)=>{
+        state.status = (0, _loadingStatuses.LoadingStatuses).inProgress;
+    }).addCase(deletePhoto.fulfilled, (state, { payload  })=>{
+        photoEntityAdapter.removeOne(state, payload);
+        state.status = (0, _loadingStatuses.LoadingStatuses).success;
+    }).addCase(deletePhoto.rejected, (state, { payload  })=>{
+        state.status = payload === (0, _loadingStatuses.LoadingStatuses).earlyAdded ? (0, _loadingStatuses.LoadingStatuses).success : (0, _loadingStatuses.LoadingStatuses).failed;
+    });
+};
+
+},{"axios":"jo6P5","@reduxjs/toolkit":"lL1Ef","../../routes/index":"kvHxr","~/src/constants/loadingStatuses":"37tdo","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aSAB2":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "userSlice", ()=>userSlice);
@@ -42180,15 +42210,25 @@ $RefreshReg$(_c, "Comment");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./styles.module.scss":"lFjep","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"lFjep":[function(require,module,exports) {
+module.exports["name"] = `UKQYVq_name`;
 module.exports["commentBlock"] = `UKQYVq_commentBlock`;
 module.exports["commentText"] = `UKQYVq_commentText`;
-module.exports["name"] = `UKQYVq_name`;
 
 },{}],"hHtrT":[function(require,module,exports) {
 module.exports["commentsBlock"] = `JZlNKG_commentsBlock`;
 
-},{}],"7AKw3":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "comment.9359d126.svg" + "?" + Date.now();
+},{}],"9TaJ2":[function(require,module,exports) {
+module.exports["deleteSvg"] = `aogtCa_deleteSvg`;
+module.exports["actionBlock"] = `aogtCa_actionBlock`;
+module.exports["username"] = `aogtCa_username`;
+module.exports["editSvg"] = `aogtCa_editSvg`;
+module.exports["infoBlock"] = `aogtCa_infoBlock`;
+module.exports["commentSvg"] = `aogtCa_commentSvg`;
+module.exports["postTitle"] = `aogtCa_postTitle`;
+module.exports["postELement"] = `aogtCa_postELement`;
+
+},{}],"dlscx":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "comment.f40d9c58.svg" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"lgJ39":[function(require,module,exports) {
 "use strict";
@@ -42224,23 +42264,13 @@ exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
 exports.getOrigin = getOrigin;
 
-},{}],"8IYYn":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "delete.fb320aa9.svg" + "?" + Date.now();
+},{}],"kje09":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "delete.f2aa7faf.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"6B2Kw":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "edit.3b2d22f0.svg" + "?" + Date.now();
+},{"./helpers/bundle-url":"lgJ39"}],"1DTuK":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "edit.2775ccd1.svg" + "?" + Date.now();
 
-},{"./helpers/bundle-url":"lgJ39"}],"9TaJ2":[function(require,module,exports) {
-module.exports["editSvg"] = `aogtCa_editSvg`;
-module.exports["infoBlock"] = `aogtCa_infoBlock`;
-module.exports["deleteSvg"] = `aogtCa_deleteSvg`;
-module.exports["username"] = `aogtCa_username`;
-module.exports["commentSvg"] = `aogtCa_commentSvg`;
-module.exports["postTitle"] = `aogtCa_postTitle`;
-module.exports["postELement"] = `aogtCa_postELement`;
-module.exports["actionBlock"] = `aogtCa_actionBlock`;
-
-},{}],"9nMHi":[function(require,module,exports) {
+},{"./helpers/bundle-url":"lgJ39"}],"9nMHi":[function(require,module,exports) {
 module.exports["postList"] = `FQ2p6a_postList`;
 
 },{}],"avx45":[function(require,module,exports) {
@@ -42262,9 +42292,9 @@ var _selectors = require("~/src/store/todos/selectors");
 var _todos = require("~/src/store/todos");
 var _store = require("~/src/store");
 var _uikit = require("~/src/uikit");
-var _deleteSvg = require("./delete.svg");
+var _deleteSvg = require("~/public/icons/delete.svg");
 var _deleteSvgDefault = parcelHelpers.interopDefault(_deleteSvg);
-var _editSvg = require("./edit.svg");
+var _editSvg = require("~/public/icons/edit.svg");
 var _editSvgDefault = parcelHelpers.interopDefault(_editSvg);
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
@@ -42484,7 +42514,7 @@ $RefreshReg$(_c, "TodoList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","../TodoElement":"9VALH","~/src/store/todos/selectors":"hwlsU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","~/src/uikit":"jt2EU","./delete.svg":"cKHcu","./edit.svg":"bv9hf","./styles.module.scss":"k8jzk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9VALH":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","react-router-dom":"9xmpe","../TodoElement":"9VALH","~/src/store/todos/selectors":"hwlsU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","~/src/uikit":"jt2EU","./styles.module.scss":"k8jzk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/public/icons/delete.svg":"kje09","~/public/icons/edit.svg":"1DTuK"}],"9VALH":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$5118 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42540,20 +42570,14 @@ $RefreshReg$(_c, "TodoElement");
 module.exports["completed"] = `uHGntq_completed`;
 module.exports["todoELement"] = `uHGntq_todoELement`;
 
-},{}],"cKHcu":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "delete.d06969e9.svg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"bv9hf":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "edit.d0af44b8.svg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"k8jzk":[function(require,module,exports) {
-module.exports["actionBlock"] = `yrM7Aa_actionBlock`;
-module.exports["editSvg"] = `yrM7Aa_editSvg`;
+},{}],"k8jzk":[function(require,module,exports) {
+module.exports["generalList"] = `yrM7Aa_generalList`;
 module.exports["board"] = `yrM7Aa_board`;
-module.exports["deleteSvg"] = `yrM7Aa_deleteSvg`;
 module.exports["todoList"] = `yrM7Aa_todoList`;
 module.exports["title"] = `yrM7Aa_title`;
-module.exports["generalList"] = `yrM7Aa_generalList`;
+module.exports["editSvg"] = `yrM7Aa_editSvg`;
+module.exports["deleteSvg"] = `yrM7Aa_deleteSvg`;
+module.exports["actionBlock"] = `yrM7Aa_actionBlock`;
 
 },{}],"7rLBL":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bfb0 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -42640,11 +42664,11 @@ var _photosBlockDefault = parcelHelpers.interopDefault(_photosBlock);
 var _uikit = require("~/src/uikit");
 var _albums = require("~/src/store/albums");
 var _store = require("~/src/store");
-var _arrowSvg = require("./arrow.svg");
+var _arrowSvg = require("~/public/icons/arrow.svg");
 var _arrowSvgDefault = parcelHelpers.interopDefault(_arrowSvg);
-var _deleteSvg = require("./delete.svg");
+var _deleteSvg = require("~/public/icons/delete.svg");
 var _deleteSvgDefault = parcelHelpers.interopDefault(_deleteSvg);
-var _editSvg = require("./edit.svg");
+var _editSvg = require("~/public/icons/edit.svg");
 var _editSvgDefault = parcelHelpers.interopDefault(_editSvg);
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
@@ -42765,7 +42789,7 @@ $RefreshReg$(_c, "AlbumElement");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","classnames":"jocGM","react-router-dom":"9xmpe","../PhotosBlock":"cVhgc","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","./arrow.svg":"ldHZC","./delete.svg":"kSBDr","./edit.svg":"53Glp","./styles.module.scss":"bmRZe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"cVhgc":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","classnames":"jocGM","react-router-dom":"9xmpe","../PhotosBlock":"cVhgc","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","./styles.module.scss":"bmRZe","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/public/icons/arrow.svg":"ellWI","~/public/icons/delete.svg":"kje09","~/public/icons/edit.svg":"1DTuK"}],"cVhgc":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$444b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -42853,29 +42877,23 @@ $RefreshReg$(_c, "PhotosBlock");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-redux":"bdVon","~/src/store":"iLHNH","~/src/store/photos/selectors":"ack2i","../Slider":"7Rnr6","~/src/store/photos":"hMT9I","~/src/uikit":"jt2EU","./styles.module.scss":"3e0tb","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3e0tb":[function(require,module,exports) {
-module.exports["photosBlock"] = `_7giObG_photosBlock`;
 module.exports["photo"] = `_7giObG_photo`;
 module.exports["dots"] = `_7giObG_dots`;
+module.exports["photosBlock"] = `_7giObG_photosBlock`;
 
-},{}],"ldHZC":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "arrow.c6fbb257.svg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"kSBDr":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "delete.92ac3af0.svg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"53Glp":[function(require,module,exports) {
-module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "edit.45b4fc30.svg" + "?" + Date.now();
-
-},{"./helpers/bundle-url":"lgJ39"}],"bmRZe":[function(require,module,exports) {
-module.exports["editSvg"] = `Lt1Iba_editSvg`;
+},{}],"bmRZe":[function(require,module,exports) {
 module.exports["deleteSvg"] = `Lt1Iba_deleteSvg`;
-module.exports["active"] = `Lt1Iba_active`;
-module.exports["arrowSvg"] = `Lt1Iba_arrowSvg`;
-module.exports["title"] = `Lt1Iba_title`;
 module.exports["actionBlock"] = `Lt1Iba_actionBlock`;
+module.exports["editSvg"] = `Lt1Iba_editSvg`;
 module.exports["albumELement"] = `Lt1Iba_albumELement`;
+module.exports["title"] = `Lt1Iba_title`;
+module.exports["arrowSvg"] = `Lt1Iba_arrowSvg`;
+module.exports["active"] = `Lt1Iba_active`;
 
-},{}],"aHIE0":[function(require,module,exports) {
+},{}],"ellWI":[function(require,module,exports) {
+module.exports = require("./helpers/bundle-url").getBundleURL("6EXJA") + "arrow.de242c13.svg" + "?" + Date.now();
+
+},{"./helpers/bundle-url":"lgJ39"}],"aHIE0":[function(require,module,exports) {
 module.exports["albumList"] = `hJofxW_albumList`;
 
 },{}],"ldU2r":[function(require,module,exports) {
@@ -42987,8 +43005,8 @@ $RefreshReg$(_c, "EditTodoComponent");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","./styles.module.scss":"j0JuF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"j0JuF":[function(require,module,exports) {
-module.exports["checkBoxBlock"] = `W4BMtW_checkBoxBlock`;
 module.exports["input"] = `W4BMtW_input`;
+module.exports["checkBoxBlock"] = `W4BMtW_checkBoxBlock`;
 module.exports["form"] = `W4BMtW_form`;
 module.exports["textarea"] = `W4BMtW_textarea`;
 module.exports["checkBox"] = `W4BMtW_checkBox`;
@@ -43005,66 +43023,13 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactRouterDom = require("react-router-dom");
 var _uikit = require("~/src/uikit");
-var _albums = require("~/src/store/albums");
-var _store = require("~/src/store");
-var _reactRedux = require("react-redux");
-var _selectors = require("~/src/store/albums/selectors");
-var _routes = require("~/src/routes");
 var _stylesModuleScss = require("./styles.module.scss");
 var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
-var _s = $RefreshSig$();
-const EditAlbumComponent = ({ albumId  })=>{
-    _s();
-    const [isLoading, setLoading] = (0, _react.useState)(true);
-    const navigate = (0, _reactRouterDom.useNavigate)();
-    const dispatch = (0, _store.useAppDispatch)();
-    const album = (0, _reactRedux.useSelector)((state)=>(0, _selectors.selectAlbumById)(state, albumId));
-    (0, _react.useEffect)(()=>{
-        dispatch((0, _albums.fetchAlbum)(albumId)).finally(()=>setLoading(false));
-    }, []);
-    (0, _react.useEffect)(()=>{
-        setFormData(album);
-    }, [
-        album
-    ]);
-    const [formData, setFormData] = (0, _react.useState)({
-        id: album?.id,
-        userId: album?.userId,
-        title: album?.title
-    });
-    const handleChangeForm = (event)=>{
-        const input = event.target;
-        const inputName = input.name;
-        const inputValue = input.value;
-        setFormData({
-            ...formData,
-            [inputName]: inputValue
-        });
-    };
-    const handleSubmitForm = (event)=>{
-        event.preventDefault();
-        dispatch((0, _albums.updateAlbum)(formData)).then(()=>{
-            setFormData({
-                id: 0,
-                userId: 0,
-                title: ""
-            });
-            alert(`Альбом успешно изменён!`);
-            navigate((0, _routes.ALBUMS_PATH));
-        })// eslint-disable-next-line no-console
-        .catch((err)=>console.log(err));
-        return;
-    };
-    if (isLoading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Preloader), {}, void 0, false, {
-        fileName: "src/components/EditAlbumComponent/index.tsx",
-        lineNumber: 72,
-        columnNumber: 27
-    }, undefined);
+const EditAlbumComponent = ({ title , onSubmitForm , onChangeForm  })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("form", {
         className: (0, _stylesModuleScssDefault.default).form,
-        onSubmit: (event)=>handleSubmitForm(event),
+        onSubmit: (event)=>onSubmitForm(event),
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: [
@@ -43073,48 +43038,41 @@ const EditAlbumComponent = ({ albumId  })=>{
                         children: "Title"
                     }, void 0, false, {
                         fileName: "src/components/EditAlbumComponent/index.tsx",
-                        lineNumber: 80,
+                        lineNumber: 21,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Input), {
                         type: "text",
                         name: "title",
                         id: "title",
-                        value: formData.title,
+                        value: title,
                         className: (0, _stylesModuleScssDefault.default).input,
-                        onChange: (event)=>handleChangeForm(event)
+                        onChange: (event)=>onChangeForm(event)
                     }, void 0, false, {
                         fileName: "src/components/EditAlbumComponent/index.tsx",
-                        lineNumber: 81,
+                        lineNumber: 22,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/EditAlbumComponent/index.tsx",
-                lineNumber: 79,
+                lineNumber: 20,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Button), {
                 children: "Сохранить"
             }, void 0, false, {
                 fileName: "src/components/EditAlbumComponent/index.tsx",
-                lineNumber: 90,
+                lineNumber: 31,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/EditAlbumComponent/index.tsx",
-        lineNumber: 75,
+        lineNumber: 19,
         columnNumber: 9
     }, undefined);
 };
-_s(EditAlbumComponent, "OEzoxguaf+j739MaZITeWKiU+F8=", false, function() {
-    return [
-        (0, _reactRouterDom.useNavigate),
-        (0, _store.useAppDispatch),
-        (0, _reactRedux.useSelector)
-    ];
-});
 _c = EditAlbumComponent;
 exports.default = EditAlbumComponent;
 var _c;
@@ -43125,10 +43083,10 @@ $RefreshReg$(_c, "EditAlbumComponent");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","react-redux":"bdVon","~/src/store/albums/selectors":"1CYRR","./styles.module.scss":"dSFM0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/routes":"kvHxr","react-router-dom":"9xmpe"}],"dSFM0":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","./styles.module.scss":"dSFM0","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"dSFM0":[function(require,module,exports) {
 module.exports["textarea"] = `_2siAjG_textarea`;
-module.exports["input"] = `_2siAjG_input`;
 module.exports["form"] = `_2siAjG_form`;
+module.exports["input"] = `_2siAjG_input`;
 
 },{}],"kWkE5":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$2fb3 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43271,9 +43229,9 @@ $RefreshReg$(_c, "CreateTodoComponent");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/todos":"3yjR4","~/src/store":"iLHNH","./styles.module.scss":"baZ17","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/routes":"kvHxr","react-router-dom":"9xmpe"}],"baZ17":[function(require,module,exports) {
-module.exports["input"] = `xr3HjG_input`;
 module.exports["textarea"] = `xr3HjG_textarea`;
 module.exports["form"] = `xr3HjG_form`;
+module.exports["input"] = `xr3HjG_input`;
 
 },{}],"7IFW6":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$79cb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43392,8 +43350,8 @@ $RefreshReg$(_c, "CreateAlbumComponent");
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/albums":"5i2UF","~/src/store":"iLHNH","./styles.module.scss":"koEzG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe","~/src/routes":"kvHxr"}],"koEzG":[function(require,module,exports) {
 module.exports["input"] = `GUQMPa_input`;
-module.exports["textarea"] = `GUQMPa_textarea`;
 module.exports["form"] = `GUQMPa_form`;
+module.exports["textarea"] = `GUQMPa_textarea`;
 
 },{}],"l3Ckd":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9b0b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43552,11 +43510,49 @@ $RefreshReg$(_c, "CreateEditPostComponent");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","~/src/uikit":"jt2EU","~/src/store/posts":"7Awff","~/src/store":"iLHNH","./styles.module.scss":"4y3JF","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/routes":"kvHxr","react-router-dom":"9xmpe"}],"4y3JF":[function(require,module,exports) {
-module.exports["form"] = `eCBWHG_form`;
-module.exports["input"] = `eCBWHG_input`;
 module.exports["textarea"] = `eCBWHG_textarea`;
+module.exports["input"] = `eCBWHG_input`;
+module.exports["form"] = `eCBWHG_form`;
 
-},{}],"elrPy":[function(require,module,exports) {
+},{}],"5tDim":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f7e1 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f7e1.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const EditPhotoComponent = ({ photoSrc , photoAlt  })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+            src: photoSrc,
+            alt: photoAlt
+        }, void 0, false, {
+            fileName: "src/components/EditPhotoComponent/index.tsx",
+            lineNumber: 14,
+            columnNumber: 13
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/EditPhotoComponent/index.tsx",
+        lineNumber: 13,
+        columnNumber: 9
+    }, undefined);
+};
+_c = EditPhotoComponent;
+exports.default = EditPhotoComponent;
+var _c;
+$RefreshReg$(_c, "EditPhotoComponent");
+
+  $parcel$ReactRefreshHelpers$f7e1.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"elrPy":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$f2d2 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -43635,8 +43631,8 @@ $RefreshReg$(_c, "EntityPage");
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","classnames":"jocGM","react-router-dom":"9xmpe","~/src/uikit":"jt2EU","./styles.module.scss":"a8AVU","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"a8AVU":[function(require,module,exports) {
 module.exports["buttonBlock"] = `_8kELJa_buttonBlock`;
-module.exports["section"] = `_8kELJa_section`;
 module.exports["createButton"] = `_8kELJa_createButton`;
+module.exports["section"] = `_8kELJa_section`;
 
 },{}],"5t3ql":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$b704 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
@@ -43906,34 +43902,149 @@ parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRedux = require("react-redux");
 var _reactRouterDom = require("react-router-dom");
 var _components = require("~/src/components");
+var _routes = require("~/src/routes");
+var _store = require("~/src/store");
+var _albums = require("~/src/store/albums");
+var _selectors = require("~/src/store/albums/selectors");
+var _photos = require("~/src/store/photos");
+var _deletephoto = require("~/src/store/photos/deletephoto");
+var _selectors1 = require("~/src/store/photos/selectors");
+var _uikit = require("~/src/uikit");
+var _deleteSvg = require("~/public/icons/delete.svg");
+var _deleteSvgDefault = parcelHelpers.interopDefault(_deleteSvg);
+var _stylesModuleScss = require("./styles.module.scss");
+var _stylesModuleScssDefault = parcelHelpers.interopDefault(_stylesModuleScss);
 var _s = $RefreshSig$();
 const EditAlbumPage = ()=>{
     _s();
     const albumId = Number((0, _reactRouterDom.useParams)().id);
+    const [isLoading, setLoading] = (0, _react.useState)(true);
+    const navigate = (0, _reactRouterDom.useNavigate)();
+    const dispatch = (0, _store.useAppDispatch)();
+    const album = (0, _reactRedux.useSelector)((state)=>(0, _selectors.selectAlbumById)(state, albumId));
+    const photos = (0, _reactRedux.useSelector)((state)=>(0, _selectors1.selectPhotos)(state, albumId));
+    (0, _react.useEffect)(()=>{
+        const promises = [
+            dispatch((0, _albums.fetchAlbum)(albumId)),
+            dispatch((0, _photos.fetchPhotos)(albumId)), 
+        ];
+        Promise.all(promises).finally(()=>setLoading(false));
+    }, []);
+    (0, _react.useEffect)(()=>{
+        setFormData(album);
+    }, [
+        album
+    ]);
+    const [formData, setFormData] = (0, _react.useState)({
+        id: album?.id,
+        userId: album?.userId,
+        title: album?.title
+    });
+    const handleDeleteImg = (photoId)=>{
+        dispatch((0, _deletephoto.deletePhoto)(photoId));
+    };
+    const handleChangeForm = (event)=>{
+        const input = event.target;
+        const inputName = input.name;
+        const inputValue = input.value;
+        setFormData({
+            ...formData,
+            [inputName]: inputValue
+        });
+    };
+    const handleSubmitForm = (event)=>{
+        event.preventDefault();
+        dispatch((0, _albums.updateAlbum)(formData)).then(()=>{
+            setFormData({
+                id: 0,
+                userId: 0,
+                title: ""
+            });
+            alert(`Альбом успешно изменён!`);
+            navigate((0, _routes.ALBUMS_PATH));
+        })// eslint-disable-next-line no-console
+        .catch((err)=>console.log(err));
+        return;
+    };
+    if (isLoading) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Preloader), {}, void 0, false, {
+        fileName: "src/pages/EditAlbumpage/index.tsx",
+        lineNumber: 85,
+        columnNumber: 27
+    }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                 children: "Изменение альбома"
             }, void 0, false, {
                 fileName: "src/pages/EditAlbumpage/index.tsx",
-                lineNumber: 10,
+                lineNumber: 89,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _components.EditAlbumComponent), {
-                albumId: albumId
+                title: formData.title,
+                onSubmitForm: handleSubmitForm,
+                onChangeForm: handleChangeForm
             }, void 0, false, {
                 fileName: "src/pages/EditAlbumpage/index.tsx",
-                lineNumber: 12,
+                lineNumber: 91,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _components.Slider), {
+                children: photos.map((photo)=>{
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: (0, _stylesModuleScssDefault.default).photoWrapper,
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: (0, _stylesModuleScssDefault.default).photo,
+                                src: photo.thumbnailUrl,
+                                alt: photo.title
+                            }, void 0, false, {
+                                fileName: "src/pages/EditAlbumpage/index.tsx",
+                                lineNumber: 101,
+                                columnNumber: 29
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _uikit.Button), {
+                                inline: true,
+                                className: (0, _stylesModuleScssDefault.default).deleteButton,
+                                onClick: ()=>handleDeleteImg(photo.id),
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: (0, _stylesModuleScssDefault.default).deleteSvg,
+                                    src: (0, _deleteSvgDefault.default)
+                                }, void 0, false, {
+                                    fileName: "src/pages/EditAlbumpage/index.tsx",
+                                    lineNumber: 112,
+                                    columnNumber: 33
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/pages/EditAlbumpage/index.tsx",
+                                lineNumber: 107,
+                                columnNumber: 29
+                            }, undefined)
+                        ]
+                    }, photo.id, true, {
+                        fileName: "src/pages/EditAlbumpage/index.tsx",
+                        lineNumber: 100,
+                        columnNumber: 25
+                    }, undefined);
+                })
+            }, void 0, false, {
+                fileName: "src/pages/EditAlbumpage/index.tsx",
+                lineNumber: 97,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true);
 };
-_s(EditAlbumPage, "zmUErVVHtqqM6DIDQ9M8H17P2nM=", false, function() {
+_s(EditAlbumPage, "TjYuWVrYwdwRh52X6uqT8DHSOHQ=", false, function() {
     return [
-        (0, _reactRouterDom.useParams)
+        (0, _reactRouterDom.useParams),
+        (0, _reactRouterDom.useNavigate),
+        (0, _store.useAppDispatch),
+        (0, _reactRedux.useSelector),
+        (0, _reactRedux.useSelector)
     ];
 });
 _c = EditAlbumPage;
@@ -43946,7 +44057,13 @@ $RefreshReg$(_c, "EditAlbumPage");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","~/src/components":"dHnah","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8Ofb2":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","~/src/components":"dHnah","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-redux":"bdVon","~/src/routes":"kvHxr","~/src/store":"iLHNH","~/src/store/albums":"5i2UF","~/src/store/albums/selectors":"1CYRR","~/src/store/photos":"hMT9I","~/src/store/photos/selectors":"ack2i","~/src/uikit":"jt2EU","./styles.module.scss":"466ns","~/src/store/photos/deletephoto":"6G8Fu","~/public/icons/delete.svg":"kje09"}],"466ns":[function(require,module,exports) {
+module.exports["deleteSvg"] = `KTNGUW_deleteSvg`;
+module.exports["photo"] = `KTNGUW_photo`;
+module.exports["deleteButton"] = `KTNGUW_deleteButton`;
+module.exports["photoWrapper"] = `KTNGUW_photoWrapper`;
+
+},{}],"8Ofb2":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6884 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -44146,10 +44263,10 @@ function Header() {
                                     children: navItem.title
                                 }, void 0, false, {
                                     fileName: "src/parts/Header/index.tsx",
-                                    lineNumber: 46,
+                                    lineNumber: 47,
                                     columnNumber: 33
                                 }, this)
-                            }, void 0, false, {
+                            }, navItem.title, false, {
                                 fileName: "src/parts/Header/index.tsx",
                                 lineNumber: 41,
                                 columnNumber: 29
@@ -44192,14 +44309,14 @@ $RefreshReg$(_c, "Header");
   window.$RefreshSig$ = prevRefreshSig;
 }
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","classnames":"jocGM","./styles.module.scss":"gQHd5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","~/src/routes":"kvHxr"}],"gQHd5":[function(require,module,exports) {
+module.exports["nav"] = `JTeIoW_nav`;
 module.exports["navlist"] = `JTeIoW_navlist`;
-module.exports["header__section"] = `JTeIoW_header__section`;
-module.exports["logo"] = `JTeIoW_logo`;
 module.exports["header"] = `JTeIoW_header`;
-module.exports["link"] = `JTeIoW_link`;
 module.exports["active"] = `JTeIoW_active`;
 module.exports["navlist__item"] = `JTeIoW_navlist__item`;
-module.exports["nav"] = `JTeIoW_nav`;
+module.exports["header__section"] = `JTeIoW_header__section`;
+module.exports["logo"] = `JTeIoW_logo`;
+module.exports["link"] = `JTeIoW_link`;
 
 },{}],"dacDC":[function(require,module,exports) {
 module.exports["container"] = `BsYhIW_container`;

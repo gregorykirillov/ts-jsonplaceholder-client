@@ -506,6 +506,28 @@ section, footer {
   width: 540px;
 }
 
+.KTNGUW_photo {
+  height: 150px;
+  min-width: 150px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.KTNGUW_photoWrapper {
+  position: relative;
+}
+
+.KTNGUW_deleteSvg {
+  height: 16px;
+}
+
+.KTNGUW_deleteButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
 .JTeIoW_header {
   height: 100px;
   box-shadow: 0 0 10px gray;
