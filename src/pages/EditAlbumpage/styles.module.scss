@@ -1,0 +1,23 @@
+.photo {
+    display: block;
+
+    height: 150px;
+    min-width: 150px;
+    
+    object-fit: cover;
+    object-position: center;
+}
+
+.photoWrapper {
+    position: relative;
+}
+
+.deleteSvg {
+    height: 16px;
+}
+
+.deleteButton {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}

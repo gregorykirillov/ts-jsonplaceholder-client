@@ -11,9 +11,9 @@ import { fetchUserById } from '~/src/store/users';
 import { deletePost } from '~/src/store/posts';
 import { selectUserById } from '~/src/store/users/selectors';
 
-import commentSvg from './comment.svg';
-import deleteSvg from './delete.svg';
-import editSvg from './edit.svg';
+import commentSvg from '~/public/icons/comment.svg';
+import deleteSvg from '~/public/icons/delete.svg';
+import editSvg from '~/public/icons/edit.svg';
 
 import styles from './styles.module.scss';
 

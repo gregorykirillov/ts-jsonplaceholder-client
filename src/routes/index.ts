@@ -22,13 +22,16 @@ export const getAllCommentsURL = (postId: number) =>
 export const getAllAlbumsURL = `${API_URL + ALBUMS_PATH}`;
 export const getAlbumURL = (albumId: number) =>
     `${API_URL + ALBUMS_PATH}/${albumId}`;
-export const getAlbumPhotosURL = (albumId: number) =>
-    `${API_URL + ALBUMS_PATH}/${albumId + PHOTOS_PATH}`;
 export const createAlbumURL = `${API_URL + ALBUMS_PATH}`;
 export const updateAlbumURL = (albumId: number) =>
     `${API_URL + ALBUMS_PATH}/${albumId}`;
 export const deleteAlbumURL = (albumId: number) =>
     `${API_URL + ALBUMS_PATH}/${albumId}`;
+
+export const getAlbumPhotosURL = (albumId: number) =>
+    `${API_URL + ALBUMS_PATH}/${albumId + PHOTOS_PATH}`;
+export const deletePhotoURL = (photoId: number) =>
+    `${API_URL + PHOTOS_PATH}/${photoId}`;
 
 export const getUserByIdURL = (userId: number) =>
     `${API_URL + USERS_PATH}/${userId}`;

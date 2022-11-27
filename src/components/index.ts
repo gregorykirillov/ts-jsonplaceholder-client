@@ -6,5 +6,6 @@ export { default as PostElement } from './PostElement';
 export { default as EditTodoComponent } from './EditTodoComponent';
 export { default as EditAlbumComponent } from './EditAlbumComponent';
 export { default as CreateTodoComponent } from './CreateTodoComponent';
+export { default as EditPhotoComponent } from './EditPhotoComponent';
 export { default as CreateAlbumComponent } from './CreateAlbumComponent';
 export { default as CreateEditPostComponent } from './CreateEditPostComponent';

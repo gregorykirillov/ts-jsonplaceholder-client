@@ -8,9 +8,9 @@ import { Button } from '~/src/uikit';
 
 import { deleteAlbum } from '~/src/store/albums';
 import { useAppDispatch } from '~/src/store';
-import arrowSvg from './arrow.svg';
-import deleteSvg from './delete.svg';
-import editSvg from './edit.svg';
+import arrowSvg from '~/public/icons/arrow.svg';
+import deleteSvg from '~/public/icons/delete.svg';
+import editSvg from '~/public/icons/edit.svg';
 
 import styles from './styles.module.scss';
 

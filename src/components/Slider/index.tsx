@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useState } from 'react';
+import React, { ReactNode, useState } from 'react';
 import { Button } from '~/src/uikit';
 
 import styles from './styles.module.scss';
@@ -9,14 +9,9 @@ type SliderProps = {
 
 const Slider = ({ children }: SliderProps) => {
     const [currSlideNum, setCurrSlideNum] = useState(0);
-    const [slides, setSlides] = useState<ReactNode[]>([]);
     const itemsCount = children.length as number;
     const slidesToShow = 3;
     const maxSlides = Math.ceil(itemsCount / slidesToShow);
-
-    useEffect(() => {
-        setSlides(children);
-    }, []);
 
     const handlePrev = () => {
         if (currSlideNum) setCurrSlideNum(currSlideNum - 1);
@@ -39,7 +34,7 @@ const Slider = ({ children }: SliderProps) => {
                         }% + ${20 * currSlideNum + 10}px))`,
                     }}
                 >
-                    {slides}
+                    {children}
                 </div>
             </div>
             <Button onClick={handlePrev} className={styles.prev}>

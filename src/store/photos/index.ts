@@ -7,6 +7,7 @@ import {
 
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { PhotoType } from '~/src/types';
+import { addCaseDeletePhotos } from './deletephoto';
 import { addCaseReadPhotos } from './fetchPhotos';
 
 const photoEntityAdapter = createEntityAdapter<PhotoType>();
@@ -21,7 +22,10 @@ export const photoSlice = createSlice({
         status: LoadingStatuses.idle,
     }),
     reducers: {},
-    extraReducers: (builder) => addCaseReadPhotos(builder, photoEntityAdapter),
+    extraReducers: (builder) => {
+        addCaseReadPhotos(builder, photoEntityAdapter);
+        addCaseDeletePhotos(builder, photoEntityAdapter);
+    },
 });
 
 export { fetchPhotos } from './fetchPhotos';

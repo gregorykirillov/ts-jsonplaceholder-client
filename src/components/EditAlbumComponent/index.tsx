@@ -1,90 +1,31 @@
-import React, { FormEvent, useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { FormEvent } from 'react';
 
-import { Button, Input, Preloader } from '~/src/uikit';
-import { fetchAlbum, updateAlbum } from '~/src/store/albums';
-import { RootState, useAppDispatch } from '~/src/store';
-
-import { AlbumType } from '~/src/types';
-import { useSelector } from 'react-redux';
-import { selectAlbumById } from '~/src/store/albums/selectors';
-import { ALBUMS_PATH } from '~/src/routes';
+import { Button, Input } from '~/src/uikit';
 
 import styles from './styles.module.scss';
 
 type EditAlbumComponentProps = {
-    albumId: number;
+    title: string;
+    onSubmitForm: (event: FormEvent) => void;
+    onChangeForm: (event: FormEvent) => void;
 };
 
-const EditAlbumComponent = ({ albumId }: EditAlbumComponentProps) => {
-    const [isLoading, setLoading] = useState(true);
-    const navigate = useNavigate();
-
-    const dispatch = useAppDispatch();
-
-    const album = useSelector((state: RootState) =>
-        selectAlbumById(state, albumId),
-    );
-
-    useEffect(() => {
-        dispatch(fetchAlbum(albumId)).finally(() => setLoading(false));
-    }, []);
-
-    useEffect(() => {
-        setFormData(album);
-    }, [album]);
-
-    const [formData, setFormData] = useState<AlbumType>({
-        id: album?.id,
-        userId: album?.userId,
-        title: album?.title,
-    });
-
-    const handleChangeForm = (event: FormEvent) => {
-        const input = event.target as HTMLInputElement;
-        const inputName = input.name;
-        const inputValue = input.value;
-
-        setFormData({
-            ...formData,
-            [inputName]: inputValue,
-        });
-    };
-
-    const handleSubmitForm = (event: FormEvent) => {
-        event.preventDefault();
-
-        dispatch(updateAlbum(formData))
-            .then(() => {
-                setFormData({
-                    id: 0,
-                    userId: 0,
-                    title: '',
-                });
-                alert(`Альбом успешно изменён!`);
-                navigate(ALBUMS_PATH);
-            })
-            // eslint-disable-next-line no-console
-            .catch((err) => console.log(err));
-        return;
-    };
-
-    if (isLoading) return <Preloader />;
-
+const EditAlbumComponent = ({
+    title,
+    onSubmitForm,
+    onChangeForm,
+}: EditAlbumComponentProps) => {
     return (
-        <form
-            className={styles.form}
-            onSubmit={(event) => handleSubmitForm(event)}
-        >
+        <form className={styles.form} onSubmit={(event) => onSubmitForm(event)}>
             <div>
                 <label htmlFor="title">Title</label>
                 <Input
                     type="text"
                     name="title"
                     id="title"
-                    value={formData.title}
+                    value={title}
                     className={styles.input}
-                    onChange={(event) => handleChangeForm(event)}
+                    onChange={(event) => onChangeForm(event)}
                 />
             </div>
             <Button>Сохранить</Button>

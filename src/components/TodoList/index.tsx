@@ -9,8 +9,8 @@ import { RootState, useAppDispatch } from '~/src/store';
 import { Button, Preloader } from '~/src/uikit';
 import { TodoType } from '~/src/types';
 
-import deleteSvg from './delete.svg';
-import editSvg from './edit.svg';
+import deleteSvg from '~/public/icons/delete.svg';
+import editSvg from '~/public/icons/edit.svg';
 
 import styles from './styles.module.scss';
 
