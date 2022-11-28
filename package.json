@@ -6,9 +6,12 @@
   "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx parcel ./index.html --public-url /ts-jsonplaceholder-client",
-    "build": "parcel build index.html --no-content-hash --public-url ./",
-    "gh-deploy": "npm run build && gh-pages -d dist"
+    "docker:build": "npm run build:local && docker build -t kirillov .",
+    "docker": "docker run --rm -p 8080:8080 kirillov",
+    "start": "npx parcel ./index.html --dist-dir dist/local",
+    "build:local": "parcel build ./index.html --dist-dir dist/local",
+    "build:server": "parcel build ./index.html --dist-dir dist/server --public-url /ts-jsonplaceholder-client",
+    "gh-deploy": "npm run build:server && gh-pages -d dist/server"
   },
   "author": "",
   "license": "ISC",
