@@ -1,3 +1,6 @@
+import qs from 'query-string';
+
+import { ADD_ITEMS_COUNT } from '../constants/constants';
 import { API_URL } from '../settings';
 
 export const POSTS_PATH = '/posts';
@@ -8,6 +11,11 @@ export const PHOTOS_PATH = '/photos';
 export const COMMENTS_PATH = '/comments';
 
 export const getAllPostsURL = `${API_URL + POSTS_PATH}`;
+export const getPostsURLByPage = (page: number) =>
+    `${API_URL + POSTS_PATH}?${qs.stringify({
+        _limit: ADD_ITEMS_COUNT,
+        _page: page,
+    })}`;
 export const getPostURL = (postId: number) =>
     `${API_URL + POSTS_PATH}/${postId}`;
 export const createPostURL = `${API_URL + POSTS_PATH}`;
@@ -20,6 +28,11 @@ export const getAllCommentsURL = (postId: number) =>
     `${API_URL + POSTS_PATH}/${postId + COMMENTS_PATH}`;
 
 export const getAllAlbumsURL = `${API_URL + ALBUMS_PATH}`;
+export const getAlbumsByPageURL = (page: number) =>
+    `${API_URL + ALBUMS_PATH}?${qs.stringify({
+        _limit: ADD_ITEMS_COUNT,
+        _page: page,
+    })}`;
 export const getAlbumURL = (albumId: number) =>
     `${API_URL + ALBUMS_PATH}/${albumId}`;
 export const createAlbumURL = `${API_URL + ALBUMS_PATH}`;

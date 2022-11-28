@@ -7,12 +7,16 @@ import { fetchPosts } from '~/src/store/posts';
 import { RootState, useAppDispatch } from '~/src/store';
 import { Preloader } from '~/src/uikit';
 import { PostType } from '~/src/types';
+import { useScroll } from '~/src/hooks/useScroll';
+import { handleScroll } from './handleScroll';
 
 import styles from './styles.module.scss';
 
 const PostList = () => {
     const [isLoading, setLoading] = useState(true);
     const dispatch = useAppDispatch();
+
+    useScroll(() => handleScroll({ dispatch }));
 
     useEffect(() => {
         dispatch(fetchPosts()).finally(() => setLoading(false));
