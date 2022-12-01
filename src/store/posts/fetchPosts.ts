@@ -1,21 +1,16 @@
 import axios from 'axios';
 import { createAsyncThunk, EntityAdapter } from '@reduxjs/toolkit';
 
-import { getAllPostsURL } from './../../routes/index';
+import { getPostsURLByPage } from './../../routes/index';
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { BuilderType } from '.';
 import { PostType } from '~/src/types';
-import { selectPostIds } from './selectors';
-import { RootState } from '..';
 
 export const fetchPosts = createAsyncThunk(
     'post/fetchPosts',
-    async (_, thunkAPI) => {
-        if (selectPostIds(thunkAPI.getState() as RootState).length > 1) {
-            return thunkAPI.rejectWithValue(LoadingStatuses.earlyAdded);
-        }
-
-        const response = await axios.get(getAllPostsURL);
+    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
+    async (page: number = 1) => {
+        const response = await axios.get(getPostsURLByPage(page));
         return response.data;
     },
 );

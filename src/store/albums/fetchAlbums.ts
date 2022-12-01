@@ -1,21 +1,16 @@
 import axios from 'axios';
 import { createAsyncThunk, EntityAdapter } from '@reduxjs/toolkit';
 
-import { getAllAlbumsURL } from '../../routes/index';
+import { getAlbumsByPageURL } from '../../routes/index';
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { BuilderType } from '.';
 import { AlbumType } from '~/src/types';
-import { selectAlbumIds } from './selectors';
-import { RootState } from '..';
 
 export const fetchAlbums = createAsyncThunk(
     'album/fetchAlbums',
-    async (_, thunkAPI) => {
-        if (selectAlbumIds(thunkAPI.getState() as RootState).length > 1) {
-            return thunkAPI.rejectWithValue(LoadingStatuses.earlyAdded);
-        }
-
-        const response = await axios.get(getAllAlbumsURL);
+    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
+    async (page: number = 1) => {
+        const response = await axios.get(getAlbumsByPageURL(page));
         return response.data;
     },
 );

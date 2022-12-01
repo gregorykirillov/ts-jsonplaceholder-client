@@ -5,18 +5,13 @@ import { getUserByIdURL } from './../../routes/index';
 import { LoadingStatuses } from '~/src/constants/loadingStatuses';
 import { BuilderType } from '.';
 import { UserType } from '~/src/types';
-import { selectUserIds } from './selectors';
-import { RootState } from '..';
 
 const fetchingItems: number[] = [];
 
 export const fetchUserById = createAsyncThunk(
     'user/fetchUsers',
     async (userId: number, thunkAPI) => {
-        if (
-            selectUserIds(thunkAPI.getState() as RootState).length > 0 ||
-            fetchingItems.includes(userId)
-        ) {
+        if (fetchingItems.includes(userId)) {
             return thunkAPI.rejectWithValue(LoadingStatuses.earlyAdded);
         }
 

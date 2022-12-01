@@ -7,12 +7,16 @@ import { fetchAlbums } from '~/src/store/albums';
 import { RootState, useAppDispatch } from '~/src/store';
 import { Preloader } from '~/src/uikit';
 import { AlbumType } from '~/src/types';
+import { handleScroll } from './handleScroll';
+import { useScroll } from '~/src/hooks/useScroll';
 
 import styles from './styles.module.scss';
 
 const AlbumList = () => {
     const [isLoading, setLoading] = useState(true);
     const dispatch = useAppDispatch();
+
+    useScroll(() => handleScroll({ dispatch }));
 
     useEffect(() => {
         dispatch(fetchAlbums()).finally(() => setLoading(false));

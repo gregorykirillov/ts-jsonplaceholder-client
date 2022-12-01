@@ -15,7 +15,8 @@
     cursor: pointer;
 
     .title {
-        max-width: calc(100% - 60px);
+        max-width: calc(100% - 100px);
+        text-align: justify;
     }
 }
 
